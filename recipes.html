@@ -1,0 +1,716 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recipes That Bring the Heat | Firecraft</title>
+    <link rel="icon" type="image/png" href="assets/images/firecraft_logo.png">
+
+    <!-- Use the same fonts as the homepage -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Global styles and existing navbar -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/recipes.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Reusable navbar -->
+    <div id="navbar-container"></div>
+
+    <main class="rc-page">
+
+        <!-- 01. HERO: Explain the purpose immediately -->
+        <section class="rc-hero">
+            
+
+            <div class="container rc-hero-inner">
+                <div class="rc-hero-copy">
+                    <span class="rc-eyebrow">
+                        <span class="rc-eyebrow-line"></span>
+                        THE FIRECRAFT RECIPE COLLECTION
+                    </span>
+
+                    <h1 class="hero-title" style="font-family: var(--font-display); font-weight: 400; font-size: clamp(48px, 6.6vw, 91px); line-height: .99; letter-spacing: -.035em;">
+                        Good food.<br>
+                        Good fire.<br>
+                        <span style="display: inline-block; margin-top: 12px; color: var(--color-red); font-size: .62em; line-height: 1.2; letter-spacing: -.015em;">A little sauce changes everything.</span>
+                    </h1>
+
+                    <p style="max-width: 500px; line-height: 1.6;">
+                        From smoky and sweet to unapologetically fiery, find your next favorite dish and the Firecraft sauce that makes it.
+                    </p>
+
+                    <div class="rc-hero-actions">
+                        <a href="#rc-recipes" class="btn btn-primary">
+                            Find Your Next Recipe
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                        <a href="products.html" class="rc-text-link">
+                            Explore Our Sauces
+                        </a>
+                    </div>
+
+                    
+                </div>
+
+                <div style="flex: 1; max-width: 650px; display: flex; justify-content: center; align-items: center;">
+                    <img src="assets/images/chili_mascot_transparent.png" alt="Firecraft Mascot" style="width: 100%; max-width: 580px; transform: scale(1.15); animation: bounce 3s infinite ease-in-out;">
+                </div>
+            </div>
+
+            <!-- hero bottom removed -->
+        </section>
+
+
+        <!-- 02. WHAT MAKES THESE RECIPES DIFFERENT -->
+        <section class="rc-intro section-light">
+            <div class="container rc-intro-grid">
+
+                <div class="rc-intro-heading">
+                    <span class="section-label">NOT JUST ANOTHER RECIPE</span>
+                    <h2>
+                        It's not just<br>
+                        what you cook.<br>
+                        <span>It's what you pour.</span>
+                    </h2>
+                </div>
+
+                <div class="rc-intro-copy">
+                    <p>
+                        A taco can be good. A taco tossed with our
+                        Classic Hot Sauce? That's a whole new story.
+                    </p>
+
+                    <p>
+                        Every recipe here is built around a Firecraft
+                        sauce, chosen to bring out something special —
+                        a tangy kick, a sweet burn, a smoky finish,
+                        or a punch of garlic and chili.
+                    </p>
+
+                    <div style="margin: 30px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        <img src="assets/images/recipes/ingredients_mixing.jpg" alt="Mixing our sauces" style="width: 100%; max-height: 350px; object-fit: cover;">
+                    </div>
+
+                    <a href="products.html" class="rc-inline-link">
+                        Meet the sauces behind the flavor
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- 03. SAUCE TO DISH: Make the product connection obvious -->
+        <section class="rc-pairings section-dark">
+            <div class="container">
+
+                <div class="rc-section-heading">
+                    <span class="section-label">THE PERFECT PAIRING</span>
+                    <h2>
+                        One sauce.<br>
+                        <span>A whole new dish.</span>
+                    </h2>
+                    <p>
+                        Get to know our sauces through the dishes they
+                        were made to elevate. Pick your flavor, then
+                        follow it straight to the recipe.
+                    </p>
+                </div>
+
+                <div class="rc-pairing-grid">
+
+                    <article class="rc-pairing-card">
+                        <div class="rc-pairing-image">
+                            <img src="assets/images/recipes/classic-sauce-tacos.jpg.png"
+                                 alt="Chicken tacos finished with red hot sauce"
+                                 loading="lazy">
+                            <span class="rc-pairing-number">01</span>
+                        </div>
+                        <div class="rc-pairing-content">
+                            <span class="rc-product-tag">THE EVERYDAY FAVORITE</span>
+                            <h3>Classic Hot Sauce</h3>
+                            <p class="rc-flavor">Tangy · Bold · Savory</p>
+                            <p>
+                                Give chicken tacos a bright, tangy kick
+                                with a generous drizzle of our Classic
+                                Hot Sauce.
+                            </p>
+                            <a href="products.html" class="rc-card-link">
+                                Discover Classic Hot Sauce
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="rc-pairing-card">
+                        <div class="rc-pairing-image">
+                            <img src="assets/images/recipes/mango-habanero-chicken.jpg.png"
+                                 alt="Grilled chicken glazed with mango habanero sauce"
+                                 loading="lazy">
+                            <span class="rc-pairing-number">02</span>
+                        </div>
+                        <div class="rc-pairing-content">
+                            <span class="rc-product-tag">SWEET MEETS HEAT</span>
+                            <h3>Mango Habanero</h3>
+                            <p class="rc-flavor">Fruity · Sweet · Fiery</p>
+                            <p>
+                                Brush our Mango Habanero sauce over
+                                grilled chicken for juicy bites with
+                                tropical sweetness and a fiery finish.
+                            </p>
+                            <a href="products.html" class="rc-card-link">
+                                Discover Mango Habanero
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="rc-pairing-card">
+                        <div class="rc-pairing-image">
+                            <img src="assets/images/recipes/chipotle-bbq-burger.jpg.png"
+                                 alt="Smoky barbecue burger coated with chipotle sauce"
+                                 loading="lazy">
+                            <span class="rc-pairing-number">03</span>
+                        </div>
+                        <div class="rc-pairing-content">
+                            <span class="rc-product-tag">SMOKE SHOW</span>
+                            <h3>Chipotle BBQ Sauce</h3>
+                            <p class="rc-flavor">Smoky · Rich · Sweet</p>
+                            <p>
+                                Layer our Chipotle BBQ Sauce into a
+                                juicy burger for deep smoky flavor and
+                                a sweet, savory finish.
+                            </p>
+                            <a href="products.html" class="rc-card-link">
+                                Discover Chipotle BBQ
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="rc-pairing-card">
+                        <div class="rc-pairing-image">
+                            <img src="assets/images/recipes/garlic-chili-noodles.jpg.png"
+                                 alt="Chili garlic noodles with vegetables and sesame"
+                                 loading="lazy">
+                            <span class="rc-pairing-number">04</span>
+                        </div>
+                        <div class="rc-pairing-content">
+                            <span class="rc-product-tag">GARLIC LOVERS</span>
+                            <h3>Garlic Chili Sauce</h3>
+                            <p class="rc-flavor">Garlicky · Tangy · Savory</p>
+                            <p>
+                                Toss noodles in our Garlic Chili Sauce
+                                for a punchy, savory meal that brings
+                                the heat to every forkful.
+                            </p>
+                            <a href="products.html" class="rc-card-link">
+                                Discover Garlic Chili
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 04. RECIPE COLLECTION -->
+        <section class="rc-recipes section-light" id="rc-recipes">
+            <div class="container">
+
+                <div class="rc-recipes-heading">
+                    <div>
+                        <span class="section-label">YOUR NEXT CRAVING</span>
+                        <h2>
+                            What are you<br>
+                            <span>hungry for?</span>
+                        </h2>
+                        <p>
+                            Pick a craving. We'll bring the recipe,
+                            the perfect Firecraft pairing, and a new
+                            reason to reach for the bottle.
+                        </p>
+                    </div>
+
+                    <span class="rc-recipes-aside">
+                        EVERY DISH HAS ITS SAUCE.
+                    </span>
+                </div>
+
+                <!-- Interactive filters -->
+                <div class="rc-filter-bar" role="group" aria-label="Filter recipes">
+                    <button class="rc-filter active" data-filter="all">All recipes</button>
+                    <button class="rc-filter" data-filter="quick">Quick & easy</button>
+                    <button class="rc-filter" data-filter="smoky">Smoky favorites</button>
+                    <button class="rc-filter" data-filter="fiery">Bring the heat</button>
+                    <button class="rc-filter" data-filter="share">Made to share</button>
+                </div>
+
+                <div class="rc-recipe-grid">
+
+                    <!-- Recipe 1 -->
+                    <article class="rc-recipe-card" data-category="quick fiery">
+                        <a href="recipe-details.html?recipe=classic-chicken-tacos"
+                           class="rc-recipe-photo">
+                            <img src="assets/images/recipes/classic-chicken-tacos.jpg.png"
+                                 alt="Spicy chicken tacos with Classic Hot Sauce"
+                                 loading="lazy">
+                            <span class="rc-time">25 MIN</span>
+                        </a>
+
+                        <div class="rc-recipe-body">
+                            <div class="rc-recipe-tags">
+                                <span>QUICK & EASY</span>
+                                <span>MEDIUM HEAT</span>
+                            </div>
+                            <h3>Spicy Chicken Tacos</h3>
+                            <p>
+                                Juicy chicken, crunchy slaw, and our
+                                <strong>Classic Hot Sauce</strong> for a
+                                tangy kick in every bite.
+                            </p>
+                            <div class="rc-featured-sauce">
+                                <span class="rc-sauce-dot"></span>
+                                MADE WITH <strong>CLASSIC HOT SAUCE</strong>
+                            </div>
+                            <a href="recipe-details.html?recipe=classic-chicken-tacos"
+                               class="rc-recipe-link">
+                                Get the recipe
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Recipe 2 -->
+                    <article class="rc-recipe-card" data-category="smoky share">
+                        <a href="recipe-details.html?recipe=chipotle-bbq-burger"
+                           class="rc-recipe-photo">
+                            <img src="assets/images/recipes/chipotle-bbq-burger.jpg.png"
+                                 alt="Burger with Chipotle BBQ Sauce"
+                                 loading="lazy">
+                            <span class="rc-time">30 MIN</span>
+                        </a>
+
+                        <div class="rc-recipe-body">
+                            <div class="rc-recipe-tags">
+                                <span>WEEKEND FAVORITE</span>
+                                <span>MILD-MEDIUM</span>
+                            </div>
+                            <h3>The Smoky BBQ Burger</h3>
+                            <p>
+                                A stacked burger finished with our
+                                <strong>Chipotle BBQ Sauce</strong>
+                                for rich, smoky sweetness.
+                            </p>
+                            <div class="rc-featured-sauce">
+                                <span class="rc-sauce-dot"></span>
+                                MADE WITH <strong>CHIPOTLE BBQ</strong>
+                            </div>
+                            <a href="recipe-details.html?recipe=chipotle-bbq-burger"
+                               class="rc-recipe-link">
+                                Get the recipe
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Recipe 3 -->
+                    <article class="rc-recipe-card" data-category="fiery quick">
+                        <a href="recipe-details.html?recipe=garlic-chili-noodles"
+                           class="rc-recipe-photo">
+                            <img src="assets/images/recipes/garlic-chili-noodles.jpg.png"
+                                 alt="Garlic chili noodles made with Firecraft sauce"
+                                 loading="lazy">
+                            <span class="rc-time">20 MIN</span>
+                        </a>
+
+                        <div class="rc-recipe-body">
+                            <div class="rc-recipe-tags">
+                                <span>WEEKNIGHT HERO</span>
+                                <span>MEDIUM HEAT</span>
+                            </div>
+                            <h3>Garlic Chili Noodles</h3>
+                            <p>
+                                Fast, savory noodles with a generous
+                                spoonful of our <strong>Garlic Chili Sauce</strong>.
+                            </p>
+                            <div class="rc-featured-sauce">
+                                <span class="rc-sauce-dot"></span>
+                                MADE WITH <strong>GARLIC CHILI</strong>
+                            </div>
+                            <a href="recipe-details.html?recipe=garlic-chili-noodles"
+                               class="rc-recipe-link">
+                                Get the recipe
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Recipe 4 -->
+                    <article class="rc-recipe-card" data-category="fiery share">
+                        <a href="recipe-details.html?recipe=mango-habanero-wings"
+                           class="rc-recipe-photo">
+                            <img src="assets/images/recipes/mango-habanero-wings.jpg.png"
+                                 alt="Chicken wings glazed with Mango Habanero sauce"
+                                 loading="lazy">
+                            <span class="rc-time">35 MIN</span>
+                        </a>
+
+                        <div class="rc-recipe-body">
+                            <div class="rc-recipe-tags">
+                                <span>GAME DAY</span>
+                                <span>HOT</span>
+                            </div>
+                            <h3>Sweet Heat Wings</h3>
+                            <p>
+                                Sticky, golden wings glazed with our
+                                <strong>Mango Habanero Sauce</strong>
+                                for sweet heat worth sharing.
+                            </p>
+                            <div class="rc-featured-sauce">
+                                <span class="rc-sauce-dot"></span>
+                                MADE WITH <strong>MANGO HABANERO</strong>
+                            </div>
+                            <a href="recipe-details.html?recipe=mango-habanero-wings"
+                               class="rc-recipe-link">
+                                Get the recipe
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Recipe 5 -->
+                    <article class="rc-recipe-card" data-category="smoky quick">
+                        <a href="recipe-details.html?recipe=chipotle-potato-wedges"
+                           class="rc-recipe-photo">
+                            <img src="assets/images/recipes/chipotle-potato-wedges.jpg.png"
+                                 alt="Crispy potato wedges served with Chipotle BBQ Sauce"
+                                 loading="lazy">
+                            <span class="rc-time">30 MIN</span>
+                        </a>
+
+                        <div class="rc-recipe-body">
+                            <div class="rc-recipe-tags">
+                                <span>SNACK TIME</span>
+                                <span>MILD-MEDIUM</span>
+                            </div>
+                            <h3>Fire-Roasted Potato Wedges</h3>
+                            <p>
+                                Crispy wedges served with a smoky
+                                <strong>Chipotle BBQ Sauce</strong>
+                                dip for a bold side or snack.
+                            </p>
+                            <div class="rc-featured-sauce">
+                                <span class="rc-sauce-dot"></span>
+                                MADE WITH <strong>CHIPOTLE BBQ</strong>
+                            </div>
+                            <a href="recipe-details.html?recipe=chipotle-potato-wedges"
+                               class="rc-recipe-link">
+                                Get the recipe
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Recipe 6 -->
+                    <article class="rc-recipe-card" data-category="share quick">
+                        <a href="recipe-details.html?recipe=classic-loaded-fries"
+                           class="rc-recipe-photo">
+                            <img src="assets/images/recipes/classic-loaded-fries.jpg.png"
+                                 alt="Loaded fries drizzled with Classic Hot Sauce"
+                                 loading="lazy">
+                            <span class="rc-time">25 MIN</span>
+                        </a>
+
+                        <div class="rc-recipe-body">
+                            <div class="rc-recipe-tags">
+                                <span>SHAREABLE</span>
+                                <span>MEDIUM HEAT</span>
+                            </div>
+                            <h3>Loaded Firecracker Fries</h3>
+                            <p>
+                                Golden fries, fresh toppings, and our
+                                <strong>Classic Hot Sauce</strong>
+                                drizzled over every layer.
+                            </p>
+                            <div class="rc-featured-sauce">
+                                <span class="rc-sauce-dot"></span>
+                                MADE WITH <strong>CLASSIC HOT SAUCE</strong>
+                            </div>
+                            <a href="recipe-details.html?recipe=classic-loaded-fries"
+                               class="rc-recipe-link">
+                                Get the recipe
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <p class="rc-no-results" hidden>
+                    No recipes in this collection yet. Try another flavor.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- 04b. INGREDIENTS -->
+        <section class="rc-ingredients section-light" style="padding: 100px 0; background: var(--bg-light-section);">
+            <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+                <div>
+                    <span class="section-label">WHAT GOES INTO THE BOTTLE</span>
+                    <h2 style="font-size: clamp(43px, 5vw, 68px); line-height: 1; letter-spacing: -.025em; margin-bottom: 24px; font-family: var(--font-display);">
+                        Pure ingredients.<br>
+                        <span style="color: var(--color-red);">Unapologetic heat.</span>
+                    </h2>
+                    <p style="font-size: 18px; line-height: 1.8; color: var(--text-light-section); margin-bottom: 24px;">
+                        We don't use extracts or artificial flavors. Our heat comes entirely from fresh chilies, roasted garlic, and exotic spices mixed to perfection. 
+                    </p>
+                    <p style="font-size: 18px; line-height: 1.8; color: var(--text-light-section); margin-bottom: 30px;">
+                        Every bottle is a craft blend designed to give you outside-the-box flavors that turn regular meals into unforgettable experiences.
+                    </p>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <img src="assets/images/recipes/ingredients_chili.jpg" alt="Fresh chilies and spices" style="border-radius: 12px; width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/5;">
+                    <img src="assets/images/recipes/ingredients_mixing.jpg" alt="Mixing the sauce" style="border-radius: 12px; width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/5; transform: translateY(40px);">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 04c. TESTIMONIALS -->
+        <section class="rc-testimonials section-dark" style="padding: 100px 0;">
+            <div class="container" style="text-align: center;">
+                <span class="section-label">COMMUNITY FAVORITES</span>
+                <h2 style="font-size: clamp(43px, 5vw, 68px); line-height: 1; margin-bottom: 50px; font-family: var(--font-display);">
+                    Don't just take<br>
+                    <span style="color: var(--color-red);">our word for it.</span>
+                </h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                    <!-- Testimonial 1 -->
+                    <div style="background: var(--color-dark-card); padding: 40px 30px; border-radius: 12px; border: 1px solid var(--color-border-dark);">
+                        <div style="color: var(--color-gold); font-size: 14px; margin-bottom: 15px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p style="color: var(--color-muted); font-size: 16px; font-style: italic; margin-bottom: 20px;">"The Garlic Chili Sauce completely changed how I make noodles. It's an absolute game-changer!"</p>
+                        <h4 style="color: var(--color-text-light); font-weight: 700; font-size: 14px;">— Sarah J.</h4>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div style="background: var(--color-dark-card); padding: 40px 30px; border-radius: 12px; border: 1px solid var(--color-border-dark);">
+                        <div style="color: var(--color-gold); font-size: 14px; margin-bottom: 15px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p style="color: var(--color-muted); font-size: 16px; font-style: italic; margin-bottom: 20px;">"Mango Habanero on my wings made me a hero at the tailgate. Best sweet heat I've ever had."</p>
+                        <h4 style="color: var(--color-text-light); font-weight: 700; font-size: 14px;">— Marcus T.</h4>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div style="background: var(--color-dark-card); padding: 40px 30px; border-radius: 12px; border: 1px solid var(--color-border-dark);">
+                        <div style="color: var(--color-gold); font-size: 14px; margin-bottom: 15px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p style="color: var(--color-muted); font-size: 16px; font-style: italic; margin-bottom: 20px;">"I use the Classic Hot Sauce on literally everything. Breakfast, lunch, and dinner. Incredible."</p>
+                        <h4 style="color: var(--color-text-light); font-weight: 700; font-size: 14px;">— Emily R.</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04d. NEWSLETTER -->
+        <section class="rc-newsletter section-light" style="padding: 100px 0;">
+            <div class="container" style="max-width: 800px; text-align: center;">
+                <span class="section-label">JOIN THE FIRECRAFT CLUB</span>
+                <h2 style="font-size: clamp(38px, 4vw, 55px); line-height: 1.1; margin-bottom: 20px; font-family: var(--font-display);">
+                    Get exclusive recipes<br>
+                    sent to your inbox.
+                </h2>
+                <p style="color: var(--text-light-section); font-size: 16px; margin-bottom: 40px;">
+                    Sign up to receive our monthly newsletter featuring new recipes, secret sauce pairings, and early access to limited edition product drops.
+                </p>
+                <form style="display: flex; gap: 15px; justify-content: center; max-width: 500px; margin: 0 auto;">
+                    <input type="email" placeholder="Your email address" style="flex: 1; padding: 15px 20px; border: 1px solid var(--color-border-dark); border-radius: 4px; background: var(--card-bg-light); color: var(--text-light-section); font-family: inherit;">
+                    <button type="submit" class="btn btn-primary" style="margin: 0; padding: 0 30px;">Subscribe <i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- 05. SHOW THE FLAVOR DIFFERENCE -->
+        <section class="rc-flavor-story section-dark">
+            <div class="container rc-flavor-grid">
+
+                <div class="rc-flavor-image">
+                    <img src="assets/images/recipes/sauce-finish-pour.jpg.png"
+                         alt="Firecraft hot sauce being drizzled over freshly prepared food"
+                         loading="lazy">
+                    <div class="rc-image-caption">
+                        <span>THE FINAL POUR</span>
+                        <strong>That's the Firecraft difference.</strong>
+                    </div>
+                </div>
+
+                <div class="rc-flavor-copy">
+                    <span class="section-label">THE SECRET IS THE SAUCE</span>
+                    <h2>
+                        Same kitchen.<br>
+                        Different sauce.<br>
+                        <span>Different story.</span>
+                    </h2>
+
+                    <p>
+                        Smoky when you want comfort. Fruity when you
+                        want a twist. Fiery when your food needs a kick.
+                        Our sauces aren't an afterthought — they're
+                        the flavor that brings the whole dish together.
+                    </p>
+
+                    <div class="rc-flavor-points">
+                        <div>
+                            <span class="rc-flavor-icon"><i class="fa-solid fa-fire"></i></span>
+                            <div>
+                                <strong>Choose your heat</strong>
+                                <p>From a gentle kick to a serious burn.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <span class="rc-flavor-icon"><i class="fa-solid fa-utensils"></i></span>
+                            <div>
+                                <strong>Find your pairing</strong>
+                                <p>A sauce for every craving and occasion.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <span class="rc-flavor-icon"><i class="fa-solid fa-bottle-droplet"></i></span>
+                            <div>
+                                <strong>Taste the difference</strong>
+                                <p>Discover the bottle behind the recipe.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="products.html" class="btn btn-primary">
+                        Find Your Flavor
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- 06. FINAL PRODUCT CTA -->
+
+<!-- FIRECRAFT RECIPE CTA -->
+<section class="rc-final-cta">
+    <div class="rc-cta-overlay"></div>
+
+    <div class="container rc-cta-content">
+        <span class="section-label">
+            <span class="rc-cta-label-line"></span>
+            YOUR KITCHEN, TURNED UP
+            <span class="rc-cta-label-line"></span>
+        </span>
+
+        <h2>
+            Found your craving?
+            <br>
+            <span>Meet your sauce.</span>
+        </h2>
+
+        <p>
+            Every great recipe deserves a bold finish.
+            Discover your perfect Firecraft sauce and turn
+            everyday meals into unforgettable flavor.
+        </p>
+
+        <a href="products.html" class="btn btn-primary rc-cta-button">
+            Shop All Sauces
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <div class="rc-cta-caption">
+            <i class="fa-solid fa-fire-flame-curved"></i>
+            REAL HEAT. PURE FLAVOR.
+        </div>
+    </div>
+
+    <div class="rc-cta-ring rc-cta-ring-left"></div>
+    <div class="rc-cta-ring rc-cta-ring-right"></div>
+</section>
+
+
+    </main>
+
+    <!-- Reusable footer, if your project has one -->
+    <div id="footer-container"></div>
+
+    <script>
+        // Load the same reusable navbar and footer used across the site.
+        async function loadComponent(elementId, path) {
+            const element = document.getElementById(elementId);
+            if (!element) return;
+
+            try {
+                const response = await fetch(path);
+                if (!response.ok) throw new Error("Component not found: " + path);
+                element.innerHTML = await response.text();
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        loadComponent("navbar-container", "components/navbar.html").then(() => {
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            if (navLinks) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === 'recipes.html') {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            if (window.initNavbar) {
+                window.initNavbar();
+            }
+        });
+        loadComponent("footer-container", "components/footer.html");
+
+        // Recipe filters
+        const filterButtons = document.querySelectorAll(".rc-filter");
+        const recipeCards = document.querySelectorAll(".rc-recipe-card");
+        const noResults = document.querySelector(".rc-no-results");
+
+        filterButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const filter = button.dataset.filter;
+                let visibleCount = 0;
+
+                filterButtons.forEach(item => item.classList.remove("active"));
+                button.classList.add("active");
+
+                recipeCards.forEach(card => {
+                    const categories = card.dataset.category.split(" ");
+                    const visible = filter === "all" || categories.includes(filter);
+
+                    card.hidden = !visible;
+                    if (visible) visibleCount++;
+                });
+
+                noResults.hidden = visibleCount !== 0;
+            });
+        });
+    </script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,509 @@
+/* =====================================================
+   ABOUT PAGE STYLES
+===================================================== */
+
+/* HERO SECTION (Background Override) */
+#about-hero {
+    background: #000000;
+    min-height: 100vh;
+}
+
+/* MASCOT ANIMATION */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.animated-mascot {
+    animation: float 4s ease-in-out infinite;
+    filter: drop-shadow(0px 20px 30px rgba(0,0,0,0.5));
+}
+
+
+/* STORY SECTION */
+.story-layout {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.story-copy h2, 
+.philosophy-heading h2, 
+.ingredients-copy h2, 
+.timeline-heading h2, 
+.pairings-heading h2,
+.press-heading h2,
+.team-copy h2 {
+    font-family: var(--font-display);
+    font-size: clamp(42px, 4.5vw, 68px);
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    color: var(--color-text-light);
+    margin: 15px 0 30px;
+}
+
+.story-copy h2 em,
+.philosophy-heading h2 em,
+.ingredients-copy h2 em,
+.timeline-heading h2 em,
+.pairings-heading h2 em,
+.press-heading h2 em,
+.team-copy h2 em {
+    color: var(--color-red);
+    font-style: normal;
+}
+
+.story-copy p {
+    color: var(--color-muted);
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.story-visual {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.story-visual img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.story-visual:hover img {
+    transform: scale(1.03);
+}
+
+.story-caption {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    background: rgba(13,13,12,.85);
+    padding: 25px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.story-caption span {
+    color: rgba(255,255,255,.6);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+}
+
+.story-caption strong {
+    color: var(--color-white);
+    font-size: 34px;
+    line-height: 1.1;
+    font-family: var(--font-display);
+    margin: 5px 0;
+}
+
+/* VISION & MISSION (Editorial Style) */
+.vision-mission-section {
+    padding: 120px 0;
+    background: var(--color-dark-soft);
+}
+.vm-editorial-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+.vm-editorial-block {
+    position: relative;
+    padding-top: 60px;
+    border-top: 1px solid var(--color-border-dark);
+}
+.vm-number {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    font-family: var(--font-display);
+    font-size: 140px;
+    font-weight: 800;
+    color: var(--color-border-dark);
+    z-index: 0;
+    line-height: 1;
+    opacity: 0.5;
+}
+.vm-content {
+    position: relative;
+    z-index: 1;
+}
+.mt-stagger {
+    margin-top: 80px;
+}
+.vm-heading {
+    font-family: var(--font-display);
+    font-size: clamp(48px, 6vw, 72px);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    color: var(--color-text-light);
+    margin: 15px 0 30px;
+}
+.vm-heading em {
+    color: var(--color-red);
+    font-style: normal;
+}
+.vm-content p {
+    color: var(--color-muted);
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 450px;
+}
+
+/* PHILOSOPHY SECTION */
+.philosophy-heading {
+    margin-bottom: 60px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.philosophy-card {
+    background: var(--card-bg-light);
+    border: 1px solid var(--color-border-dark);
+    border-radius: 4px;
+    padding: 40px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.philosophy-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-red);
+}
+
+.philosophy-card i {
+    font-size: 40px;
+    color: var(--color-red);
+    margin-bottom: 25px;
+}
+
+.philosophy-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    color: var(--color-text-light);
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.philosophy-card p {
+    color: var(--color-muted);
+    line-height: 1.6;
+}
+
+/* INGREDIENTS SECTION */
+.ingredients-section {
+    margin-top: 80px;
+}
+
+.ingredients-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.ingredients-visual {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.ingredients-visual img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.image-stamp {
+    position: absolute;
+    bottom: 40px;
+    right: 30px;
+    width: 140px;
+    height: 140px;
+    background: var(--color-red);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(230, 59, 46, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.ingredients-visual:hover .image-stamp {
+    transform: scale(1.1);
+}
+
+.image-stamp span {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: rgba(255,255,255,0.8);
+}
+
+.image-stamp strong {
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--color-white);
+    line-height: 1.1;
+    margin: 5px 0;
+}
+
+.ingredients-copy p {
+    color: var(--color-muted);
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.ingredients-list {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ingredient-item h4 {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    font-weight: 600;
+}
+
+.text-red {
+    color: var(--color-red);
+    margin-right: 10px;
+}
+
+/* TIMELINE / HOW WE STARTED (Journey style) */
+.timeline-section {
+    padding: 120px 0;
+    background: var(--color-dark);
+}
+
+.timeline-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.timeline-heading {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.journey { 
+    display: grid; 
+    gap: 40px; 
+    position: relative; 
+}
+.journey-line {
+    position: absolute; top: 45px; height: 2px; 
+    background: var(--color-border-dark);
+}
+.journey-step { position: relative; z-index: 2; text-align: center; }
+.step-number { 
+    display: inline-block;
+    color: var(--color-red); font-size: 12px; font-weight: 800; 
+    font-family: var(--font-body);
+    margin-bottom: 15px;
+}
+.step-icon {
+    width: 90px; height: 90px; margin: 0 auto 25px;
+    border: 2px solid var(--color-border-dark); border-radius: 50%; display: grid; place-items: center;
+    background: var(--color-dark); color: var(--color-red); font-size: 28px;
+    transition: all 0.3s ease;
+}
+.journey-step:hover .step-icon {
+    background: var(--color-red); color: var(--color-text-light); border-color: var(--color-red);
+    transform: translateY(-5px);
+}
+.journey-step h3.journey-title { 
+    font-family: var(--font-display); font-size: 32px; margin: 0 0 10px 0; color: var(--color-text-light); 
+}
+.journey-step p { 
+    color: var(--color-muted); font-size: 14px; margin: 0 auto; line-height: 1.6; max-width: 300px;
+}
+
+/* PAIRINGS */
+.pairings-section { background: var(--color-dark-soft); padding: 120px 0; }
+.pairings-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.pairing-card {
+    background: var(--color-dark);
+    border: 1px solid var(--color-border-dark);
+    border-radius: 4px;
+    padding: 50px 40px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.pairing-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-red);
+}
+.pairing-icon {
+    width: 70px; height: 70px; margin: 0 auto 25px;
+    background: var(--color-red); color: #ffffff;
+    border-radius: 50%; display: grid; place-items: center; font-size: 24px;
+}
+.pairing-card h3 {
+    font-family: var(--font-display); font-size: 26px; color: var(--color-text-light); margin-bottom: 15px; font-weight: 400;
+}
+.pairing-card p {
+    color: var(--color-muted); font-size: 14px; line-height: 1.7;
+}
+
+/* PRESS & AWARDS */
+.press-section { background: var(--color-dark); padding: 120px 0; }
+.press-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 60px; }
+.press-card {
+    background: var(--card-bg-light);
+    border: 1px solid var(--color-border-dark);
+    border-radius: 4px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.stars { color: var(--color-red); margin-bottom: 20px; font-size: 14px; }
+.press-card blockquote {
+    font-size: 18px; line-height: 1.6; color: var(--color-text-light); font-style: italic; margin: 0 0 25px 0;
+}
+.press-source {
+    color: var(--color-muted); font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+}
+
+/* TEAM / BEHIND THE BRAND */
+.team-section {
+    padding: 120px 0;
+    background: var(--color-dark-soft);
+}
+
+.team-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.team-copy p {
+    color: var(--color-muted);
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.team-visual {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.team-visual img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Utility to center text */
+.text-center {
+    text-align: center;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 992px) {
+    .story-layout,
+    .vm-editorial-layout,
+    .ingredients-layout,
+    .team-layout {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .mt-stagger {
+        margin-top: 0;
+    }
+    
+    .pairings-grid, .press-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ingredients-layout {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .journey {
+        grid-template-columns: 1fr !important;
+        gap: 60px;
+    }
+    .journey-line {
+        display: none;
+    }
+    .hero-inner {
+        align-items: flex-start;
+    }
+    .hero-side-note {
+        display: none;
+    }
+}
+
+/* LIGHT THEME FOR ABOUT PAGE */
+body.light-theme #about-hero {
+    background: #000000 !important;
+    color: #f7f2ea !important;
+}
+
+body.light-theme #about-hero h1,
+body.light-theme #about-hero p,
+body.light-theme #about-hero .hero-side-note span,
+body.light-theme #about-hero .hero-side-note strong {
+    color: #f7f2ea !important;
+}
+
+body.light-theme .story-copy h2,
+body.light-theme .philosophy-heading h2,
+body.light-theme .ingredients-copy h2,
+body.light-theme .timeline-heading h2,
+body.light-theme .pairings-heading h2,
+body.light-theme .press-heading h2,
+body.light-theme .team-copy h2,
+body.light-theme .vm-editorial-card h3,
+body.light-theme .pairing-card h3 {
+    color: #171513 !important;
+}
+
+body.light-theme .story-copy p,
+body.light-theme .ingredients-copy p,
+body.light-theme .team-copy p,
+body.light-theme .vm-editorial-card p,
+body.light-theme .journey-step p,
+body.light-theme .pairing-card p {
+    color: #5e5952 !important;
+}
+
+body.light-theme .vm-editorial-card,
+body.light-theme .pairing-card,
+body.light-theme .press-card {
+    background: #fffaf2 !important;
+    border-color: rgba(23, 21, 19, 0.15) !important;
+}
+

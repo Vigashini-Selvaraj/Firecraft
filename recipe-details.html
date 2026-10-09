@@ -1,0 +1,750 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recipe Details | Firecraft</title>
+    <link rel="icon" type="image/png" href="assets/images/firecraft_logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/recipe-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div id="navbar-container"></div>
+
+    <main class="rd-page">
+
+        <!-- Breadcrumb -->
+        <div class="rd-breadcrumb-wrap">
+            <div class="container rd-breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <a href="recipes.html">Recipes</a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <span id="breadcrumb-title">Recipe Details</span>
+            </div>
+        </div>
+
+        <!-- Recipe hero -->
+        <section class="rd-hero">
+            <div class="container rd-hero-grid">
+
+                <div class="rd-hero-copy">
+                    <span class="rd-eyebrow">
+                        <span></span>
+                        THE FIRECRAFT RECIPE COLLECTION
+                    </span>
+
+                    <div class="rd-tags">
+                        <span id="recipe-category">QUICK & EASY</span>
+                        <span id="recipe-heat">MEDIUM HEAT</span>
+                    </div>
+
+                    <h1 id="recipe-title">
+                        Spicy Chicken <span>Tacos.</span>
+                    </h1>
+
+                    <p class="rd-hero-description" id="recipe-description">
+                        Juicy chicken, crunchy slaw, and our Classic Hot Sauce
+                        for a bright, tangy kick in every bite.
+                    </p>
+
+                    <div class="rd-meta">
+                        <div>
+                            <i class="fa-regular fa-clock"></i>
+                            <span>
+                                <small>TOTAL TIME</small>
+                                <strong id="recipe-time">25 minutes</strong>
+                            </span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-utensils"></i>
+                            <span>
+                                <small>SERVINGS</small>
+                                <strong id="recipe-servings">2 servings</strong>
+                            </span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-signal"></i>
+                            <span>
+                                <small>DIFFICULTY</small>
+                                <strong id="recipe-difficulty">Easy</strong>
+                            </span>
+                        </div>
+                    </div>
+
+                    <a href="#rd-cooking" class="rd-primary-btn">
+                        Let's Make It
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </a>
+                </div>
+
+                <div class="rd-hero-visual">
+                    <img
+                        id="recipe-image"
+                        src="assets/images/recipes/classic-chicken-tacos.jpg.png"
+                        alt="Spicy chicken tacos made with Firecraft sauce"
+                    >
+
+                    <div class="rd-image-label">
+                        <span>THE FLAVOR MAKER</span>
+                        <strong id="hero-sauce-name">Classic Hot Sauce</strong>
+                    </div>
+
+                    <span class="rd-image-index">FIRECRAFT / RECIPE 001</span>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Make the brand/product purpose clear -->
+        <section class="rd-sauce-feature">
+            <div class="container">
+                <div class="rd-sauce-card">
+
+                    <div class="rd-sauce-image">
+                        <img
+                            id="sauce-image"
+                            src="assets/images/products/classic-hot-sauce.png"
+                            alt="Firecraft Classic Hot Sauce bottle"
+                        >
+                    </div>
+
+                    <div class="rd-sauce-copy">
+                        <span class="rd-section-label">THE SECRET IS THE SAUCE</span>
+                        <h2>
+                            This recipe gets its<br>
+                            <span>kick from Firecraft.</span>
+                        </h2>
+
+                        <p id="sauce-description">
+                            Our Classic Hot Sauce brings a tangy, bold finish
+                            that balances the juicy chicken and fresh toppings.
+                            It's the little pour that makes the whole dish pop.
+                        </p>
+
+                        <div class="rd-sauce-flavor">
+                            <span id="sauce-flavor">TANGY · BOLD · SAVORY</span>
+                            <span id="sauce-heat">MEDIUM HEAT</span>
+                        </div>
+
+                        <a id="sauce-link" href="products.html" class="rd-secondary-btn">
+                            Discover This Sauce
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+
+                    <div class="rd-sauce-number">
+                        <span>01</span>
+                        <small>THE FLAVOR<br>BEHIND THE DISH</small>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Ingredients + cooking steps -->
+        <section class="rd-cooking section-light" id="rd-cooking">
+            <div class="container">
+
+                <div class="rd-section-heading">
+                    <span class="rd-section-label">FROM PREP TO FIRST BITE</span>
+                    <h2>
+                        Let's make<br>
+                        <span>something delicious.</span>
+                    </h2>
+                    <p>
+                        Simple ingredients. A few easy steps. And the right
+                        Firecraft sauce to bring everything together.
+                    </p>
+                </div>
+
+                <div class="rd-cooking-grid">
+
+                    <!-- Ingredients -->
+                    <aside class="rd-ingredients">
+                        <div class="rd-panel-heading">
+                            <div>
+                                <span class="rd-mini-label">GET EVERYTHING READY</span>
+                                <h3>What you'll need</h3>
+                            </div>
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </div>
+
+                        <p class="rd-ingredient-intro">
+                            Check off each ingredient as you prep.
+                        </p>
+
+                        <div id="ingredient-list" class="rd-ingredient-list">
+                            <!-- Filled by JavaScript -->
+                        </div>
+
+                        <div class="rd-ingredient-tip">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <p>
+                                <strong>Firecraft tip</strong>
+                                <span id="recipe-tip">
+                                    Add the sauce gradually and taste as you go.
+                                </span>
+                            </p>
+                        </div>
+                    </aside>
+
+
+                    <!-- Cooking method -->
+                    <div class="rd-method">
+                        <div class="rd-panel-heading">
+                            <div>
+                                <span class="rd-mini-label">THE GOOD PART</span>
+                                <h3>How to make it</h3>
+                            </div>
+                            <span class="rd-step-count" id="step-count">04 STEPS</span>
+                        </div>
+
+                        <div id="step-list" class="rd-step-list">
+                            <!-- Filled by JavaScript -->
+                        </div>
+
+                        <div class="rd-finish-note">
+                            <i class="fa-solid fa-pepper-hot"></i>
+                            <div>
+                                <strong>Don't forget the final pour.</strong>
+                                <p>
+                                    Finish with your featured Firecraft sauce
+                                    and serve while everything is fresh.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- The sauce's role in the recipe -->
+        <section class="rd-flavor-note">
+            <div class="container rd-flavor-note-inner">
+                <div class="rd-flavor-note-icon">
+                    <i class="fa-solid fa-bottle-droplet"></i>
+                </div>
+
+                <div>
+                    <span class="rd-section-label">WHY THIS PAIRING WORKS</span>
+                    <h2 id="pairing-title">
+                        A little tang. A lot more flavor.
+                    </h2>
+                    <p id="pairing-description">
+                        Classic Hot Sauce adds a bright, tangy kick to the
+                        chicken, bringing the fresh ingredients together
+                        without overpowering the dish.
+                    </p>
+                </div>
+
+                <a href="products.html" class="rd-flavor-link">
+                    Explore the sauces
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+
+        <!-- More recipes -->
+        <section class="rd-related section-dark">
+            <div class="container">
+
+                <div class="rd-related-heading">
+                    <div>
+                        <span class="rd-section-label">KEEP THE GOOD FOOD GOING</span>
+                        <h2>
+                            Another craving?<br>
+                            <span>We've got a sauce for that.</span>
+                        </h2>
+                    </div>
+
+                    <a href="recipes.html" class="rd-related-all">
+                        All recipes
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="rd-related-grid">
+
+                    <a href="recipe-details.html?recipe=chipotle-bbq-burger" class="rd-related-card">
+                        <div class="rd-related-image">
+                            <img src="assets/images/recipes/chipotle-bbq-burger.jpg.png"
+                                 alt="Smoky burger made with Chipotle BBQ Sauce"
+                                 loading="lazy">
+                            <span>SMOKY FAVORITE</span>
+                        </div>
+                        <div class="rd-related-content">
+                            <h3>The Smoky BBQ Burger</h3>
+                            <p>Made with Chipotle BBQ Sauce</p>
+                            <span>TRY THIS RECIPE <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="recipe-details.html?recipe=mango-habanero-wings" class="rd-related-card">
+                        <div class="rd-related-image">
+                            <img src="assets/images/recipes/mango-habanero-wings.jpg.png"
+                                 alt="Mango Habanero glazed chicken wings"
+                                 loading="lazy">
+                            <span>SWEET MEETS HEAT</span>
+                        </div>
+                        <div class="rd-related-content">
+                            <h3>Sweet Heat Wings</h3>
+                            <p>Made with Mango Habanero Sauce</p>
+                            <span>TRY THIS RECIPE <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="recipe-details.html?recipe=garlic-chili-noodles" class="rd-related-card">
+                        <div class="rd-related-image">
+                            <img src="assets/images/recipes/garlic-chili-noodles.jpg.png"
+                                 alt="Garlic chili noodles made with Firecraft sauce"
+                                 loading="lazy">
+                            <span>QUICK & EASY</span>
+                        </div>
+                        <div class="rd-related-content">
+                            <h3>Garlic Chili Noodles</h3>
+                            <p>Made with Garlic Chili Sauce</p>
+                            <span>TRY THIS RECIPE <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Share Your Creation -->
+        <section class="rd-share-creation">
+            <div class="container rd-share-grid">
+                <div class="rd-share-content">
+                    <span class="rd-eyebrow">
+                        <span></span>
+                        SHOW US YOUR FIRE
+                    </span>
+                    <h2>Made this recipe?</h2>
+                    <p>
+                        We want to see it! Snap a photo, post it on Instagram or TikTok, and tag us <strong>@firecraftsauce</strong>. Use the hashtag <strong>#FirecraftFlavor</strong> so we can feature our favorite creations.
+                    </p>
+                    <a href="https://instagram.com" target="_blank" class="rd-primary-btn" style="margin-top: 25px;">
+                        <i class="fa-brands fa-instagram"></i> Share on Instagram
+                    </a>
+                </div>
+                <div class="rd-share-image">
+                    <div class="rd-share-frame">
+                        <img src="assets/images/recipes/hot-honey-pizza.jpg" alt="Fan creation">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chef Tips Newsletter -->
+        <section class="rd-newsletter-section">
+            <div class="container rd-newsletter-container">
+                <div class="rd-newsletter-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+                <h2>More heat, delivered weekly.</h2>
+                <p>
+                    Get exclusive recipes, new sauce drop announcements, and pro cooking tips sent straight to your inbox.
+                </p>
+                <form class="rd-newsletter-form" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="rd-primary-btn">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Final shop CTA -->
+        <section class="rd-final-cta">
+            <div class="container rd-final-content">
+                <span class="rd-section-label">YOUR NEXT FAVORITE FLAVOR</span>
+                <h2>
+                    The recipe starts here.<br>
+                    <span>The flavor starts with Firecraft.</span>
+                </h2>
+                <p>
+                    Bring home the sauce behind the dish and turn your
+                    everyday meals into something worth talking about.
+                </p>
+                <a href="products.html" class="rd-primary-btn">
+                    Shop All Sauces
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer-container"></div>
+
+
+    <script>
+        /*
+         * Recipe details data.
+         * Add or edit ingredients and instructions here.
+         * These are illustrative recipe suggestions; adjust quantities
+         * and cooking times after testing the recipes.
+         */
+        const recipes = {
+            "classic-chicken-tacos": {
+                title: "Spicy Chicken Tacos",
+                category: "QUICK & EASY",
+                heat: "MEDIUM HEAT",
+                time: "25 minutes",
+                servings: "2 servings",
+                difficulty: "Easy",
+                image: "assets/images/recipes/classic-chicken-tacos.jpg.png",
+                sauceName: "Classic Hot Sauce",
+                sauceImage: "assets/images/products/classic-hot-sauce.png",
+                sauceFlavor: "TANGY · BOLD · SAVORY",
+                sauceHeat: "MEDIUM HEAT",
+                sauceDescription: "Our Classic Hot Sauce brings a bright, tangy kick that balances the juicy chicken and fresh toppings. It's the little pour that makes the whole dish pop.",
+                pairingTitle: "A little tang. A lot more flavor.",
+                pairingDescription: "Classic Hot Sauce adds a bright, tangy kick to the chicken, bringing the fresh ingredients together without overpowering the dish.",
+                description: "Juicy chicken, crunchy slaw, and our Classic Hot Sauce for a bright, tangy kick in every bite.",
+                tip: "Toss the cooked chicken with Classic Hot Sauce just before serving so every bite gets that tangy flavor.",
+                ingredients: [
+                    "250 g boneless chicken, sliced",
+                    "4 small tortillas",
+                    "2 tbsp Firecraft Classic Hot Sauce",
+                    "1 cup shredded cabbage",
+                    "1 small tomato, diced",
+                    "2 tbsp plain yogurt",
+                    "1 tbsp cooking oil",
+                    "Salt, pepper and lime to taste"
+                ],
+                steps: [
+                    ["Season the chicken", "Mix the sliced chicken with salt, pepper, lime juice and a little oil."],
+                    ["Cook until golden", "Heat a pan over medium heat. Cook the chicken until golden and fully cooked through."],
+                    ["Bring in the sauce", "Toss the hot chicken with Firecraft Classic Hot Sauce until evenly coated."],
+                    ["Build your tacos", "Warm the tortillas. Add chicken, shredded cabbage, tomato and yogurt. Finish with an extra drizzle of sauce."]
+                ]
+            },
+
+            "chipotle-bbq-burger": {
+                title: "The Smoky BBQ Burger",
+                category: "WEEKEND FAVORITE",
+                heat: "MILD-MEDIUM",
+                time: "30 minutes",
+                servings: "2 servings",
+                difficulty: "Easy",
+                image: "assets/images/recipes/chipotle-bbq-burger.jpg.png",
+                sauceName: "Chipotle BBQ Sauce",
+                sauceImage: "assets/images/products/chipotle-bbq-sauce.png",
+                sauceFlavor: "SMOKY · RICH · SWEET",
+                sauceHeat: "MILD-MEDIUM",
+                sauceDescription: "Firecraft Chipotle BBQ Sauce adds a smoky, savory sweetness that complements the grilled patty and brings every burger layer together.",
+                pairingTitle: "Smoky flavor in every layer.",
+                pairingDescription: "Chipotle BBQ Sauce brings smoky sweetness to the burger. Spread it over the patty or use it as a dip for an extra hit of flavor.",
+                description: "A juicy, stacked burger finished with our Chipotle BBQ Sauce for rich, smoky sweetness.",
+                tip: "Brush a little Chipotle BBQ Sauce over the patty near the end of cooking for a glossy finish.",
+                ingredients: [
+                    "2 burger buns",
+                    "2 burger patties",
+                    "3 tbsp Firecraft Chipotle BBQ Sauce",
+                    "2 cheese slices",
+                    "4 lettuce leaves",
+                    "1 tomato, sliced",
+                    "½ red onion, sliced",
+                    "1 tsp cooking oil"
+                ],
+                steps: [
+                    ["Prepare the toppings", "Wash the lettuce, slice the tomato and onion, and set everything aside."],
+                    ["Cook the patties", "Heat a pan or grill with oil. Cook the patties thoroughly, adding cheese near the end if desired."],
+                    ["Add the smoky sauce", "Spread Firecraft Chipotle BBQ Sauce over the cooked patties."],
+                    ["Build the burgers", "Toast the buns lightly. Layer lettuce, patties, tomato and onion, then add more BBQ sauce to taste."]
+                ]
+            },
+
+            "garlic-chili-noodles": {
+                title: "Garlic Chili Noodles",
+                category: "QUICK & EASY",
+                heat: "MEDIUM HEAT",
+                time: "20 minutes",
+                servings: "2 servings",
+                difficulty: "Easy",
+                image: "assets/images/recipes/garlic-chili-noodles.jpg.png",
+                sauceName: "Garlic Chili Sauce",
+                sauceImage: "assets/images/products/garlic-chili-sauce.png",
+                sauceFlavor: "GARLICKY · TANGY · SAVORY",
+                sauceHeat: "MEDIUM HEAT",
+                sauceDescription: "Firecraft Garlic Chili Sauce brings a savory garlic punch and a chili kick that coats the noodles with bold, satisfying flavor.",
+                pairingTitle: "Garlic first. Heat that follows.",
+                pairingDescription: "Garlic Chili Sauce adds savory depth and chili warmth to noodles, making a quick meal taste fuller and more exciting.",
+                description: "Fast, savory noodles tossed with vegetables and a generous spoonful of our Garlic Chili Sauce.",
+                tip: "Mix the sauce with a splash of noodle water to help it coat every strand.",
+                ingredients: [
+                    "200 g noodles",
+                    "2 tbsp Firecraft Garlic Chili Sauce",
+                    "2 garlic cloves, finely chopped",
+                    "1 cup mixed sliced vegetables",
+                    "1 tbsp soy sauce",
+                    "1 tbsp cooking oil",
+                    "1 tsp sesame seeds",
+                    "Spring onions to garnish"
+                ],
+                steps: [
+                    ["Cook the noodles", "Boil the noodles according to the packet instructions. Drain and reserve a little cooking water."],
+                    ["Sauté the vegetables", "Heat oil in a pan. Add garlic and vegetables and stir-fry until just tender."],
+                    ["Toss with sauce", "Add noodles, Firecraft Garlic Chili Sauce, soy sauce and a splash of noodle water. Toss well."],
+                    ["Finish and serve", "Top with sesame seeds and spring onions. Taste and add a little more sauce if you want extra heat."]
+                ]
+            },
+
+            "mango-habanero-wings": {
+                title: "Sweet Heat Wings",
+                category: "MADE TO SHARE",
+                heat: "HOT",
+                time: "35 minutes",
+                servings: "2–3 servings",
+                difficulty: "Medium",
+                image: "assets/images/recipes/mango-habanero-wings.jpg.png",
+                sauceName: "Mango Habanero Sauce",
+                sauceImage: "assets/images/products/mango-habanero-sauce.png",
+                sauceFlavor: "FRUITY · SWEET · FIERY",
+                sauceHeat: "HOT",
+                sauceDescription: "Firecraft Mango Habanero Sauce pairs tropical sweetness with a fiery finish, giving chicken wings a sticky, vibrant glaze.",
+                pairingTitle: "Sweet up front. Fire at the finish.",
+                pairingDescription: "Mango Habanero Sauce balances fruity sweetness and chili heat, making these wings a standout shareable dish.",
+                description: "Sticky, golden wings glazed with our Mango Habanero Sauce for sweet heat worth sharing.",
+                tip: "Habanero heat can build quickly. Start with less sauce, taste, then add more to suit your spice preference.",
+                ingredients: [
+                    "500 g chicken wings",
+                    "3 tbsp Firecraft Mango Habanero Sauce",
+                    "1 tbsp cooking oil",
+                    "1 tsp garlic powder",
+                    "½ tsp paprika",
+                    "Salt and black pepper",
+                    "1 tsp lime juice",
+                    "Fresh coriander to garnish"
+                ],
+                steps: [
+                    ["Season the wings", "Pat the wings dry and toss with oil, garlic powder, paprika, salt and pepper."],
+                    ["Cook the wings", "Bake at 200°C until fully cooked and crisp, turning halfway through. Cooking time depends on wing size."],
+                    ["Glaze with Mango Habanero", "Toss the cooked wings with Firecraft Mango Habanero Sauce and lime juice."],
+                    ["Serve and share", "Garnish with coriander and serve immediately, with extra sauce on the side if desired."]
+                ]
+            },
+
+            "chipotle-potato-wedges": {
+                title: "Fire-Roasted Potato Wedges",
+                category: "QUICK & EASY",
+                heat: "MILD-MEDIUM",
+                time: "30 minutes",
+                servings: "2 servings",
+                difficulty: "Easy",
+                image: "assets/images/recipes/chipotle-potato-wedges.jpg.png",
+                sauceName: "Chipotle BBQ Sauce",
+                sauceImage: "assets/images/products/chipotle-bbq-sauce.png",
+                sauceFlavor: "SMOKY · RICH · SWEET",
+                sauceHeat: "MILD-MEDIUM",
+                sauceDescription: "The smoky sweetness of Firecraft Chipotle BBQ Sauce turns crisp potato wedges into a bold snack or side dish.",
+                pairingTitle: "Crispy potatoes meet smoky BBQ.",
+                pairingDescription: "Dip each golden wedge into Chipotle BBQ Sauce to bring out smoky, sweet notes against the crisp potato edges.",
+                description: "Crispy seasoned potato wedges served with a smoky Chipotle BBQ dip.",
+                tip: "Give the wedges enough space on the tray so they roast instead of steam.",
+                ingredients: [
+                    "3 medium potatoes",
+                    "2 tbsp cooking oil",
+                    "2 tbsp Firecraft Chipotle BBQ Sauce",
+                    "1 tsp paprika",
+                    "½ tsp garlic powder",
+                    "Salt and black pepper",
+                    "Fresh parsley, optional"
+                ],
+                steps: [
+                    ["Prepare the potatoes", "Wash the potatoes and cut them into even wedges. Pat them dry."],
+                    ["Season and roast", "Toss with oil, paprika, garlic powder, salt and pepper. Roast at 220°C until golden and tender."],
+                    ["Prepare the dip", "Pour Firecraft Chipotle BBQ Sauce into a small serving bowl. Add a little yogurt if you prefer a creamier dip."],
+                    ["Serve hot", "Arrange the wedges on a plate, garnish if desired and serve with the smoky BBQ dip."]
+                ]
+            },
+
+            "classic-loaded-fries": {
+                title: "Loaded Firecracker Fries",
+                category: "MADE TO SHARE",
+                heat: "MEDIUM HEAT",
+                time: "25 minutes",
+                servings: "2 servings",
+                difficulty: "Easy",
+                image: "assets/images/recipes/classic-loaded-fries.jpg.png",
+                sauceName: "Classic Hot Sauce",
+                sauceImage: "assets/images/products/classic-hot-sauce.png",
+                sauceFlavor: "TANGY · BOLD · SAVORY",
+                sauceHeat: "MEDIUM HEAT",
+                sauceDescription: "Firecraft Classic Hot Sauce brings a tangy, lively kick to loaded fries, cutting through rich toppings and tying every layer together.",
+                pairingTitle: "The final drizzle changes everything.",
+                pairingDescription: "Classic Hot Sauce adds a tangy contrast to the crisp fries and rich toppings. Drizzle just before serving for the freshest flavor.",
+                description: "Golden fries piled with fresh toppings and our Classic Hot Sauce drizzled over every layer.",
+                tip: "Add the sauce just before serving to keep the fries crisp.",
+                ingredients: [
+                    "300 g frozen or freshly cut fries",
+                    "2 tbsp Firecraft Classic Hot Sauce",
+                    "¼ cup grated cheese",
+                    "2 tbsp sweet corn",
+                    "2 tbsp chopped tomato",
+                    "2 tbsp plain yogurt or sour cream",
+                    "Spring onions to garnish",
+                    "Salt to taste"
+                ],
+                steps: [
+                    ["Cook the fries", "Bake, air-fry or fry the potatoes according to the package instructions until crisp."],
+                    ["Prepare the toppings", "Chop the tomato and spring onions. Prepare the corn, cheese and yogurt."],
+                    ["Build the layers", "Place the fries on a serving plate. Add cheese and toppings while the fries are hot."],
+                    ["Finish with Firecraft", "Drizzle Classic Hot Sauce over the fries, add yogurt and spring onions, then serve immediately."]
+                ]
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const requestedRecipe = params.get("recipe") || "classic-chicken-tacos";
+        const recipe = recipes[requestedRecipe] || recipes["classic-chicken-tacos"];
+
+        document.title = recipe.title + " | Firecraft Recipes";
+
+        function setText(id, value) {
+            const element = document.getElementById(id);
+            if (element) element.textContent = value;
+        }
+
+        setText("breadcrumb-title", recipe.title);
+        setText("recipe-title", recipe.title);
+        setText("recipe-category", recipe.category);
+        setText("recipe-heat", recipe.heat);
+        setText("recipe-time", recipe.time);
+        setText("recipe-servings", recipe.servings);
+        setText("recipe-difficulty", recipe.difficulty);
+        setText("recipe-description", recipe.description);
+        setText("hero-sauce-name", recipe.sauceName);
+        setText("sauce-description", recipe.sauceDescription);
+        setText("sauce-flavor", recipe.sauceFlavor);
+        setText("sauce-heat", recipe.sauceHeat);
+        setText("pairing-title", recipe.pairingTitle);
+        setText("pairing-description", recipe.pairingDescription);
+        setText("recipe-tip", recipe.tip);
+        setText("step-count", String(recipe.steps.length).padStart(2, "0") + " STEPS");
+
+        const titleParts = recipe.title.split(" ");
+        const lastWord = titleParts.pop();
+        document.getElementById("recipe-title").innerHTML =
+            titleParts.join(" ") + ' <span>' + lastWord + '</span>';
+
+        const recipeImage = document.getElementById("recipe-image");
+        recipeImage.src = recipe.image;
+        recipeImage.alt = recipe.title + " made with " + recipe.sauceName;
+
+        const sauceImage = document.getElementById("sauce-image");
+        sauceImage.src = recipe.sauceImage;
+        sauceImage.alt = recipe.sauceName + " bottle";
+
+        // Link to the matching product page.
+        // Update these URLs if your product detail routes differ.
+        const productLinks = {
+            "Classic Hot Sauce": "product-details.html?product=classic-hot-sauce",
+            "Mango Habanero Sauce": "product-details.html?product=mango-habanero",
+            "Chipotle BBQ Sauce": "product-details.html?product=chipotle-bbq",
+            "Garlic Chili Sauce": "product-details.html?product=garlic-chili"
+        };
+
+        document.getElementById("sauce-link").href =
+            productLinks[recipe.sauceName] || "products.html";
+
+        // Ingredient checklist
+        const ingredientList = document.getElementById("ingredient-list");
+
+        recipe.ingredients.forEach((ingredient, index) => {
+            const label = document.createElement("label");
+            label.className = "rd-ingredient";
+
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.id = "ingredient-" + index;
+
+            const customBox = document.createElement("span");
+            customBox.className = "rd-checkmark";
+            customBox.innerHTML = '<i class="fa-solid fa-check"></i>';
+
+            const text = document.createElement("span");
+            text.className = "rd-ingredient-text";
+            text.textContent = ingredient;
+
+            checkbox.addEventListener("change", () => {
+                label.classList.toggle("checked", checkbox.checked);
+            });
+
+            label.append(checkbox, customBox, text);
+            ingredientList.appendChild(label);
+        });
+
+        // Numbered cooking instructions
+        const stepList = document.getElementById("step-list");
+
+        recipe.steps.forEach((step, index) => {
+            const article = document.createElement("article");
+            article.className = "rd-step";
+
+            const number = document.createElement("span");
+            number.className = "rd-step-number";
+            number.textContent = String(index + 1).padStart(2, "0");
+
+            const content = document.createElement("div");
+            content.className = "rd-step-content";
+
+            const heading = document.createElement("h4");
+            heading.textContent = step[0];
+
+            const description = document.createElement("p");
+            description.textContent = step[1];
+
+            content.append(heading, description);
+            article.append(number, content);
+            stepList.appendChild(article);
+        });
+
+        // Load the shared site components.
+        async function loadComponents() {
+            try {
+                const navRes = await fetch("components/navbar.html");
+                document.getElementById("navbar-container").innerHTML = await navRes.text();
+
+                // Make Recipes link active instead of Home
+                const navLinks = document.querySelectorAll(".nav-menu a");
+                navLinks.forEach(link => link.classList.remove("active"));
+                const recipesLink = document.querySelector(".nav-menu a[href='recipes.html']");
+                if (recipesLink) recipesLink.classList.add("active");
+
+                // Initialize theme toggle and profile dropdown functionality
+                if (typeof initNavbar === 'function') {
+                    initNavbar();
+                }
+
+                const footRes = await fetch("components/footer.html");
+                document.getElementById("footer-container").innerHTML = await footRes.text();
+            } catch (err) {
+                console.error(err);
+            }
+        }
+        loadComponents();
+    </script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
+

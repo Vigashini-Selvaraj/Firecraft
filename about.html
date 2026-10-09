@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fireborn | Our Story</title>
+    <link rel="icon" type="image/png" href="assets/images/firecraft_logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     NAVBAR
+====================================================== -->
+<header class="navbar">
+    <div class="container navbar-container">
+
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <img src="assets/images/firecraft_logo.png" alt="Firecraft Hot Sauces">
+            <span class="logo-text">Firecraft</span>
+        </a>
+
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="home2.html">Home 2</a>
+            <a href="about.html" class="active">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="services.html">Service</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <!-- Navbar Actions -->
+        <div class="nav-actions">
+            
+            <button class="mobile-menu-btn" aria-label="Open Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            
+            <button class="nav-icon theme-toggle-btn" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button class="nav-icon dir-toggle-btn" aria-label="Toggle Direction">
+                LTR
+            </button>
+
+            <div class="profile-dropdown-container desktop-only">
+                <button class="nav-icon profile-btn" aria-label="Profile">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+                <div class="profile-dropdown">
+                    <a href="#">Login</a>
+                    <a href="#">Register</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</header>
+
+
+<main>
+
+<!-- =====================================================
+     01. HERO
+===================================================== -->
+<section class="hero-section" id="about-hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-container" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 40px;">
+
+        <div class="hero-content" style="max-width: 600px; flex: 1 1 400px;">
+            <p class="hero-eyebrow">ABOUT FIRECRAFT</p>
+            <h1 class="hero-title">
+                Real Heat.<br>
+                <span>Real Flavor.</span>
+            </h1>
+            <p class="hero-description">
+                We believe heat without flavor is just a party trick. 
+                Discover how Fireborn grew from a small kitchen experiment into a revolution in culinary heat.
+            </p>
+            
+            <div class="hero-buttons" style="margin-top: 38px; display: flex; gap: 14px; flex-wrap: wrap;">
+                <a href="products.html" class="btn btn-primary">
+                    Shop Sauces
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#heat-guide" class="btn btn-outline" style="border-color: rgba(255,255,255,0.4); color: #ffffff;" onmouseover="this.style.background='#ffffff'; this.style.color='#171513'" onmouseout="this.style.background='transparent'; this.style.color='#ffffff'">
+                    Explore Heat Levels
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="hero-mascot" style="flex: 1 1 400px; max-width: 600px; text-align: center;">
+            <img src="assets/images/services/Firecraft_%20Battle%20of%20Fire%20and%20Water.png" class="animated-mascot" alt="Firecraft Battle of Fire and Water" style="width: 100%; max-width: 550px; height: auto; border-radius: 8px;">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     02. THE BEGINNING
+===================================================== -->
+<section class="story-section section">
+    <div class="container story-layout">
+        
+        <div class="story-copy">
+            <span class="section-label">THE BEGINNING</span>
+            <h2>
+                It started with a<br>
+                <em>single pepper.</em>
+            </h2>
+            <p>
+                Years ago, our founder stood in a cramped kitchen staring at a basket of habaneros, frustrated by the hot sauces on the market. They were either face-meltingly hot with no depth, or flavorful but lacking any real punch.
+            </p>
+            <p>
+                The mission became clear: bridge the gap. We wanted a sauce that respected the complexity of the chili pepper—highlighting its natural fruity notes, earthy undertones, and vibrant color—before delivering that satisfying burn.
+            </p>
+            <p>
+                Hundreds of batches later, the Fireborn standard was set.
+            </p>
+        </div>
+
+        <div class="story-visual">
+            <img src="assets/images/about_story.jpg" alt="Artisan chef making hot sauce">
+            <div class="story-caption">
+                <span>EST. 2019</span>
+                <strong>THE FIRST BATCH</strong>
+                <span>CRAFTED BY HAND</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="vision-mission-redesigned section" style="background: var(--color-dark-soft); position: relative; padding: 120px 0;">
+    <div class="container">
+        <div class="section-heading centered" style="text-align: center; margin-bottom: 70px;">
+            <span class="section-label" style="display:flex; justify-content:center; color: var(--color-red); letter-spacing: 0.25em; font-weight: 800; font-size: 12px; margin-bottom: 15px;">OUR PURPOSE</span>
+            <h2 style="font-family: var(--font-display); font-size: 48px; color: var(--color-text-light);">Driving the <em>Firecraft</em> Standard</h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; position: relative; z-index: 2;">
+            
+            <!-- Vision Card -->
+            <div style="background: var(--card-bg-light); border: 1px solid var(--color-border-dark); border-radius: 12px; padding: 50px; transition: transform 0.4s ease, box-shadow 0.4s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(255, 68, 51, 0.15)'; this.style.borderColor='var(--color-red)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='var(--color-border-dark)'">
+                <div style="width: 60px; height: 60px; background: rgba(255, 68, 51, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
+                    <i class="fa-solid fa-eye" style="font-size: 24px; color: var(--color-red);"></i>
+                </div>
+                <h3 style="font-family: var(--font-display); font-size: 36px; color: var(--color-text-light); margin-bottom: 20px;">The Vision</h3>
+                <p style="color: var(--color-muted); font-size: 16px; line-height: 1.8;">
+                    To redefine the hot sauce industry globally. We want to prove that extreme heat and exquisite, gourmet flavor can coexist perfectly in every single drop, pushing culinary boundaries to new heights.
+                </p>
+            </div>
+
+            <!-- Mission Card -->
+            <div style="background: var(--card-bg-light); border: 1px solid var(--color-border-dark); border-radius: 12px; padding: 50px; transition: transform 0.4s ease, box-shadow 0.4s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(255, 68, 51, 0.15)'; this.style.borderColor='var(--color-red)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='var(--color-border-dark)'">
+                <div style="width: 60px; height: 60px; background: rgba(255, 68, 51, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
+                    <i class="fa-solid fa-bullseye" style="font-size: 24px; color: var(--color-red);"></i>
+                </div>
+                <h3 style="font-family: var(--font-display); font-size: 36px; color: var(--color-text-light); margin-bottom: 20px;">The Mission</h3>
+                <p style="color: var(--color-muted); font-size: 16px; line-height: 1.8;">
+                    To source the finest, most vibrant ingredients from sustainable farmers, and meticulously craft small-batch sauces that elevate everyday meals into unforgettable experiences. No compromises.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     04. OUR PHILOSOPHY
+===================================================== -->
+<section class="philosophy-section section section-dark">
+    <div class="container">
+        <div class="philosophy-heading text-center">
+            <span class="section-label">OUR PHILOSOPHY</span>
+            <h2>
+                More than
+                <em>just heat.</em>
+            </h2>
+            <p>We refuse to compromise on our core tenets. This is how we ensure every bottle is perfect.</p>
+        </div>
+
+        <div class="philosophy-grid">
+            <article class="philosophy-card">
+                <i class="fa-solid fa-leaf"></i>
+                <h3>Flavor First</h3>
+                <p>We build our recipes around flavor profiles first, only introducing heat to elevate the ingredients, never to mask them.</p>
+            </article>
+
+            <article class="philosophy-card">
+                <i class="fa-solid fa-fire-burner"></i>
+                <h3>Small Batch</h3>
+                <p>Mass production kills character. We cook in small, controlled batches to maintain the artisanal quality of our sauces.</p>
+            </article>
+
+            <article class="philosophy-card">
+                <i class="fa-solid fa-seedling"></i>
+                <h3>Real Ingredients</h3>
+                <p>No artificial extracts. No fillers. Just real, fresh peppers, aromatics, vinegars, and spices sourced responsibly.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     05. INGREDIENTS
+===================================================== -->
+<section class="ingredients-section section">
+    <div class="container ingredients-layout">
+        
+        <div class="ingredients-visual">
+            <img src="assets/images/about_farm.jpg" alt="Freshly harvested ingredients">
+            <div class="image-stamp">
+                <span>FRESH</span>
+                <strong>PRODUCE</strong>
+                <span>ONLY</span>
+            </div>
+        </div>
+
+        <div class="ingredients-copy">
+            <span class="section-label">THE RAW MATERIALS</span>
+            <h2>
+                Nature's
+                <em>finest fire.</em>
+            </h2>
+            <p>
+                You can't fake quality. From the smokey depth of our chipotles to the bright, tropical sting of our habaneros, the secret is simply starting with the best raw materials available.
+            </p>
+            <p>
+                We partner with independent farmers who share our obsession with quality, ensuring that the peppers going into our vats were picked at peak ripeness right from the sunlit fields.
+            </p>
+            
+            <div class="ingredients-list">
+                <div class="ingredient-item">
+                    <h4><i class="fa-solid fa-check text-red"></i> Hand-Selected Peppers</h4>
+                </div>
+                <div class="ingredient-item">
+                    <h4><i class="fa-solid fa-check text-red"></i> Artisanal Vinegars</h4>
+                </div>
+                <div class="ingredient-item">
+                    <h4><i class="fa-solid fa-check text-red"></i> Fresh Roasted Garlic</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     06. TIMELINE / OUR JOURNEY
+===================================================== -->
+<section class="timeline-section section">
+    <div class="container timeline-container">
+        <div class="timeline-heading">
+            <span class="section-label">HOW WE STARTED</span>
+            <h2>Our <em>Journey.</em></h2>
+        </div>
+
+        <div class="journey" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="journey-line" style="left: 16%; right: 16%;"></div>
+            
+            <div class="journey-step">
+                <span class="step-number">2019</span>
+                <div class="step-icon"><i class="fa-solid fa-flask"></i></div>
+                <h3 class="journey-title">The First Batch</h3>
+                <p>A cramped apartment kitchen, a basket of habaneros, and an obsession with perfect flavor.</p>
+            </div>
+            
+            <div class="journey-step">
+                <span class="step-number">2021</span>
+                <div class="step-icon"><i class="fa-solid fa-store"></i></div>
+                <h3 class="journey-title">Scaling Up</h3>
+                <p>Moving to a commercial space and letting word-of-mouth build our loyal following.</p>
+            </div>
+            
+            <div class="journey-step">
+                <span class="step-number">2024</span>
+                <div class="step-icon"><i class="fa-solid fa-fire"></i></div>
+                <h3 class="journey-title">National Brand</h3>
+                <p>Enjoyed across the country, while keeping our small-batch quality exactly the same.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     07. PERFECT PAIRINGS
+===================================================== -->
+<section class="pairings-section section">
+    <div class="container">
+        <div class="pairings-heading text-center">
+            <span class="section-label">CULINARY COMPANIONS</span>
+            <h2>The Perfect <em>Pairings.</em></h2>
+            <p style="color: var(--color-muted); max-width: 600px; margin: 20px auto 50px; line-height: 1.7; font-size: 15px;">
+                Our sauces are designed to elevate, not overpower. Here are some of our favorite ways to bring the heat to the table.
+            </p>
+        </div>
+
+        <div class="pairings-grid">
+            <div class="pairing-card">
+                <div class="pairing-icon"><i class="fa-solid fa-pizza-slice"></i></div>
+                <h3>Pizza & Flatbreads</h3>
+                <p>A few drops cut through the richness of melted cheese and add a bright, fiery tang to any slice.</p>
+            </div>
+            
+            <div class="pairing-card">
+                <div class="pairing-icon"><i class="fa-solid fa-burger"></i></div>
+                <h3>Burgers & BBQ</h3>
+                <p>Mix with mayo for a spicy aioli or dash directly onto grilled meats for a smoky, elevated finish.</p>
+            </div>
+            
+            <div class="pairing-card">
+                <div class="pairing-icon"><i class="fa-solid fa-bowl-rice"></i></div>
+                <h3>Tacos & Bowls</h3>
+                <p>The perfect acidity and fruitiness to bring out the fresh ingredients in your favorite Mexican dishes.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     08. AWARDS & PRESS
+===================================================== -->
+<section class="press-section section">
+    <div class="container">
+        <div class="press-heading text-center">
+            <span class="section-label">THE VERDICT</span>
+            <h2>Awards & <em>Press.</em></h2>
+        </div>
+
+        <div class="press-grid">
+            <div class="press-card">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <blockquote>"Easily the most balanced and complex hot sauce we've tasted this year. It redefines what table sauce should be."</blockquote>
+                <div class="press-source">— Culinary Monthly</div>
+            </div>
+            
+            <div class="press-card">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <blockquote>"Firecraft doesn't just bring the heat; it brings a depth of flavor that completely transforms ordinary home-cooked meals."</blockquote>
+                <div class="press-source">— The Spicy Tribune</div>
+            </div>
+            
+            <div class="press-card">
+                <div class="stars">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+                <blockquote>Voted <strong>"Best Artisanal Hot Sauce"</strong><br>at the 2024 National Fiery Foods Exhibition.</blockquote>
+                <div class="press-source">— Fiery Foods Fest</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     09. BEHIND THE BRAND
+===================================================== -->
+<section class="team-section section">
+    <div class="container team-layout">
+        <div class="team-copy">
+            <span class="section-label">THE PEOPLE</span>
+            <h2>
+                Behind the
+                <em>Brand.</em>
+            </h2>
+            <p>
+                Fireborn isn't made in a corporate factory. It's crafted by a diverse team of artisan chefs, flavor enthusiasts, and dedicated founders who are passionate about elevating everyday meals.
+            </p>
+            <p>
+                We spend our days experimenting with new pepper strains, refining roasting techniques, and arguing over the perfect acidity levels. We wouldn't have it any other way.
+            </p>
+        </div>
+        
+        <div class="team-visual">
+            <img src="assets/images/about_team.jpg" alt="The Firecraft Team">
+        </div>
+    </div>
+</section>
+
+
+</main>
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+<style>
+    .footer-column h3 {
+        font-family: var(--font-body); /* Override display font to match navbar */
+        font-size: 12px !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 25px !important;
+        color: #f7f2ea;
+    }
+    .footer-column a {
+        color: #a8a29a;
+        transition: color 0.3s;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    .footer-column a:hover {
+        color: var(--color-red);
+    }
+</style>
+
+<footer class="footer" style="background-color: #080808; color: #f7f2ea; padding-top: 60px; margin-top: 80px;">
+    <div class="container footer-container" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; padding-bottom: 40px;">
+
+        <!-- Brand & Socials -->
+        <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+                <img src="assets/images/firecraft_logo.png" alt="Firecraft Logo" style="height: 65px; width: auto; object-fit: contain;">
+            </a>
+            <p style="margin-top: 20px; line-height: 1.6; color: #a8a29a; font-size: 16px;">
+                Crafting premium, small-batch hot sauces for serious flavor seekers. Elevate your everyday meals with the perfect balance of heat and taste.
+            </p>
+            <div class="social-links" style="display: flex; gap: 15px; margin-top: 25px;">
+                <a href="#" aria-label="Facebook" style="color: #f7f2ea; font-size: 18px; transition: color 0.3s;" onmouseover="this.style.color='var(--color-red)'" onmouseout="this.style.color='#f7f2ea'"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter" style="color: #f7f2ea; font-size: 18px; transition: color 0.3s;" onmouseover="this.style.color='var(--color-red)'" onmouseout="this.style.color='#f7f2ea'"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="Instagram" style="color: #f7f2ea; font-size: 18px; transition: color 0.3s;" onmouseover="this.style.color='var(--color-red)'" onmouseout="this.style.color='#f7f2ea'"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="WhatsApp" style="color: #f7f2ea; font-size: 18px; transition: color 0.3s;" onmouseover="this.style.color='var(--color-red)'" onmouseout="this.style.color='#f7f2ea'"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+                <a href="index.html">Home</a>
+                <a href="home2.html">Home 2</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Products</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="services.html">Service</a>
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-column">
+            <h3>Support</h3>
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+                <a href="contact.html">Contact</a>
+                <a href="contact.html">Wholesale</a>
+                <a href="#">Pricing Policy</a>
+                <a href="#">Shipping</a>
+                <a href="#">FAQs</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div style="display: flex; gap: 15px; align-items: flex-start;">
+                    <i class="fa-solid fa-phone" style="color: var(--color-red); margin-top: 2px;"></i>
+                    <span style="color: #a8a29a; font-size: 13px;">+1 (800) 123-4567</span>
+                </div>
+                <div style="display: flex; gap: 15px; align-items: flex-start;">
+                    <i class="fa-solid fa-location-dot" style="color: var(--color-red); margin-top: 2px;"></i>
+                    <span style="color: #a8a29a; font-size: 13px; line-height: 1.6;">123 Flavor Street, Culinary District<br>New York, NY 10001</span>
+                </div>
+                <div style="display: flex; gap: 15px; align-items: flex-start;">
+                    <i class="fa-solid fa-envelope" style="color: var(--color-red); margin-top: 2px;"></i>
+                    <span style="color: #a8a29a; font-size: 13px;">hello@firecraft.com</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container footer-bottom-container" style="display: flex; justify-content: center; padding: 20px 0; border-top: 1px solid var(--color-border-dark);">
+            <p style="color: #a8a29a; font-size: 13px; font-weight: 500; letter-spacing: 0.02em;">
+                © 2026 Firecraft. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

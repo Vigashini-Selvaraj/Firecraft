@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Firecraft | Product Detail</title>
+    <link rel="icon" type="image/png" href="assets/images/firecraft_logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/product-detail.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="container navbar-container">
+        <a href="index.html" class="logo">
+            <img src="assets/images/firecraft_logo.png" alt="Firecraft Hot Sauces">
+            <span class="logo-text">Firecraft</span>
+        </a>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="home2.html">Home 2</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html" class="active">Products</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="services.html">Service</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="mobile-menu-btn" aria-label="Open Menu"><i class="fa-solid fa-bars"></i></button>
+            <button class="nav-icon theme-toggle-btn" aria-label="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+            <button class="nav-icon dir-toggle-btn" aria-label="Toggle Direction">LTR</button>
+            <div class="profile-dropdown-container desktop-only">
+                <button class="nav-icon profile-btn" aria-label="Profile"><i class="fa-solid fa-user"></i></button>
+                <div class="profile-dropdown">
+                    <a href="#">Login</a>
+                    <a href="#">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- SPLIT SCREEN HERO & PRODUCT INFO -->
+    <section class="pd-hero-split">
+        <div class="pd-hero-sticky-image">
+            <div class="image-wrapper">
+                <img id="pd-image" src="" alt="Product Image">
+                <div class="glass-badge" id="pd-heat-badge">
+                    <i class="fa-solid fa-fire"></i> <span id="pd-heat">MILD</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pd-hero-scroll-content">
+            <!-- Breadcrumbs -->
+            <div class="breadcrumbs">
+                <a href="products.html">All Products</a> / <span id="pd-breadcrumb-name">Loading...</span>
+            </div>
+
+            <!-- Header Info -->
+            <h1 class="pd-title" id="pd-name">Loading...</h1>
+            <div class="pd-rating-block">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span id="pd-rating" class="rating-num">4.8</span> 
+                <span id="pd-reviews" class="review-count">(0 Reviews)</span>
+            </div>
+            
+            <p class="pd-short-desc" id="pd-desc">Loading description...</p>
+            
+            <div class="pd-tags-container" id="pd-tags"></div>
+
+            <div class="pd-price-row">
+                <div class="pd-price" id="pd-price">$0</div>
+            </div>
+            
+            <!-- Actions -->
+            <div class="pd-actions-block">
+                <div class="qty-control">
+                    <button id="qty-minus"><i class="fa-solid fa-minus"></i></button>
+                    <input type="text" id="qty-input" value="1" readonly>
+                    <button id="qty-plus"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <button class="btn btn-primary btn-add-cart">
+                    <span>Add to Cart</span> <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+                <button class="btn btn-favorite"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            
+            <div class="pd-shipping-perk">
+                <i class="fa-solid fa-truck-fast"></i> Free wholesale shipping on orders over $500.
+            </div>
+
+            <!-- FLAVOR & HEAT (Redesigned inside scroll area) -->
+            <div class="pd-details-grid">
+                <div class="detail-box flavor-box">
+                    <h3>Taste, Decoded.</h3>
+                    <p id="pd-flavor-desc">Loading...</p>
+                    <ul id="pd-flavor-notes" class="custom-list"></ul>
+                </div>
+                
+                <div class="detail-box heat-box">
+                    <h3>The Burn.</h3>
+                    <div class="heat-stat">
+                        <span>Primary Pepper</span>
+                        <strong id="pd-pepper">Loading...</strong>
+                    </div>
+                    <div class="heat-stat">
+                        <span>Scoville Rating</span>
+                        <strong id="pd-scoville">Loading...</strong>
+                    </div>
+                    <div class="heat-stat">
+                        <span>Intensity Meter</span>
+                        <div class="heat-meter" id="pd-heat-meter">
+                            <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WHAT'S INSIDE (Redesigned as Tabs) -->
+            <div class="pd-tabs-section">
+                <h3>What's Inside</h3>
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-target="tab-ingredients">Ingredients</button>
+                    <button class="tab-btn" data-target="tab-texture">Texture</button>
+                    <button class="tab-btn" data-target="tab-shelf">Storage</button>
+                    <button class="tab-btn" data-target="tab-allergens">Allergens</button>
+                </div>
+                <div class="tabs-content">
+                    <div class="tab-pane active" id="tab-ingredients"><p id="pd-ingredients"></p></div>
+                    <div class="tab-pane" id="tab-texture"><p id="pd-texture"></p></div>
+                    <div class="tab-pane" id="tab-shelf"><p id="pd-shelf"></p></div>
+                    <div class="tab-pane" id="tab-allergens"><p id="pd-allergens"></p></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PAIRINGS SECTION (3 IMAGES) -->
+    <section class="pd-pairings-section">
+        <div class="container text-center">
+            <span class="section-label">CULINARY SYNERGY</span>
+            <h2>Best <em>Pairings.</em></h2>
+            <p class="section-subtitle">Elevate your meals with the perfect flavor match.</p>
+            
+            <div class="pairings-grid-3" id="pd-pairings">
+                <!-- JS WILL INJECT 3 PAIRINGS HERE -->
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW TO USE IT / TUTORIAL -->
+    <section class="pd-tutorial-section">
+        <div class="container">
+            <div class="tutorial-grid">
+                <div class="tutorial-text">
+                    <span class="section-label">MASTER THE HEAT</span>
+                    <h2>How to <em>Use It.</em></h2>
+                    <p class="tutorial-desc">Don't just blind your tastebuds. Use our sauce to enhance the natural flavors of your dish.</p>
+                    
+                    <div class="tutorial-steps">
+                        <div class="step">
+                            <div class="step-num">01</div>
+                            <div class="step-info">
+                                <h4>Start Small</h4>
+                                <p>Begin with a few drops to test your tolerance before committing.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-num">02</div>
+                            <div class="step-info">
+                                <h4>Taste First</h4>
+                                <p>Let the flavor profile coat your tongue before the heat kicks in.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-num">03</div>
+                            <div class="step-info">
+                                <h4>Apply Generously</h4>
+                                <p>Drizzle, dip, or mix into marinades for maximum impact.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tutorial-image">
+                    <img src="assets/images/about_story.jpg" alt="Using Firecraft Sauce">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS (Redesigned) -->
+    <section class="pd-reviews-section">
+        <div class="container text-center">
+            <span class="section-label">COMMUNITY VERDICT</span>
+            <h2>What They're <em>Saying.</em></h2>
+            
+            <div class="reviews-slider">
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Absolute perfection!</h3>
+                    <p>"This is exactly what I was looking for. The flavor is incredible and the heat level is spot on. I'll be buying a case next time!"</p>
+                    <div class="reviewer">
+                        <div class="avatar">M</div>
+                        <div class="reviewer-info">
+                            <strong>Marcus T.</strong>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <h3>New staple in my kitchen.</h3>
+                    <p>"I put this on my eggs every single morning. It's not just hot, it actually makes the food taste better. Highly recommended."</p>
+                    <div class="reviewer">
+                        <div class="avatar">S</div>
+                        <div class="reviewer-info">
+                            <strong>Sarah J.</strong>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs (Redesigned) -->
+    <section class="pd-faq-section">
+        <div class="container pd-faq-grid">
+            <div class="faq-intro">
+                <span class="section-label">CURIOUS?</span>
+                <h2>Frequently <em>Asked.</em></h2>
+                <p>Everything you need to know about our ingredients, heat levels, and shipping.</p>
+            </div>
+            <div class="faq-accordion custom-accordion">
+                <div class="faq-item">
+                    <button class="faq-header">How spicy is this sauce? <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-content"><p>Please refer to our Heat Breakdown section. We use the Scoville scale to provide an accurate estimate of the burn, paired with a visual intensity meter.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-header">How should I store the bottle? <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-content"><p>Store in a cool, dry place before opening. We highly recommend refrigerating after opening to preserve the vibrant flavor and natural color.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-header">Does it contain artificial preservatives? <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-content"><p>Absolutely not. We rely on natural vinegars, salts, and high-quality ingredients to preserve our sauces naturally without chemicals.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RELATED PRODUCTS -->
+    <section class="pd-related-section">
+        <div class="container">
+            <div class="section-heading text-center">
+                <span class="section-label">DISCOVER MORE</span>
+                <h2>You May Also <em>Love.</em></h2>
+            </div>
+            <div class="related-grid-3" id="pd-related">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+
+
+</main>
+
+<script src="js/product-detail.js"></script>
+
+<div id="footer-container"></div>
+
+<script src="js/main.js"></script>
+<script>
+    // Tab functionality
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+    
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            tabBtns.forEach(b => b.classList.remove('active'));
+            tabPanes.forEach(p => p.classList.remove('active'));
+            
+            btn.classList.add('active');
+            document.getElementById(btn.dataset.target).classList.add('active');
+        });
+    });
+
+    // Fetch footer component
+    fetch('components/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+        });
+
+    // FAQ Accordion functionality
+    const faqHeaders = document.querySelectorAll('.faq-header');
+    faqHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('i');
+            
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                header.classList.remove('active');
+                icon.className = 'fa-solid fa-chevron-down';
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                header.classList.add('active');
+                icon.className = 'fa-solid fa-chevron-up';
+            }
+        });
+    });
+</script>
+</body>
+</html>

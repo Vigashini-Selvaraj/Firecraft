@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal | Firecraft</title>
+    <link rel="icon" type="image/png" href="assets/images/firecraft_logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/blog.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div id="navbar-container"></div>
+
+    <main class="blog-page">
+
+        <!-- 01. HERO WITH BACKGROUND IMAGE -->
+        <section class="blog-hero section-dark">
+            <div class="blog-hero-bg"></div>
+            <div class="container blog-hero-inner">
+                <span class="section-label" style="color: var(--color-gold); margin-bottom: 20px; display: inline-block;">THE JOURNAL</span>
+                <h1>Stories of <span>flavor, heat,</span><br>and craftsmanship.</h1>
+                <p>Dive deep into our process, discover new recipes, and read about the culture of craft hot sauce.</p>
+            </div>
+        </section>
+
+        <!-- 02. BEST ARTICLE OF THE WEEK -->
+        <section class="featured-post-section">
+            <div class="container">
+                <div class="section-heading-row" style="margin-bottom: 40px;">
+                    <div class="section-heading" style="margin: 0;">
+                        <span class="section-label">EDITOR'S PICK</span>
+                        <h2>Best Article <span>of the Week</span></h2>
+                    </div>
+                </div>
+                <div class="featured-post-card">
+                    <div class="fp-image">
+                        <img src="assets/images/about_ingredients.jpg" alt="Fermentation Process">
+                        <div class="fp-badge">Featured</div>
+                    </div>
+                    <div class="fp-content">
+                        <div class="fp-meta">
+                            <span class="fp-category">Behind the Scenes</span>
+                            <span class="fp-date">Oct 12, 2026</span>
+                        </div>
+                        <h2>The Art of Fermentation: Why Time is Our Best Ingredient.</h2>
+                        <p>Learn how letting our peppers age gracefully in oak barrels brings out the deep, complex flavors that define our signature sauces. It's a slow process, but good things come to those who wait.</p>
+                        <a href="blog-details.html" class="btn btn-outline">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03. FIND YOUR TASTE -->
+        <section class="find-taste-section section-dark" id="find-your-taste">
+            <div class="container">
+                <div class="section-heading centered">
+                    <span class="section-label">CURATED COLLECTIONS</span>
+                    <h2>Find Your <span>Taste</span></h2>
+                    <p style="color: var(--color-muted); max-width: 600px; margin: 20px auto 0;">Explore articles and recipes tailored to your favorite flavor profiles.</p>
+                </div>
+                <div class="taste-grid">
+                    <a href="blog-details.html" class="taste-card">
+                        <div class="taste-icon"><i class="fa-solid fa-lemon"></i></div>
+                        <h3>Fruity & Tangy</h3>
+                        <span>12 Articles</span>
+                    </a>
+                    <a href="blog-details.html" class="taste-card">
+                        <div class="taste-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                        <h3>Smoky Depth</h3>
+                        <span>8 Articles</span>
+                    </a>
+                    <a href="blog-details.html" class="taste-card">
+                        <div class="taste-icon"><i class="fa-solid fa-pepper-hot"></i></div>
+                        <h3>Classic Chili</h3>
+                        <span>15 Articles</span>
+                    </a>
+                    <a href="blog-details.html" class="taste-card">
+                        <div class="taste-icon"><i class="fa-solid fa-garlic"></i></div>
+                        <h3>Savory & Garlic</h3>
+                        <span>10 Articles</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04. EXPLORE BY TOPICS (MAIN GRID) -->
+        <section class="recent-posts-section section-light" id="latest-articles">
+            <div class="container">
+                <div class="section-heading-row" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 50px; flex-wrap: wrap; gap: 20px;">
+                    <div class="section-heading" style="margin-bottom: 0;">
+                        <span class="section-label">ALL ARTICLES</span>
+                        <h2>Explore by <span>Topic</span></h2>
+                    </div>
+                    
+                    <div class="blog-filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="recipes">Recipes</button>
+                        <button class="filter-btn" data-filter="education">Education</button>
+                        <button class="filter-btn" data-filter="culture">Culture</button>
+                    </div>
+                </div>
+
+                <div class="blog-grid" id="blog-grid">
+                    <article class="blog-card" data-category="recipes">
+                        <a href="blog-details.html" class="blog-card-image"><img src="assets/images/services/perfect-pairings.jpg" alt="Pairings"></a>
+                        <div class="blog-card-content">
+                            <div class="blog-meta"><span>Recipes</span> &bull; <span>Oct 05, 2026</span></div>
+                            <h3><a href="blog-details.html">5 Unexpected Ways to Use Mango Habanero</a></h3>
+                        </div>
+                    </article>
+                    <article class="blog-card" data-category="culture">
+                        <a href="blog-details.html" class="blog-card-image"><img src="assets/images/about_team.jpg" alt="Team"></a>
+                        <div class="blog-card-content">
+                            <div class="blog-meta"><span>Culture</span> &bull; <span>Sep 28, 2026</span></div>
+                            <h3><a href="blog-details.html">A Day in the Life of a Sauce Maker</a></h3>
+                        </div>
+                    </article>
+                    <article class="blog-card" data-category="education">
+                        <a href="blog-details.html" class="blog-card-image"><img src="assets/images/services/services-process.jpg" alt="Heat Guide"></a>
+                        <div class="blog-card-content">
+                            <div class="blog-meta"><span>Education</span> &bull; <span>Sep 15, 2026</span></div>
+                            <h3><a href="blog-details.html">Understanding the pH of Fermented Sauce</a></h3>
+                        </div>
+                    </article>
+                    <article class="blog-card" data-category="recipes">
+                        <a href="blog-details.html" class="blog-card-image"><img src="assets/images/products/Hot-Honey-Pizza.png" alt="Pizza"></a>
+                        <div class="blog-card-content">
+                            <div class="blog-meta"><span>Recipes</span> &bull; <span>Sep 02, 2026</span></div>
+                            <h3><a href="blog-details.html">The Ultimate Hot Honey Pizza Recipe</a></h3>
+                        </div>
+                    </article>
+                    <article class="blog-card" data-category="culture">
+                        <a href="blog-details.html" class="blog-card-image"><img src="assets/images/about_farm.jpg" alt="Farm"></a>
+                        <div class="blog-card-content">
+                            <div class="blog-meta"><span>Culture</span> &bull; <span>Aug 21, 2026</span></div>
+                            <h3><a href="blog-details.html">Community: Sourcing from Local Farms</a></h3>
+                        </div>
+                    </article>
+                    <article class="blog-card" data-category="education">
+                        <a href="blog-details.html" class="blog-card-image"><img src="assets/images/services/sauce-collections.jpg" alt="Bottles"></a>
+                        <div class="blog-card-content">
+                            <div class="blog-meta"><span>Education</span> &bull; <span>Aug 10, 2026</span></div>
+                            <h3><a href="blog-details.html">The Difference Between Aged and Fresh Mash</a></h3>
+                        </div>
+                    </article>
+                    <article class="blog-card" data-category="recipes">
+                        <a href="blog-details.html" class="blog-card-image"><img src="assets/images/services/custom-favors.jpg" alt="Favors"></a>
+                        <div class="blog-card-content">
+                            <div class="blog-meta"><span>Recipes</span> &bull; <span>Jul 22, 2026</span></div>
+                            <h3><a href="blog-details.html">Spicy Cocktails: Crafting the Perfect Bloody Mary</a></h3>
+                        </div>
+                    </article>
+                    <article class="blog-card" data-category="culture">
+                        <a href="blog-details.html" class="blog-card-image"><img src="assets/images/services/firecraft-business.jpg" alt="Business"></a>
+                        <div class="blog-card-content">
+                            <div class="blog-meta"><span>Culture</span> &bull; <span>Jul 14, 2026</span></div>
+                            <h3><a href="blog-details.html">Behind the Label: Designing the Firecraft Bottle</a></h3>
+                        </div>
+                    </article>
+                    <article class="blog-card" data-category="education">
+                        <a href="blog-details.html" class="blog-card-image"><img src="assets/images/services/recipe-development.jpg" alt="Recipe Dev"></a>
+                        <div class="blog-card-content">
+                            <div class="blog-meta"><span>Education</span> &bull; <span>Jul 05, 2026</span></div>
+                            <h3><a href="blog-details.html">How to Build Tolerance to Spicy Foods</a></h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 05. ESSENTIAL READING -->
+        <section class="essential-reading-section section-dark" id="essential-reading">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-label">CURATED FOR YOU</span>
+                    <h2>Essential <span>Reading</span></h2>
+                </div>
+                <div class="essential-grid">
+                    <div class="essential-card">
+                        <img src="assets/images/services/services-process.jpg" alt="Scoville">
+                        <div class="essential-content">
+                            <h4>Demystifying the Scoville Scale</h4>
+                            <p>What does a Scoville Heat Unit actually mean? We break down the science of spice.</p>
+                            <a href="blog-details.html">Read <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="essential-card">
+                        <img src="assets/images/about_farm.jpg" alt="Farms">
+                        <div class="essential-content">
+                            <h4>Meet Our Ghost Pepper Farmers</h4>
+                            <p>Take a trip to the local farms where our most intense heat profiles are born.</p>
+                            <a href="blog-details.html">Read <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="essential-card">
+                        <img src="assets/images/services/perfect-pairings.jpg" alt="Pairings">
+                        <div class="essential-content">
+                            <h4>The Golden Rules of Pairing</h4>
+                            <p>How to match hot sauce with your meals without overpowering the ingredients.</p>
+                            <a href="blog-details.html">Read <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06. FAQ SECTION -->
+        <section class="blog-faq-section section-light">
+            <div class="container">
+                <div class="section-heading centered">
+                    <span class="section-label">GOT QUESTIONS?</span>
+                    <h2>Frequently Asked <span>Questions</span></h2>
+                </div>
+                <div class="faq-accordion" id="faq-list">
+                    <details class="faq-item" open>
+                        <summary>How often do you publish new articles?<span class="faq-icon"></span></summary>
+                        <p>We typically publish new content every Tuesday and Thursday, ranging from deep-dive educational pieces to quick weekend recipes.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Can I submit a recipe featuring Firecraft?<span class="faq-icon"></span></summary>
+                        <p>Absolutely! We love seeing what our community creates. Tag us on social media or send us an email for a chance to be featured in the Journal.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Do you have a newsletter for new blog posts?<span class="faq-icon"></span></summary>
+                        <p>Yes, our "Never Miss a Drop" newsletter includes a weekly roundup of our latest articles, plus exclusive early access to limited edition sauces.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- 07. READY TO LEARN / NEWSLETTER CTA -->
+        <section class="newsletter-section section-dark">
+            <div class="container">
+                <div class="newsletter-card">
+                    <div class="newsletter-content">
+                        <span class="section-label" style="color: var(--color-gold); margin-bottom: 15px; display: inline-block;">READY TO LEARN FROM THIS?</span>
+                        <h2>Never Miss a <span>Drop.</span></h2>
+                        <p>Join our community to receive curated articles, new recipes, pairing guides, and early access to limited reserve sauce releases directly to your inbox.</p>
+                    </div>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script>
+        async function loadComponent(elementId, path) {
+            const container = document.getElementById(elementId);
+            try {
+                const response = await fetch(path);
+                if (!response.ok) throw new Error("Component could not be loaded");
+                container.innerHTML = await response.text();
+            } catch (error) {
+                console.error("Unable to load " + path, error);
+            }
+        }
+        
+        document.addEventListener("DOMContentLoaded", () => {
+            loadComponent("navbar-container", "components/navbar.html").then(() => {
+                const navLinks = document.querySelectorAll('.nav-menu a');
+                if (navLinks) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.textContent.trim().toUpperCase() === 'BLOG') link.classList.add('active');
+                    });
+                }
+                if (window.initNavbar) window.initNavbar();
+            });
+            loadComponent("footer-container", "components/footer.html");
+
+            // Setup Blog Filters
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const filterValue = btn.getAttribute('data-filter');
+                    blogCards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Setup Dynamic Links for Blog Details
+            document.querySelectorAll('.blog-card').forEach(card => {
+                const title = card.querySelector('h3').textContent;
+                const img = card.querySelector('img').getAttribute('src');
+                const links = card.querySelectorAll('a');
+                links.forEach(link => {
+                    link.href = `blog-details.html?title=${encodeURIComponent(title)}&image=${encodeURIComponent(img)}`;
+                });
+            });
+
+            document.querySelectorAll('.essential-card').forEach(card => {
+                const title = card.querySelector('h4').textContent;
+                const img = card.querySelector('img').getAttribute('src');
+                const link = card.querySelector('a');
+                if(link) {
+                    link.href = `blog-details.html?title=${encodeURIComponent(title)}&image=${encodeURIComponent(img)}`;
+                }
+            });
+
+            // Accordion Logic
+            document.getElementById("faq-list").addEventListener("toggle", event => {
+                if (event.target.tagName !== "DETAILS" || !event.target.open) return;
+                document.querySelectorAll(".faq-item").forEach(item => {
+                    if (item !== event.target) item.open = false;
+                });
+            }, true);
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

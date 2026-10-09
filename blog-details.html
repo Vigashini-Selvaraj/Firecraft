@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal | Firecraft</title>
+    <link rel="icon" type="image/png" href="assets/images/firecraft_logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/blog-details.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div id="navbar-container"></div>
+
+    <main class="article-page">
+        <!-- 01. ARTICLE HERO -->
+        <section class="article-hero section-dark">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i>
+                    <a href="blog.html">Journal</a> <i class="fa-solid fa-chevron-right"></i>
+                    <span id="bc-title" class="current-page">Article</span>
+                </div>
+
+                <div class="hero-content">
+                    <span class="article-category" id="article-cat">Category</span>
+                    <h1 id="article-title">Article Title</h1>
+                    <p class="article-intro" id="article-intro">Article introduction text goes here.</p>
+                    
+                    <div class="article-meta">
+                        <span class="author">By <span id="article-author">Firecraft</span></span> &bull;
+                        <span class="date" id="article-date">Date</span> &bull;
+                        <span class="read-time"><i class="fa-regular fa-clock"></i> <span id="article-time">5 Min Read</span></span>
+                    </div>
+                </div>
+
+                <div class="article-cover-image">
+                    <img id="article-cover" src="assets/images/hero-bg.jpg" alt="Cover Image">
+                </div>
+            </div>
+        </section>
+
+        <!-- 02. ARTICLE BODY & TOC -->
+        <section class="article-main-section">
+            <div class="container article-layout">
+                
+                <!-- Left Sidebar (TOC) -->
+                <aside class="article-sidebar">
+                    <div class="sidebar-sticky">
+                        
+                        <!-- Mobile TOC Toggle -->
+                        <div class="mobile-toc-toggle" id="mobile-toc-toggle">
+                            <span>Table of Contents</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+
+                        <div class="toc-container" id="toc-container">
+                            <h3 class="toc-title">In this article</h3>
+                            <ul class="toc-list" id="toc-list">
+                                <!-- Injected by JS -->
+                            </ul>
+                        </div>
+                        
+                        <div class="reading-progress">
+                            <span class="progress-label">Reading Progress</span>
+                            <div class="progress-track">
+                                <div class="progress-bar" id="progress-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Right Main Content -->
+                <div class="article-body">
+                    
+                    <div class="rich-text-content" id="article-content">
+                        <!-- HTML injected by JS -->
+                    </div>
+
+                    <!-- 03. FEATURED INSIGHT -->
+                    <div class="featured-insight">
+                        <div class="insight-icon"><i class="fa-solid fa-fire"></i></div>
+                        <h4>Key Takeaway</h4>
+                        <p id="article-insight">The insight text goes here.</p>
+                    </div>
+
+                    <!-- 04. PRACTICAL FOOD PAIRING -->
+                    <div class="food-pairing-section" id="food-pairing-section">
+                        <h3>Practical Pairings</h3>
+                        <p>How to apply these flavors to your everyday meals.</p>
+                        <div class="pairing-grid" id="pairing-grid">
+                            <!-- Injected by JS -->
+                        </div>
+                    </div>
+
+                    <!-- 05. RECOMMENDED SAUCES -->
+                    <div class="recommended-sauces-section" id="recommended-sauces-section">
+                        <h3>Recommended Sauces</h3>
+                        <div class="sauce-grid" id="sauce-grid">
+                            <!-- Injected by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06. RELATED ARTICLES -->
+        <section class="related-articles-section section-light">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-label">KEEP EXPLORING</span>
+                    <h2>Related <span>Articles</span></h2>
+                </div>
+                <div class="related-grid" id="related-grid">
+                    <!-- Injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 07. FINAL CTA -->
+        <section class="final-cta-section section-dark">
+            <div class="container">
+                <div class="cta-card">
+                    <div class="cta-content">
+                        <h2>Ready to bring the <span>heat?</span></h2>
+                        <p>Explore our collection of small-batch, craft hot sauces designed to elevate your everyday meals with bold, balanced flavor.</p>
+                        <div class="cta-actions">
+                            <a href="services.html" class="btn btn-primary">Explore Sauces</a>
+                            <a href="recipes.html" class="btn btn-outline">Browse Recipes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script>
+        async function loadComponent(elementId, path) {
+            const container = document.getElementById(elementId);
+            try {
+                const response = await fetch(path);
+                if (!response.ok) throw new Error("Component could not be loaded");
+                container.innerHTML = await response.text();
+            } catch (error) {
+                console.error("Unable to load " + path, error);
+            }
+        }
+        
+        document.addEventListener("DOMContentLoaded", () => {
+            loadComponent("navbar-container", "components/navbar.html").then(() => {
+                const navLinks = document.querySelectorAll('.nav-menu a');
+                if (navLinks) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.textContent.trim().toUpperCase() === 'BLOG') link.classList.add('active');
+                    });
+                }
+                if (window.initNavbar) window.initNavbar();
+            });
+            loadComponent("footer-container", "components/footer.html");
+            
+            renderArticle();
+            setupScrollProgress();
+            setupMobileToc();
+        });
+
+        // ARTICLE DATA
+        const db = {
+            "understand-chili-heat": {
+                title: "Understand the Heat in Chili Peppers",
+                category: "Education",
+                date: "Oct 12, 2026",
+                author: "Firecraft Kitchen",
+                readTime: "6 Min Read",
+                intro: "Demystifying the Scoville scale and discovering why some peppers burn instantly while others build slowly over time.",
+                image: "assets/images/about_ingredients.jpg",
+                content: `
+                    <h2 id="scoville-scale">The Scoville Scale Explained</h2>
+                    <p>The Scoville scale was invented in 1912 by pharmacist Wilbur Scoville. It was originally designed as an organoleptic test, meaning it relied on human tasters to determine the concentration of capsaicin—the active chemical component that produces the heat sensation in chili peppers.</p>
+                    <p>Today, we use High-Performance Liquid Chromatography (HPLC) to measure capsaicinoids directly, but we still convert the results back to Scoville Heat Units (SHU) out of tradition. A standard Jalapeño sits around 2,500 to 8,000 SHU, while a Carolina Reaper can peak past 2,000,000 SHU.</p>
+                    
+                    <h2 id="types-of-burn">The Different Types of Burn</h2>
+                    <p>But heat is not just a number. If you've ever eaten a fiery Thai chili versus a smoky Ghost pepper, you know the burn behaves differently. The way capsaicinoids bind to your pain receptors varies based on the pepper's chemical makeup.</p>
+                    <ul>
+                        <li><strong>The Sharp Burn:</strong> Peppers like Habaneros and Thai chilies deliver a front-of-mouth warmth that hits you immediately but dissipates relatively quickly.</li>
+                        <li><strong>The Slow Burn:</strong> Superhots like the Ghost Pepper (Bhut Jolokia) are notorious for a creeping heat. You might eat a wing, think "this isn't bad," and 30 seconds later, your throat is on fire.</li>
+                        <li><strong>The Heavy Burn:</strong> Extracts and unrefined capsaicin tend to create a heavy, oppressive burn that lingers in the stomach. We avoid extracts at Firecraft for this reason.</li>
+                    </ul>
+                    <img src="assets/images/ingredients.jpg" alt="Chili Peppers" class="article-image">
+                    
+                    <h2 id="building-tolerance">Building Your Tolerance</h2>
+                    <p>If you're new to spicy food, don't rush into superhots. Start with mild, balanced sauces and gradually increase the Scoville units. Your pain receptors will actually adapt over time (a process called defunctionalization), allowing you to taste the nuanced, fruity, and smoky flavors hidden beneath the fire.</p>
+                    <p>When you inevitably eat something too hot, reach for dairy. Milk and yogurt contain casein, a protein that binds to capsaicin and washes it away. Water will only spread the oil around your mouth!</p>
+                `,
+                toc: [
+                    { id: "scoville-scale", text: "The Scoville Scale Explained" },
+                    { id: "types-of-burn", text: "The Different Types of Burn" },
+                    { id: "building-tolerance", text: "Building Your Tolerance" }
+                ],
+                insight: "Heat should elevate the meal, not obliterate it. The finest craft hot sauces use spice as a vehicle to carry deeper flavor profiles, rather than just acting as a stunt.",
+                pairings: [
+                    { name: "Fish Tacos", desc: "A bright, citrusy habanero sauce cuts through the richness of fried fish without masking the delicate flavor.", img: "assets/images/recipe_wings_1791360856984.jpg" },
+                    { name: "Smoked Brisket", desc: "A robust ghost pepper sauce adds the perfect rolling heat to rich, fatty barbecue meats.", img: "assets/images/hero_fiery_hot_sauce.jpg" }
+                ],
+                sauces: [
+                    { name: "Classic Hot Sauce", desc: "A balanced, everyday heat perfect for building tolerance.", img: "assets/images/product_sauces_1791360804955.jpg" },
+                    { name: "Mango Habanero Hot Sauce", desc: "Sharp, fruity heat that dissipates quickly.", img: "assets/images/product_sauces_1791360804955.jpg" }
+                ]
+            },
+            "flavor-profiles": {
+                title: "Sweet or Smoky? Understanding Flavor Profiles",
+                category: "Culinary",
+                date: "Sep 28, 2026",
+                author: "Chef Alex",
+                readTime: "8 Min Read",
+                intro: "How to identify and balance the core flavor notes in hot sauce, and why great sauce is about more than just the pepper.",
+                image: "assets/images/hero_fiery_hot_sauce_v2.jpg",
+                content: `
+                    <h2 id="the-balance">The Importance of Balance</h2>
+                    <p>A great hot sauce is a balancing act of acidity, sweetness, salt, umami, and heat. When you taste a craft sauce, you should experience a journey on your palate, not just a single note of burning pain.</p>
+                    
+                    <h2 id="sweet-heat">The Allure of Sweet Heat</h2>
+                    <p>Sweetness in a hot sauce usually comes from tropical fruits (mango, pineapple), honey, or agave. Sugar naturally dampens the perception of heat, making highly spicy peppers more palatable. The contrast between sweet and spicy triggers multiple receptors on your tongue simultaneously, which is why sauces like Mango Habanero are so highly addictive.</p>
+                    
+                    <h2 id="smoky-depth">Finding the Smoky Depth</h2>
+                    <p>Smoky sauces rely on roasted ingredients, smoked salts, or specific peppers like Chipotle (which is a smoke-dried jalapeño). These sauces deliver a savory, grounded flavor profile that anchors rich foods. A good smoky sauce doesn't just taste like a campfire; it brings out the umami notes in whatever you put it on.</p>
+                `,
+                toc: [
+                    { id: "the-balance", text: "The Importance of Balance" },
+                    { id: "sweet-heat", text: "The Allure of Sweet Heat" },
+                    { id: "smoky-depth", text: "Finding the Smoky Depth" }
+                ],
+                insight: "Never judge a sauce by a single drop on a spoon. Hot sauce is a condiment, meaning it is designed to interact chemically with the fats and proteins in your food.",
+                pairings: [
+                    { name: "Chicken Wings", desc: "Toss crispy wings in a sweet and spicy sauce for a classic appetizer.", img: "assets/images/recipe_wings_1791360856984.jpg" },
+                    { name: "Breakfast Eggs", desc: "A smoky chipotle sauce adds savory depth to simple scrambled eggs.", img: "assets/images/product_condiments_1791360816664.jpg" }
+                ],
+                sauces: [
+                    { name: "Chipotle BBQ Sauce", desc: "Deep, rich, and intensely smoky.", img: "assets/images/product_sauces_1791360804955.jpg" },
+                    { name: "Mango Habanero Hot Sauce", desc: "Bright, tropical, and fiery.", img: "assets/images/product_sauces_1791360804955.jpg" }
+                ]
+            },
+            "choose-right-sauce": {
+                title: "How to Choose the Right Hot Sauce",
+                category: "Guides",
+                date: "Sep 15, 2026",
+                author: "Firecraft Team",
+                readTime: "5 Min Read",
+                intro: "A definitive guide to matching the right sauce to the right meal without overpowering your dish.",
+                image: "assets/images/craft-process.jpg",
+                content: `
+                    <h2 id="acidity-matters">Why Acidity Matters</h2>
+                    <p>The vinegar content (acidity) of a hot sauce determines how it cuts through food. A highly acidic sauce (like a traditional Louisiana style) is perfect for fried, greasy foods because the acid cuts the fat and cleanses the palate.</p>
+                    
+                    <h2 id="matching-intensity">Matching Intensity</h2>
+                    <p>A delicate piece of white fish will be completely destroyed by a heavy garlic ghost pepper sauce. Conversely, a hearty bowl of beef chili will completely swallow up a mild green jalapeño sauce. You must match the intensity of the sauce to the weight of the dish.</p>
+                `,
+                toc: [
+                    { id: "acidity-matters", text: "Why Acidity Matters" },
+                    { id: "matching-intensity", text: "Matching Intensity" }
+                ],
+                insight: "When in doubt, think about the region. Mexican foods pair well with cilantro and lime-heavy sauces, while Southern BBQ demands smoky, robust flavors.",
+                pairings: [
+                    { name: "Noodle Bowls", desc: "A savory garlic chili sauce binds perfectly with soy and sesame oil.", img: "assets/images/ingredients.jpg" },
+                    { name: "Cheeseburgers", desc: "A sharp, acidic classic hot sauce cuts through the rich cheddar and beef fat.", img: "assets/images/product_condiments_1791360816664.jpg" }
+                ],
+                sauces: [
+                    { name: "Garlic Chili Sauce", desc: "Savory, umami-rich, and medium heat.", img: "assets/images/product_sauces_1791360804955.jpg" },
+                    { name: "Classic Hot Sauce", desc: "The perfect acidic table sauce.", img: "assets/images/product_sauces_1791360804955.jpg" }
+                ]
+            },
+            "fermentation-basics": {
+                title: "The Art of Fermenting Hot Sauce",
+                category: "Technique",
+                date: "Oct 20, 2026",
+                author: "Firecraft Kitchen",
+                readTime: "7 Min Read",
+                intro: "Why we let our pepper mash age, and how lacto-fermentation unlocks entirely new depths of flavor.",
+                image: "assets/images/craft-process.jpg",
+                content: `
+                    <h2 id="lacto-fermentation">What is Lacto-Fermentation?</h2>
+                    <p>Lacto-fermentation is a biological process where lactobacillus bacteria convert sugars into lactic acid. In the hot sauce world, this means taking fresh peppers, salt, and time, and allowing them to age in a controlled environment. The lactic acid preserves the peppers while simultaneously deepening their flavor.</p>
+                    
+                    <h2 id="flavor-development">The Flavor Development</h2>
+                    <p>While fresh pepper mash is bright and highly acidic (due to added vinegar), fermented mash develops a complex, funky, and umami-rich profile. The heat actually mellows out slightly, making room for savory notes that you simply cannot achieve by blending fresh peppers with vinegar.</p>
+                `,
+                toc: [
+                    { id: "lacto-fermentation", text: "What is Lacto-Fermentation?" },
+                    { id: "flavor-development", text: "The Flavor Development" }
+                ],
+                insight: "Patience is an ingredient. The best hot sauces are not rushed; they are given the time they need to mature and develop their unique character.",
+                pairings: [
+                    { name: "Grilled Meats", desc: "The umami from the fermented sauce enhances the char and smoke of grilled meats.", img: "assets/images/recipe_wings_1791360856984.jpg" },
+                    { name: "Hearty Stews", desc: "A spoonful of fermented sauce acts like a flavor bomb, adding depth and heat.", img: "assets/images/ingredients.jpg" }
+                ],
+                sauces: [
+                    { name: "Volcanic Reserve", desc: "Aged for 6 months for maximum depth.", img: "assets/images/product_sauces_1791360804955.jpg" },
+                    { name: "Classic Hot Sauce", desc: "Our signature blend.", img: "assets/images/product_sauces_1791360804955.jpg" }
+                ]
+            }
+        };
+
+        function renderArticle() {
+            const params = new URLSearchParams(window.location.search);
+            const passedTitle = params.get('title');
+            const passedImage = params.get('image');
+            
+            const articleKey = params.get('article') || 'understand-chili-heat'; 
+            const data = db[articleKey] || db['understand-chili-heat'];
+
+            const finalTitle = passedTitle || data.title;
+            const finalImage = passedImage || data.image;
+
+            // Header info
+            document.getElementById('bc-title').textContent = finalTitle;
+            document.getElementById('article-cat').textContent = data.category;
+            document.getElementById('article-title').textContent = finalTitle;
+            document.getElementById('article-intro').textContent = data.intro;
+            document.getElementById('article-author').textContent = data.author;
+            document.getElementById('article-date').textContent = data.date;
+            document.getElementById('article-time').textContent = data.readTime;
+            document.getElementById('article-cover').src = finalImage;
+            document.title = finalTitle + " | Firecraft";
+
+            // Body
+            document.getElementById('article-content').innerHTML = data.content;
+            document.getElementById('article-insight').textContent = data.insight;
+
+            // TOC
+            const tocList = document.getElementById('toc-list');
+            tocList.innerHTML = '';
+            data.toc.forEach(item => {
+                tocList.innerHTML += `<li><a href="#${item.id}">${item.text}</a></li>`;
+            });
+
+            // Food Pairings
+            const pairingGrid = document.getElementById('pairing-grid');
+            pairingGrid.innerHTML = '';
+            data.pairings.forEach(p => {
+                pairingGrid.innerHTML += `
+                    <div class="pairing-card">
+                        <img src="${p.img}" alt="${p.name}">
+                        <div class="pairing-info">
+                            <h4>${p.name}</h4>
+                            <p>${p.desc}</p>
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Recommended Sauces
+            const sauceGrid = document.getElementById('sauce-grid');
+            sauceGrid.innerHTML = '';
+            data.sauces.forEach(s => {
+                sauceGrid.innerHTML += `
+                    <a href="services.html" class="sauce-card">
+                        <div class="sauce-img"><img src="${s.img}" alt="${s.name}"></div>
+                        <h4>${s.name}</h4>
+                        <p>${s.desc}</p>
+                        <span class="view-link">View Sauce <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                `;
+            });
+
+            // Related Articles
+            const relatedGrid = document.getElementById('related-grid');
+            relatedGrid.innerHTML = '';
+            Object.keys(db).forEach(key => {
+                if(key !== articleKey) {
+                    const article = db[key];
+                    relatedGrid.innerHTML += `
+                        <article class="related-card">
+                            <a href="blog-details.html?article=${key}" class="rc-img"><img src="${article.image}" alt="${article.title}"></a>
+                            <div class="rc-content">
+                                <span class="rc-cat">${article.category}</span>
+                                <h3><a href="blog-details.html?article=${key}">${article.title}</a></h3>
+                                <p>${article.intro.substring(0, 80)}...</p>
+                                <span class="rc-time"><i class="fa-regular fa-clock"></i> ${article.readTime}</span>
+                            </div>
+                        </article>
+                    `;
+                }
+            });
+        }
+
+        function setupScrollProgress() {
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                document.getElementById('progress-bar').style.width = scrolled + '%';
+            });
+        }
+
+        function setupMobileToc() {
+            const toggle = document.getElementById('mobile-toc-toggle');
+            const container = document.getElementById('toc-container');
+            toggle.addEventListener('click', () => {
+                container.classList.toggle('expanded');
+                toggle.classList.toggle('active');
+            });
+        }
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

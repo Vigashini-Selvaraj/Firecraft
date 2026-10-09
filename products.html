@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fireborn | Products</title>
+    <link rel="icon" type="image/png" href="assets/images/firecraft_logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/products.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     NAVBAR
+====================================================== -->
+<header class="navbar">
+    <div class="container navbar-container">
+
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <img src="assets/images/firecraft_logo.png" alt="Firecraft Hot Sauces">
+            <span class="logo-text">Firecraft</span>
+        </a>
+
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="home2.html">Home 2</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html" class="active">Products</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="services.html">Service</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <!-- Navbar Actions -->
+        <div class="nav-actions">
+            
+            <button class="mobile-menu-btn" aria-label="Open Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            
+            <button class="nav-icon theme-toggle-btn" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button class="nav-icon dir-toggle-btn" aria-label="Toggle Direction">
+                LTR
+            </button>
+
+            <div class="profile-dropdown-container desktop-only">
+                <button class="nav-icon profile-btn" aria-label="Profile">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+                <div class="profile-dropdown">
+                    <a href="#">Login</a>
+                    <a href="#">Register</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</header>
+
+
+<main>
+<!-- =====================================================
+     01. PRODUCT HERO
+===================================================== -->
+<section class="products-hero">
+    <div class="container hero-content-wrapper">
+        <div class="hero-text-content">
+            <span class="section-label">THE COLLECTION</span>
+            <h1>Find Your<br><em>Perfect Heat.</em></h1>
+            <p>Premium, small-batch hot sauces meticulously crafted for those who demand uncompromising flavor alongside their fire.</p>
+            <div class="hero-buttons">
+                <a href="#collection" class="btn btn-primary">Explore Sauces <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#bundles" class="btn btn-outline">Build Your Collection <i class="fa-solid fa-box"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     02. OUR SAUCE COLLECTION
+===================================================== -->
+<section id="collection" class="collection-section section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-label">SIGNATURE SAUCES</span>
+            <h2>Our Sauce <em>Collection.</em></h2>
+        </div>
+        
+        <div class="collection-grid">
+            <!-- Classic -->
+            <article class="product-card" style="cursor: pointer;" onclick="window.location.href='product-detail.html?id=classic-hot-sauce'">
+                <div class="product-image"><img src="assets/images/products/Classic-Hot-Sauce.png" alt="Classic Hot Sauce"></div>
+                <div class="product-info">
+                    <div class="heat-bar"><span class="heat-level mild">MILD</span></div>
+                    <h3>Classic Hot Sauce</h3>
+                    <p class="flavor-profile"><strong>Flavor:</strong> Tangy, Bright, Peppery</p>
+                    <p class="best-with"><strong>Best With:</strong> Pizza, Eggs, Tacos</p>
+                    <div class="product-actions">
+                        <span class="price">$120 / Case</span>
+                        <a href="product-detail.html?id=classic-hot-sauce" class="btn btn-outline">Bulk Order</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Mango Habanero -->
+            <article class="product-card" style="cursor: pointer;" onclick="window.location.href='product-detail.html?id=mango-habanero'">
+                <div class="product-image"><img src="assets/images/products/Mango-Habanero-Hot-Sauce.png" alt="Mango Habanero Hot Sauce"></div>
+                <div class="product-info">
+                    <div class="heat-bar"><span class="heat-level hot">HOT</span></div>
+                    <h3>Mango Habanero</h3>
+                    <p class="flavor-profile"><strong>Flavor:</strong> Sweet, Fruity, Intense Burn</p>
+                    <p class="best-with"><strong>Best With:</strong> Grilled Chicken, Fish Tacos</p>
+                    <div class="product-actions">
+                        <span class="price">$140 / Case</span>
+                        <a href="product-detail.html?id=mango-habanero" class="btn btn-outline">Bulk Order</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Chipotle BBQ -->
+            <article class="product-card" style="cursor: pointer;" onclick="window.location.href='product-detail.html?id=chipotle-bbq'">
+                <div class="product-image"><img src="assets/images/products/Chipotle-BBQ-Sauce.png" alt="Chipotle BBQ Sauce"></div>
+                <div class="product-info">
+                    <div class="heat-bar"><span class="heat-level medium">MEDIUM</span></div>
+                    <h3>Chipotle BBQ</h3>
+                    <p class="flavor-profile"><strong>Flavor:</strong> Smoky, Earthy, Sweet Molasses</p>
+                    <p class="best-with"><strong>Best With:</strong> Burgers, Ribs, Pulled Pork</p>
+                    <div class="product-actions">
+                        <span class="price">$150 / Case</span>
+                        <a href="product-detail.html?id=chipotle-bbq" class="btn btn-outline">Bulk Order</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Garlic Chili -->
+            <article class="product-card" style="cursor: pointer;" onclick="window.location.href='product-detail.html?id=garlic-chili'">
+                <div class="product-image"><img src="assets/images/products/Garlic-Chili-Sauce.png" alt="Garlic Chili Sauce"></div>
+                <div class="product-info">
+                    <div class="heat-bar"><span class="heat-level medium">MEDIUM</span></div>
+                    <h3>Garlic Chili Sauce</h3>
+                    <p class="flavor-profile"><strong>Flavor:</strong> Deeply Savory, Garlicky, Zesty</p>
+                    <p class="best-with"><strong>Best With:</strong> Noodles, Stir-fry, Dumplings</p>
+                    <div class="product-actions">
+                        <span class="price">$140 / Case</span>
+                        <a href="product-detail.html?id=garlic-chili" class="btn btn-outline">Bulk Order</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Ghost Pepper Reserve -->
+            <article class="product-card" style="cursor: pointer;" onclick="window.location.href='product-detail.html?id=ghost-pepper'">
+                <div class="product-image"><img src="assets/images/products/extra-hot.png" alt="Ghost Pepper Reserve"></div>
+                <div class="product-info">
+                    <div class="heat-bar"><span class="heat-level extra-hot">EXTRA HOT</span></div>
+                    <h3>Ghost Pepper Reserve</h3>
+                    <p class="flavor-profile"><strong>Flavor:</strong> Pure Fire, Earthy, Intense</p>
+                    <p class="best-with"><strong>Best With:</strong> Chili, Soups, Daredevils</p>
+                    <div class="product-actions">
+                        <span class="price">$180 / Case</span>
+                        <a href="product-detail.html?id=ghost-pepper" class="btn btn-outline">Bulk Order</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Smoked Jalapeno -->
+            <article class="product-card" style="cursor: pointer;" onclick="window.location.href='product-detail.html?id=smoked-jalapeno'">
+                <div class="product-image"><img src="assets/images/products/deep-and-smoky.png" alt="Smoked Jalapeno"></div>
+                <div class="product-info">
+                    <div class="heat-bar"><span class="heat-level mild">MILD</span></div>
+                    <h3>Smoked Jalapeño</h3>
+                    <p class="flavor-profile"><strong>Flavor:</strong> Rich, Smoky, Mild Zest</p>
+                    <p class="best-with"><strong>Best With:</strong> Tacos, Nachos, Breakfast</p>
+                    <div class="product-actions">
+                        <span class="price">$120 / Case</span>
+                        <a href="product-detail.html?id=smoked-jalapeno" class="btn btn-outline">Bulk Order</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Pineapple Habanero -->
+            <article class="product-card" style="cursor: pointer;" onclick="window.location.href='product-detail.html?id=pineapple-habanero'">
+                <div class="product-image"><img src="assets/images/products/Fruit-Forward.png" alt="Pineapple Habanero"></div>
+                <div class="product-info">
+                    <div class="heat-bar"><span class="heat-level hot">HOT</span></div>
+                    <h3>Pineapple Habanero</h3>
+                    <p class="flavor-profile"><strong>Flavor:</strong> Tropical, Sweet, Sharp Bite</p>
+                    <p class="best-with"><strong>Best With:</strong> Fish Tacos, Pork, Rice Bowls</p>
+                    <div class="product-actions">
+                        <span class="price">$140 / Case</span>
+                        <a href="product-detail.html?id=pineapple-habanero" class="btn btn-outline">Bulk Order</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- The Daily Blaze -->
+            <article class="product-card" style="cursor: pointer;" onclick="window.location.href='product-detail.html?id=daily-blaze'">
+                <div class="product-image"><img src="assets/images/products/everyday-sauce.png" alt="The Daily Blaze"></div>
+                <div class="product-info">
+                    <div class="heat-bar"><span class="heat-level medium">MEDIUM</span></div>
+                    <h3>The Daily Blaze</h3>
+                    <p class="flavor-profile"><strong>Flavor:</strong> Balanced, Vinegar, Savory</p>
+                    <p class="best-with"><strong>Best With:</strong> Literally Everything</p>
+                    <div class="product-actions">
+                        <span class="price">$10.00</span>
+                        <a href="product-detail.html?id=daily-blaze" class="btn btn-outline">Bulk Order</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Smoked Red Chili -->
+            <article class="product-card" style="cursor: pointer;" onclick="window.location.href='product-detail.html?id=smoked-red-chili'">
+                <div class="product-image"><img src="assets/images/sauce_smoked_red_1791369304097.jpg" alt="Smoked Red Chili"></div>
+                <div class="product-info">
+                    <div class="heat-bar"><span class="heat-level medium">MEDIUM</span></div>
+                    <h3>Smoked Red Chili</h3>
+                    <p class="flavor-profile"><strong>Flavor:</strong> Robust, Oak Smoked, Warm</p>
+                    <p class="best-with"><strong>Best With:</strong> Steaks, Roasted Veggies</p>
+                    <div class="product-actions">
+                        <span class="price">$150 / Case</span>
+                        <a href="product-detail.html?id=smoked-red-chili" class="btn btn-outline">Bulk Order</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Roasted Habanero -->
+            <article class="product-card" style="cursor: pointer;" onclick="window.location.href='product-detail.html?id=roasted-habanero'">
+                <div class="product-image"><img src="assets/images/products/deep-and-smoky.png" alt="Roasted Habanero"></div>
+                <div class="product-info">
+                    <div class="heat-bar"><span class="heat-level hot">HOT</span></div>
+                    <h3>Roasted Habanero</h3>
+                    <p class="flavor-profile"><strong>Flavor:</strong> Charred, Sweet, Fiery</p>
+                    <p class="best-with"><strong>Best With:</strong> Tacos, Grilled Meats</p>
+                    <div class="product-actions">
+                        <span class="price">$145 / Case</span>
+                        <a href="product-detail.html?id=roasted-habanero" class="btn btn-outline">Bulk Order</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     03. CHOOSE YOUR HEAT
+===================================================== -->
+<section class="heat-scale-section section section-dark" style="background: var(--color-black);">
+    <div class="container">
+        <div class="section-heading text-center" style="margin-bottom: 60px;">
+            <span class="section-label">THE FIRE SCALE</span>
+            <h2>Choose Your <em>Heat.</em></h2>
+        </div>
+        
+        <div class="heat-scale-grid">
+            <div class="heat-step mild" data-heat="mild" style="background-image: url('assets/images/heat_mild.jpg');">
+                <div class="heat-step-overlay"></div>
+                <div class="heat-step-content">
+                    
+                    <h3>Mild</h3>
+                    <p>A gentle, warming tingle. Perfect for enhancing flavor without breaking a sweat.</p>
+                </div>
+            </div>
+            <div class="heat-step medium" data-heat="medium" style="background-image: url('assets/images/heat_medium.jpg');">
+                <div class="heat-step-overlay"></div>
+                <div class="heat-step-content">
+                    
+                    <h3>Medium</h3>
+                    <p>A satisfying, noticeable kick. The sweet spot for everyday heat seekers.</p>
+                </div>
+            </div>
+            <div class="heat-step hot" data-heat="hot" style="background-image: url('assets/images/heat_hot.jpg');">
+                <div class="heat-step-overlay"></div>
+                <div class="heat-step-content">
+                    
+                    <h3>Hot</h3>
+                    <p>An aggressive, lingering burn. For those who want their endorphins racing.</p>
+                </div>
+            </div>
+            <div class="heat-step extra-hot" data-heat="extra-hot" style="background-image: url('assets/images/heat_extreme.jpg');">
+                <div class="heat-step-overlay"></div>
+                <div class="heat-step-content">
+                    
+                    <h3>Extra Hot</h3>
+                    <p>Pure, unapologetic fire. A searing heat that challenges even the boldest palates.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     04. FLAVOR PROFILES & PAIRINGS
+===================================================== -->
+<section class="flavor-pairing-section section">
+    <div class="container">
+        <div class="fp-layout">
+            <div class="fp-content">
+                <span class="section-label">TASTE PROFILES</span>
+                <h2>Flavor, Not Just <em>Fire.</em></h2>
+                <p>We build our recipes around distinct taste profiles so you can perfectly match your sauce to your meal.</p>
+                
+                <div class="flavor-tags interactive" id="flavorTags">
+                    <button class="flavor-tag active" data-flavor="tangy">TANGY</button>
+                    <button class="flavor-tag" data-flavor="smoky">SMOKY</button>
+                    <button class="flavor-tag" data-flavor="sweet">SWEET</button>
+                    <button class="flavor-tag" data-flavor="garlicky">GARLICKY</button>
+                    <button class="flavor-tag" data-flavor="fruity">FRUITY</button>
+                    <button class="flavor-tag" data-flavor="bold">BOLD</button>
+                </div>
+            </div>
+            
+            <div class="fp-pairings">
+                <div class="flavor-display-card" id="flavorDisplayCard">
+                    <div class="flavor-image-container">
+                        <img src="assets/images/products/Hot-Honey-Pizza.png" id="flavorImage" alt="Perfect for Pizza">
+                        <div class="flavor-image-overlay"></div>
+                    </div>
+                    <div class="flavor-details">
+                        <h3 id="flavorFood">Perfect for Pizza & Breakfast</h3>
+                        <p id="flavorDesc">A bright, zesty vinegar base that cuts through rich, heavy cheese perfectly.</p>
+                        <div class="recommended-sauce">
+                            <span>RECOMMENDED SAUCE</span>
+                            <strong id="flavorSauce">Classic Hot Sauce</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     05. FIND YOUR SAUCE / PREFERENCE SELECTOR
+===================================================== -->
+<section class="find-sauce-section section" style="background: var(--color-dark-soft);">
+    <div class="container text-center">
+        <div class="find-sauce-box">
+            <h2>Find Your <em>Match.</em></h2>
+            <p>Not sure where to start? Let us recommend the perfect bottle.</p>
+            
+            <div class="selector-form">
+                <div class="selector-group">
+                    <label>How much heat?</label>
+                    <select id="heatPref">
+                        <option value="mild">Mild & Flavorful</option>
+                        <option value="medium">Medium Kick</option>
+                        <option value="hot">Melt My Face</option>
+                    </select>
+                </div>
+                <div class="selector-group">
+                    <label>Flavor Vibe?</label>
+                    <select id="flavorPref">
+                        <option value="sweet">Sweet & Fruity</option>
+                        <option value="smoky">Deep & Smoky</option>
+                        <option value="zesty">Zesty & Garlicky</option>
+                        <option value="any">Anything</option>
+                    </select>
+                </div>
+                <div class="selector-group">
+                    <label>Eating with?</label>
+                    <select id="foodPref">
+                        <option value="tacos">Tacos / Mexican</option>
+                        <option value="pizza">Pizza / Italian</option>
+                        <option value="bbq">BBQ / Meats</option>
+                        <option value="any">Anything</option>
+                    </select>
+                </div>
+                <button id="findMatchBtn" class="btn btn-primary" style="margin-top:20px;">Find My Sauce</button>
+            </div>
+            
+            <div id="matchResult" class="match-result-box" style="display: none; margin-top: 40px; text-align: left; background: var(--color-black); padding: 30px; border-radius: 8px; border: 1px solid var(--color-red); align-items: center; gap: 30px;">
+                <img id="matchImg" src="assets/images/products/Classic-Hot-Sauce.png" style="width: 120px; height: 120px; object-fit: cover; border-radius: 4px;" alt="Match">
+                <div>
+                    <span style="color: var(--color-red); font-weight: 700; font-size: 12px; letter-spacing: 0.1em; display: block; margin-bottom: 5px;">YOUR PERFECT MATCH</span>
+                    <h3 id="matchName" style="color: var(--color-text-light); font-family: var(--font-display); font-size: 32px; margin-bottom: 10px;">Classic Hot Sauce</h3>
+                    <p id="matchDesc" style="color: var(--color-muted); font-size: 15px; margin-bottom: 15px;">The perfect balance of heat and tang for any meal.</p>
+                    <a href="product-detail.html?id=classic-hot-sauce" class="btn btn-outline" style="padding: 8px 20px; font-size: 12px;">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     06. BUNDLES & BEST SELLERS
+===================================================== -->
+<section id="bundles" class="bundles-section section">
+    <div class="container">
+        <div class="section-heading text-center">
+            <span class="section-label">COMPLETE YOUR COLLECTION</span>
+            <h2>Curated <em>Bundles.</em></h2>
+        </div>
+        
+                <div class="bundles-grid">
+            <div class="bundle-card" style="cursor: pointer;" onclick="window.location.href='product-detail.html?id=daily-blaze'">
+                <div class="bundle-image" style="margin-bottom: 25px;">
+                    <img src="assets/images/products/everyday-sauce.png" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+                </div>
+                <div class="bundle-content">
+                    <h3>The Everyday Trio</h3>
+                    <p>Classic, Garlic Chili, and Chipotle BBQ. The essentials for any pantry.</p>
+                    <span class="price">$380 / Case</span>
+                    <a href="product-detail.html?id=daily-blaze" class="btn btn-primary">Bulk Order</a>
+                </div>
+            </div>
+
+            <div class="bundle-card" style="cursor: pointer;" onclick="window.location.href='product-detail.html?id=ghost-pepper'">
+                <div class="bundle-image" style="margin-bottom: 25px;">
+                    <img src="assets/images/products/extra-hot.png" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+                </div>
+                <div class="bundle-content">
+                    <h3>Heat Seeker Set</h3>
+                    <p>Mango Habanero and our secret Ghost Pepper reserve. Not for the faint of heart.</p>
+                    <span class="price">$320 / Case</span>
+                    <a href="product-detail.html?id=ghost-pepper" class="btn btn-primary">Bulk Order</a>
+                </div>
+            </div>
+
+            <div class="bundle-card" style="cursor: pointer;" onclick="window.location.href='product-detail.html?id=mango-habanero'">
+                <div class="bundle-image" style="margin-bottom: 25px;">
+                    <img src="assets/images/products/deep-and-smoky.png" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+                </div>
+                <div class="bundle-content">
+                    <h3>Sweet + Smoky</h3>
+                    <p>Chipotle BBQ and Mango Habanero. The ultimate flavor contrast.</p>
+                    <span class="price">$280 / Case</span>
+                    <a href="product-detail.html?id=mango-habanero" class="btn btn-primary">Bulk Order</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Moved CTA to bottom -->
+
+<!-- =====================================================
+     07. OUR QUALITY GUARANTEE
+===================================================== -->
+<section class="section section-dark" style="background: var(--color-dark); padding: 80px 0; border-top: 1px solid var(--color-border-dark);">
+    <div class="container text-center">
+        <span class="section-label" style="display:flex; justify-content:center; margin-bottom: 16px;">THE FIRECRAFT STANDARD</span>
+        <div class="section-heading centered">
+            <h2>No Compromises. Just <em>Flavor.</em></h2>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; justify-content: center; margin-top: 40px;">
+            <div style="padding: 30px; background: var(--color-dark-soft); border: 1px solid var(--color-border-dark); border-radius: 8px;">
+                <i class="fa-solid fa-pepper-hot" style="font-size: 32px; color: var(--color-red); margin-bottom: 20px;"></i>
+                <h3 style="font-family: var(--font-display); font-size: 28px; color: var(--color-text-light); margin-bottom: 15px; font-weight: 400;">Small Batch</h3>
+                <p style="color: var(--color-muted); font-size: 15px; line-height: 1.6;">We handcraft every single bottle in small batches to ensure absolute perfection in flavor and heat consistency.</p>
+            </div>
+            <div style="padding: 30px; background: var(--color-dark-soft); border: 1px solid var(--color-border-dark); border-radius: 8px;">
+                <i class="fa-solid fa-leaf" style="font-size: 32px; color: var(--color-red); margin-bottom: 20px;"></i>
+                <h3 style="font-family: var(--font-display); font-size: 28px; color: var(--color-text-light); margin-bottom: 15px; font-weight: 400;">100% Natural</h3>
+                <p style="color: var(--color-muted); font-size: 15px; line-height: 1.6;">No artificial extracts or preservatives. Our heat comes directly from the finest, freshest peppers grown locally.</p>
+            </div>
+            <div style="padding: 30px; background: var(--color-dark-soft); border: 1px solid var(--color-border-dark); border-radius: 8px;">
+                <i class="fa-solid fa-medal" style="font-size: 32px; color: var(--color-red); margin-bottom: 20px;"></i>
+                <h3 style="font-family: var(--font-display); font-size: 28px; color: var(--color-text-light); margin-bottom: 15px; font-weight: 400;">Award Winning</h3>
+                <p style="color: var(--color-muted); font-size: 15px; line-height: 1.6;">Recognized globally for balancing extreme heat with complex, culinary-grade flavor profiles.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     08. TESTIMONIALS
+===================================================== -->
+<section class="section section-dark" style="background: var(--color-dark-soft); padding: 80px 0;">
+    <div class="container text-center">
+        <span class="section-label" style="display:flex; justify-content:center; margin-bottom: 16px;">COMMUNITY</span>
+        <div class="section-heading centered">
+            <h2>Burn Book <em>Reviews.</em></h2>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+            <div style="text-align: left; padding: 40px; border-left: 3px solid var(--color-red); background: var(--color-dark); border-radius: 4px;">
+                <div style="color: var(--color-gold); margin-bottom: 20px; font-size: 12px; letter-spacing: 4px;">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p style="font-family: var(--font-display); font-size: 23px; color: var(--color-text-light); margin-bottom: 20px; line-height: 1.35;">"The Ghost Pepper Reserve completely ruined my taste buds in the best way possible. I can't eat BBQ without it now."</p>
+                <span style="color: var(--color-muted); font-weight: 700; font-size: 11px;">MARCUS T.</span>
+            </div>
+            <div style="text-align: left; padding: 40px; border-left: 3px solid var(--color-red); background: var(--color-dark); border-radius: 4px;">
+                <div style="color: var(--color-gold); margin-bottom: 20px; font-size: 12px; letter-spacing: 4px;">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p style="font-family: var(--font-display); font-size: 23px; color: var(--color-text-light); margin-bottom: 20px; line-height: 1.35;">"Mango Habanero changed my life. It's the exact perfect sweet to heat ratio. I buy it by the case now."</p>
+                <span style="color: var(--color-muted); font-weight: 700; font-size: 11px;">SARAH J.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     09. FINAL CTA
+===================================================== -->
+
+<!-- FIRECRAFT FINAL CTA -->
+<section class="firecraft-cta">
+    <div class="firecraft-cta-glow"></div>
+
+    <div class="firecraft-cta-content">
+        <span class="firecraft-cta-eyebrow">
+            <span class="firecraft-cta-line"></span>
+            MADE FOR THE BOLD
+            <span class="firecraft-cta-line"></span>
+        </span>
+
+        <h2>
+            Ordinary Food.<br>
+            <span>Extraordinary Heat.</span>
+        </h2>
+
+        <p>
+            Bold flavors. Real ingredients. Unforgettable heat.
+            Find your perfect Firecraft sauce and turn every meal
+            into something worth craving.
+        </p>
+
+        <div class="firecraft-cta-actions">
+            <a href="#collection" class="firecraft-cta-button">
+                EXPLORE THE COLLECTION
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <span class="firecraft-cta-note">
+                <i class="fa-solid fa-fire-flame-curved"></i>
+                FIND YOUR LEVEL OF HEAT
+            </span>
+        </div>
+    </div>
+
+    <div class="firecraft-cta-decoration firecraft-cta-decoration-one"></div>
+    <div class="firecraft-cta-decoration firecraft-cta-decoration-two"></div>
+</section>
+
+</main>
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+<style>
+    .footer-column h3 {
+        font-family: var(--font-body); /* Override display font to match navbar */
+        font-size: 12px !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 25px !important;
+        color: var(--color-white);
+    }
+    .footer-column a {
+        color: var(--color-muted);
+        transition: color 0.3s;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    .footer-column a:hover {
+        color: var(--color-red);
+    }
+</style>
+
+<footer class="footer" style="background-color: #090908; color: #f7f2ea; padding-top: 60px; margin-top: 80px;">
+    <div class="container footer-container" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; padding-bottom: 40px;">
+
+        <!-- Brand & Socials -->
+        <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+                <img src="assets/images/firecraft_logo.png" alt="Firecraft Logo" style="height: 65px; width: auto; object-fit: contain;">
+            </a>
+            <p style="margin-top: 20px; line-height: 1.6; color: var(--color-muted); font-size: 16px;">
+                Crafting premium, small-batch hot sauces for serious flavor seekers. Elevate your everyday meals with the perfect balance of heat and taste.
+            </p>
+            <div class="social-links" style="display: flex; gap: 15px; margin-top: 25px;">
+                <a href="#" aria-label="Facebook" style="color: var(--color-white); font-size: 18px; transition: color 0.3s;" onmouseover="this.style.color='var(--color-red)'" onmouseout="this.style.color='var(--color-white)'"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter" style="color: var(--color-white); font-size: 18px; transition: color 0.3s;" onmouseover="this.style.color='var(--color-red)'" onmouseout="this.style.color='var(--color-white)'"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="Instagram" style="color: var(--color-white); font-size: 18px; transition: color 0.3s;" onmouseover="this.style.color='var(--color-red)'" onmouseout="this.style.color='var(--color-white)'"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="WhatsApp" style="color: var(--color-white); font-size: 18px; transition: color 0.3s;" onmouseover="this.style.color='var(--color-red)'" onmouseout="this.style.color='var(--color-white)'"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+                <a href="index.html">Home</a>
+                <a href="home2.html">Home 2</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Products</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="services.html">Service</a>
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-column">
+            <h3>Support</h3>
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+                <a href="contact.html">Contact</a>
+                <a href="contact.html">Wholesale</a>
+                <a href="#">Pricing Policy</a>
+                <a href="#">Shipping</a>
+                <a href="#">FAQs</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div style="display: flex; gap: 15px; align-items: flex-start;">
+                    <i class="fa-solid fa-phone" style="color: var(--color-red); margin-top: 2px;"></i>
+                    <span style="color: var(--color-muted); font-size: 13px;">+1 (800) 123-4567</span>
+                </div>
+                <div style="display: flex; gap: 15px; align-items: flex-start;">
+                    <i class="fa-solid fa-location-dot" style="color: var(--color-red); margin-top: 2px;"></i>
+                    <span style="color: var(--color-muted); font-size: 13px; line-height: 1.6;">123 Flavor Street, Culinary District<br>New York, NY 10001</span>
+                </div>
+                <div style="display: flex; gap: 15px; align-items: flex-start;">
+                    <i class="fa-solid fa-envelope" style="color: var(--color-red); margin-top: 2px;"></i>
+                    <span style="color: var(--color-muted); font-size: 13px;">hello@firecraft.com</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container footer-bottom-container" style="display: flex; justify-content: center; padding: 20px 0; border-top: 1px solid var(--color-border-dark);">
+            <p style="color: var(--color-muted); font-size: 13px; font-weight: 500; letter-spacing: 0.02em;">
+                © 2026 Firecraft. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- =====================================================
+     08. HEAT MODAL
+===================================================== -->
+<div class="heat-modal-overlay" id="heatModal">
+    <div class="heat-modal-box">
+        <button class="heat-modal-close" id="closeHeatModal"><i class="fa-solid fa-xmark"></i></button>
+        <div class="heat-modal-header">
+            <span class="heat-modal-badge" id="modalBadge">MILD</span>
+            <h2 id="modalTitle">The Mild Experience</h2>
+        </div>
+        <div class="heat-modal-body">
+            <div class="modal-stat">
+                <i class="fa-solid fa-fire"></i>
+                <div>
+                    <strong>Scoville Rating (SHU)</strong>
+                    <p id="modalScoville">100 - 2,500</p>
+                </div>
+            </div>
+            <div class="modal-stat">
+                <i class="fa-solid fa-pepper-hot"></i>
+                <div>
+                    <strong>Common Peppers</strong>
+                    <p id="modalPeppers">Poblano, Jalapeño, Anaheim</p>
+                </div>
+            </div>
+            <div class="modal-stat">
+                <i class="fa-solid fa-utensils"></i>
+                <div>
+                    <strong>Flavor Profile</strong>
+                    <p id="modalProfile">Focus on tanginess, smoke, and savory notes rather than burn.</p>
+                </div>
+            </div>
+            <div class="modal-stat">
+                <i class="fa-solid fa-heart"></i>
+                <div>
+                    <strong>Best For</strong>
+                    <p id="modalBestFor">Everyday use, families, splashing heavily on eggs and pizza.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+    // Heat Modal Logic
+    const heatData = {
+        'mild': {
+            badge: 'MILD',
+            title: 'The Mild Experience',
+            scoville: '100 - 2,500 SHU',
+            peppers: 'Poblano, Jalapeño, Anaheim',
+            profile: 'Focus on tanginess, smoke, and savory notes rather than an aggressive burn.',
+            bestFor: 'Everyday use, families, and splashing heavily on eggs and pizza.'
+        },
+        'medium': {
+            badge: 'MEDIUM',
+            title: 'The Medium Kick',
+            scoville: '2,500 - 10,000 SHU',
+            peppers: 'Serrano, Chipotle, Cayenne',
+            profile: 'A noticeable, warming kick that builds slowly but dissipates quickly.',
+            bestFor: 'Burgers, tacos, grilled chicken, and everyday heat seekers.'
+        },
+        'hot': {
+            badge: 'HOT',
+            title: 'The Hot Burn',
+            scoville: '10,000 - 100,000 SHU',
+            peppers: 'Habanero, Scotch Bonnet, Thai Chili',
+            profile: 'Sharp, intense burn that lingers, often accompanied by fruity or floral undertones.',
+            bestFor: 'Curries, stir-fries, wings, and adventurous eaters.'
+        },
+        'extra-hot': {
+            badge: 'EXTRA HOT',
+            title: 'Pure Fire',
+            scoville: '100,000+ SHU',
+            peppers: 'Ghost Pepper, Carolina Reaper, Scorpion',
+            profile: 'Unforgiving, searing heat that dominates the palate. Endorphin-inducing.',
+            bestFor: 'Chili competitions, daring recipes, and extreme heat fanatics.'
+        }
+    };
+
+    const modal = document.getElementById('heatModal');
+    const closeBtn = document.getElementById('closeHeatModal');
+    const heatSteps = document.querySelectorAll('.heat-step');
+
+    heatSteps.forEach(step => {
+        step.addEventListener('click', () => {
+            const heat = step.getAttribute('data-heat');
+            const data = heatData[heat];
+            
+            if (data) {
+                document.getElementById('modalBadge').textContent = data.badge;
+                document.getElementById('modalTitle').textContent = data.title;
+                document.getElementById('modalScoville').textContent = data.scoville;
+                document.getElementById('modalPeppers').textContent = data.peppers;
+                document.getElementById('modalProfile').textContent = data.profile;
+                document.getElementById('modalBestFor').textContent = data.bestFor;
+                
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Flavor Interactive Logic
+    const flavorData = {
+        'tangy': {
+            image: 'assets/images/products/Hot-Honey-Pizza.png',
+            food: 'Perfect for Pizza & Breakfast',
+            desc: 'A bright, zesty vinegar base that cuts through rich, heavy cheese perfectly.',
+            sauce: 'Classic Hot Sauce'
+        },
+        'smoky': {
+            image: 'assets/images/sauce_smoked_red_1791369304097.jpg',
+            food: 'Perfect for BBQ, Burgers & Ribs',
+            desc: 'Deep, oak-smoked chili notes that instantly elevate grilled meats and rich dishes.',
+            sauce: 'Chipotle BBQ'
+        },
+        'sweet': {
+            image: 'assets/images/products/Spicy-Chicken-Tacos.png',
+            food: 'Perfect for Tacos & Glazes',
+            desc: 'A sugary front note that quickly gives way to intense, lingering heat.',
+            sauce: 'Mango Habanero'
+        },
+        'garlicky': {
+            image: 'assets/images/products/Chilli-Garlic-Noodles.png',
+            food: 'Perfect for Noodles & Stir-Fries',
+            desc: 'Savory roasted garlic blended with sharp chilies for ultimate umami depth.',
+            sauce: 'Garlic Chili Sauce'
+        },
+        'fruity': {
+            image: 'assets/images/products/Fruit-Forward.png',
+            food: 'Perfect for Seafood & Rice Bowls',
+            desc: 'Tropical fruit notes that pair wonderfully with light, acidic, or fresh dishes.',
+            sauce: 'Pineapple Habanero'
+        },
+        'bold': {
+            image: 'assets/images/products/Fire-Wings.png',
+            food: 'Perfect for Wings & Daredevils',
+            desc: 'Unapologetic, aggressive flavor profiles that refuse to take a back seat.',
+            sauce: 'Ghost Pepper Reserve'
+        }
+    };
+
+    const flavorTags = document.querySelectorAll('.flavor-tag');
+    const flavorDisplayCard = document.getElementById('flavorDisplayCard');
+    const flavorImage = document.getElementById('flavorImage');
+    const flavorFood = document.getElementById('flavorFood');
+    const flavorDesc = document.getElementById('flavorDesc');
+    const flavorSauce = document.getElementById('flavorSauce');
+
+    if (flavorTags.length > 0) {
+        flavorTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                flavorTags.forEach(t => t.classList.remove('active'));
+                tag.classList.add('active');
+
+                const flavor = tag.getAttribute('data-flavor');
+                const data = flavorData[flavor];
+
+                if (data) {
+                    flavorDisplayCard.style.opacity = '0.4';
+                    flavorDisplayCard.style.transform = 'scale(0.98)';
+                    
+                    setTimeout(() => {
+                        flavorImage.src = data.image;
+                        flavorFood.textContent = data.food;
+                        flavorDesc.textContent = data.desc;
+                        flavorSauce.textContent = data.sauce;
+                        
+                        flavorDisplayCard.style.opacity = '1';
+                        flavorDisplayCard.style.transform = 'scale(1)';
+                    }, 200);
+                }
+            });
+        });
+    }
+
+    const findMatchBtn = document.getElementById('findMatchBtn');
+    if(findMatchBtn) {
+        const sauces = [
+            { id: 'classic-hot-sauce', name: 'Classic Hot Sauce', heat: 'mild', flavor: 'zesty', food: 'pizza', img: 'assets/images/products/Classic-Hot-Sauce.png', desc: 'The perfect tangy, zesty balance that elevates pizza and eggs without overwhelming them.' },
+            { id: 'smoked-jalapeno', name: 'Smoked Jalapeño', heat: 'mild', flavor: 'smoky', food: 'tacos', img: 'assets/images/products/deep-and-smoky.png', desc: 'Mild smoky zest that elevates tacos and nachos without burning your tongue.' },
+            { id: 'mango-habanero', name: 'Mango Habanero', heat: 'hot', flavor: 'sweet', food: 'tacos', img: 'assets/images/products/Mango-Habanero-Hot-Sauce.png', desc: 'A fierce, sweet and fruity burn that pairs beautifully with grilled chicken and tacos.' },
+            { id: 'chipotle-bbq', name: 'Chipotle BBQ', heat: 'medium', flavor: 'smoky', food: 'bbq', img: 'assets/images/products/Chipotle-BBQ-Sauce.png', desc: 'Deep, earthy molasses and oak-smoked chili for ribs and burgers.' },
+            { id: 'garlic-chili', name: 'Garlic Chili Sauce', heat: 'medium', flavor: 'zesty', food: 'any', img: 'assets/images/products/Garlic-Chili-Sauce.png', desc: 'Deeply savory and garlicky, perfect for noodles, stir-fry, or any savory dish.' },
+            { id: 'pineapple-habanero', name: 'Pineapple Habanero', heat: 'hot', flavor: 'sweet', food: 'pizza', img: 'assets/images/products/Fruit-Forward.png', desc: 'A sharp tropical bite that works surprisingly incredibly well on a hot slice of pizza.' },
+            { id: 'ghost-pepper', name: 'Ghost Pepper Reserve', heat: 'hot', flavor: 'smoky', food: 'bbq', img: 'assets/images/products/extra-hot.png', desc: 'Pure fire and earthy smoke. Use with extreme caution on your BBQ.' },
+            { id: 'daily-blaze', name: 'The Daily Blaze', heat: 'medium', flavor: 'any', food: 'any', img: 'assets/images/products/everyday-sauce.png', desc: 'Your new daily driver. Balanced heat and tang that is good on literally everything.' }
+        ];
+
+        findMatchBtn.addEventListener('click', () => {
+            const heat = document.getElementById('heatPref').value;
+            const flavor = document.getElementById('flavorPref').value;
+            const food = document.getElementById('foodPref').value;
+            
+            let bestMatch = sauces[0];
+            let highestScore = -1;
+            
+            sauces.forEach(sauce => {
+                let score = 0;
+                if (sauce.heat === heat) score += 3;
+                if (sauce.flavor === flavor || sauce.flavor === 'any' || flavor === 'any') score += 2;
+                if (sauce.food === food || sauce.food === 'any' || food === 'any') score += 1;
+                
+                if (score > highestScore) {
+                    highestScore = score;
+                    bestMatch = sauce;
+                }
+            });
+            
+            document.getElementById('matchImg').src = bestMatch.img;
+            document.getElementById('matchName').textContent = bestMatch.name;
+            document.getElementById('matchDesc').textContent = bestMatch.desc;
+            
+            const resultBox = document.getElementById('matchResult');
+            const shopNowBtn = resultBox.querySelector('a');
+            shopNowBtn.href = 'product-detail.html?id=' + bestMatch.id;
+            
+            resultBox.style.display = 'flex';
+            resultBox.style.opacity = '0';
+            setTimeout(() => {
+                resultBox.style.transition = 'opacity 0.5s ease';
+                resultBox.style.opacity = '1';
+            }, 50);
+        });
+    }
+
+</script>
+</body>
+</html>
+
+

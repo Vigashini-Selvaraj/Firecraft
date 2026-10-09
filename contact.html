@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Firecraft Hot Sauce for product questions, order support, wholesale enquiries and partnerships.">
+  <title>Contact Us | Firecraft Hot Sauce</title>
+  <link rel="icon" type="image/png" href="assets/images/firecraft_logo.png">
+
+  <!-- Keep the same project typography used across Firecraft pages. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+  <div id="navbar-container"></div>
+
+  <main class="contact-page">
+    <!-- 1. BLACK HERO -->
+    <section class="contact-hero" aria-labelledby="contact-hero-title">
+      <div class="contact-hero-glow contact-hero-glow-one" aria-hidden="true"></div>
+      <div class="contact-hero-glow contact-hero-glow-two" aria-hidden="true"></div>
+      <div class="container hero-layout">
+        <div class="hero-content">
+          <span class="hero-label"><span class="hero-label-line"></span> CONTACT THE FIRECRAFT TEAM</span>
+          <h1 id="contact-hero-title">Good flavor starts with a <span>conversation.</span></h1>
+          <p>Product question, order update, or a partnership idea? Tell us what’s on your mind. We’ll help you find the right next step.</p>
+          <div class="hero-actions">
+            <a href="#contact-form-section" class="btn-primary">Send us a message <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <a href="#contact-options" class="btn-hero-secondary">Explore contact options <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+          </div>
+          <div class="hero-assurance"><span class="assurance-dot"></span><span>Real people. Big flavor energy. Helpful answers.</span></div>
+        </div>
+
+        <div class="hero-image-wrapper" aria-label="Firecraft hot sauce promotional artwork">
+          <div class="hero-image-orbit orbit-one" aria-hidden="true"></div>
+          <div class="hero-image-orbit orbit-two" aria-hidden="true"></div>
+          <div class="hero-image-frame">
+            <!-- Update only the filename below if your asset uses a slightly different spelling. -->
+            <img
+              id="contact-hero-art"
+              class="hero-splash-art"
+              src="assets/images/services/Firecraft Hot Sauce Social Splash.png"
+              alt="Firecraft hot sauce social splash artwork"
+              fetchpriority="high"
+            >
+          </div>
+          <div class="hero-image-tag"><span class="tag-kicker">MADE FOR</span><strong>Flavor seekers</strong><span class="tag-mark">FC.</span></div>
+        </div>
+      </div>
+      <div class="hero-bottom-rule" aria-hidden="true"><span></span></div>
+    </section>
+
+    <!-- 2. QUICK CONTACT PROMISE STRIP -->
+    <section class="contact-promise" id="contact-options" aria-label="Contact response information">
+      <div class="container promise-grid">
+        <article class="promise-item"><span class="promise-number">01</span><div><h2>Clear answers</h2><p>We’ll point you toward the information you need.</p></div></article>
+        <article class="promise-item"><span class="promise-number">02</span><div><h2>Order support</h2><p>Share your order number to help us investigate faster.</p></div></article>
+        <article class="promise-item"><span class="promise-number">03</span><div><h2>Partnership-ready</h2><p>Retailers and food-service teams are welcome.</p></div></article>
+      </div>
+    </section>
+
+    <!-- 3. MAIN CONTACT FORM -->
+    <section class="contact-main" id="contact-form-section">
+      <div class="container contact-layout">
+        <div class="contact-sidebar">
+          <span class="section-eyebrow">WE’RE LISTENING</span>
+          <h2>Tell us what’s <em>cooking.</em></h2>
+          <p class="contact-intro">Choose the enquiry type that fits best and send us the details. We aim to respond within 24–48 business hours.</p>
+
+          <div class="contact-info-list">
+            <article class="info-item">
+              <div class="info-icon"><i class="fa-regular fa-envelope" aria-hidden="true"></i></div>
+              <div class="info-details"><h3>General &amp; order enquiries</h3><a href="mailto:hello@firecraft.com">hello@firecraft.com</a><span>Product questions and order help</span></div>
+            </article>
+            <article class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-handshake-angle" aria-hidden="true"></i></div>
+              <div class="info-details"><h3>Wholesale &amp; partnerships</h3><a href="mailto:wholesale@firecraft.com">wholesale@firecraft.com</a><span>Retail, restaurant and collaboration enquiries</span></div>
+            </article>
+            <article class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+              <div class="info-details"><h3>Find us</h3><p>Chennai, Tamil Nadu, India</p><span>View the city map below</span></div>
+            </article>
+          </div>
+
+          <div class="sidebar-note"><span class="sidebar-note-mark">“</span><p>Have a question, an idea, or a new way to bring the heat? We’re all ears.</p></div>
+        </div>
+
+        <div class="contact-form-box">
+          <div class="form-heading"><span class="form-step">LET’S GET STARTED</span><h2>Send a message</h2><p>Fields marked with <span aria-hidden="true">*</span> are required.</p></div>
+          <form id="firecraft-contact-form" class="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group"><label for="fullName">Full name <span>*</span></label><input type="text" id="fullName" name="fullName" autocomplete="name" required placeholder="Your name"></div>
+              <div class="form-group"><label for="email">Email address <span>*</span></label><input type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com"></div>
+            </div>
+            <div class="form-group"><label for="enquiryType">How can we help? <span>*</span></label>
+              <select id="enquiryType" name="enquiryType" required>
+                <option value="" disabled selected>Select an enquiry type</option>
+                <option value="Product Questions">Product questions</option>
+                <option value="Order Support">Order support</option>
+                <option value="Wholesale & Retail">Wholesale &amp; retail</option>
+                <option value="Brand Partnerships">Brand partnerships</option>
+                <option value="Other">Something else</option>
+              </select>
+            </div>
+            <div class="form-group hidden" id="orderNumberGroup"><label for="orderNumber">Order number <span>*</span></label><input type="text" id="orderNumber" name="orderNumber" placeholder="e.g. FC-123456"></div>
+            <div class="form-group"><label for="subject">Subject <span>*</span></label><input type="text" id="subject" name="subject" required placeholder="What is this regarding?"></div>
+            <div class="form-group"><label for="message">Your message <span>*</span></label><textarea id="message" name="message" rows="5" required placeholder="Tell us a little more..."></textarea></div>
+            <button type="submit" class="btn-submit"><span>Send your message</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+            <p class="form-privacy"><i class="fa-solid fa-lock" aria-hidden="true"></i> Your details are used to respond to your enquiry.</p>
+            <div id="form-message" class="form-message" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. WHAT HAPPENS NEXT (new section) -->
+    <section class="response-section">
+      <div class="container">
+        <div class="response-heading"><span class="section-eyebrow">A SIMPLE PROCESS</span><h2>From your message to <em>the next step.</em></h2><p>We keep the process straightforward, so you know what happens after you hit send.</p></div>
+        <div class="response-steps">
+          <article class="response-step"><span class="step-index">01</span><div class="step-symbol"><i class="fa-regular fa-paper-plane" aria-hidden="true"></i></div><h3>You reach out</h3><p>Tell us what you need and include any useful details, such as an order number.</p></article>
+          <article class="response-step"><span class="step-index">02</span><div class="step-symbol"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></div><h3>We review it</h3><p>Your enquiry is directed to the right area: product, order support, or partnerships.</p></article>
+          <article class="response-step"><span class="step-index">03</span><div class="step-symbol"><i class="fa-regular fa-comments" aria-hidden="true"></i></div><h3>We follow up</h3><p>We aim to respond within 24–48 business hours with helpful next steps.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. HOW CAN WE HELP -->
+    <section class="help-section">
+      <div class="container">
+        <div class="section-heading-row"><div><span class="section-eyebrow">FIND THE RIGHT PLACE</span><h2>What can we help you <em>with?</em></h2></div><p>Start with the topic that best matches your question.</p></div>
+        <div class="help-grid">
+          <article class="help-card"><div class="help-card-top"><span class="help-icon"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i></span><span class="help-card-number">01 / FLAVOR</span></div><h3>Product &amp; heat guide</h3><p>Need help choosing a sauce or understanding its heat level and flavor profile?</p><a href="service-details.html?service=flavor-and-heat-discovery" class="help-link">Explore the guide <span aria-hidden="true">↗</span></a></article>
+          <article class="help-card"><div class="help-card-top"><span class="help-icon"><i class="fa-solid fa-box-open" aria-hidden="true"></i></span><span class="help-card-number">02 / ORDERS</span></div><h3>Orders &amp; delivery</h3><p>Ask about delivery, tracking, or a bottle that arrived damaged.</p><a href="#faq-section" class="help-link">Read the FAQs <span aria-hidden="true">↗</span></a></article>
+          <article class="help-card"><div class="help-card-top"><span class="help-icon"><i class="fa-solid fa-store" aria-hidden="true"></i></span><span class="help-card-number">03 / BUSINESS</span></div><h3>Wholesale &amp; retail</h3><p>Interested in stocking Firecraft or featuring our sauces on your menu?</p><a href="#partnership-section" class="help-link">Explore partnerships <span aria-hidden="true">↗</span></a></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CHENNAI MAP (compact and fitted) -->
+    <section class="location-section" aria-labelledby="location-title">
+      <div class="container location-layout">
+        <div class="location-copy"><span class="section-eyebrow">OUR LOCATION</span><h2 id="location-title">A little heat from <em>Chennai.</em></h2><p>Use the map to explore Chennai, Tamil Nadu. For specific product, order or business enquiries, the contact form above is the quickest place to start.</p><a class="location-link" href="https://www.google.com/maps/search/?api=1&query=Chennai%2C%20Tamil%20Nadu%2C%20India" target="_blank" rel="noopener noreferrer">Open in Google Maps <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div>
+        <div class="contact-map"><iframe src="https://www.google.com/maps?q=Chennai%2C%20Tamil%20Nadu%2C%20India&output=embed" title="Map of Chennai, Tamil Nadu, India" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><div class="map-caption"><span class="map-pin"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span><div><strong>Chennai, Tamil Nadu</strong><span>India</span></div><a href="https://www.google.com/maps/search/?api=1&query=Chennai%2C%20Tamil%20Nadu%2C%20India" target="_blank" rel="noopener noreferrer" aria-label="Open Chennai in Google Maps"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></div>
+      </div>
+    </section>
+
+    <!-- 7. WHOLESALE & PARTNERSHIPS -->
+    <section class="wholesale-banner" id="partnership-section">
+      <div class="wholesale-bg" aria-hidden="true"><img src="assets/images/services/wholesale-partnership.jpg" alt="" loading="lazy"></div>
+      <div class="wholesale-overlay" aria-hidden="true"></div>
+      <div class="container wholesale-content"><span class="section-eyebrow">FOR RETAILERS &amp; FOOD SERVICE</span><h2>Let’s bring the heat <span>to more tables.</span></h2><p>Have a retail, restaurant, or collaboration idea? Tell us about your business and let’s explore wholesale options together.</p><a href="#contact-form-section" class="btn-primary" id="btn-partnership">Discuss a partnership <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div>
+    </section>
+
+    <!-- 8. FAQ -->
+    <section class="faq-section" id="faq-section">
+      <div class="container faq-layout">
+        <div class="faq-intro"><span class="section-eyebrow">GOOD TO KNOW</span><h2>Frequently asked <em>questions.</em></h2><p>Looking for a quick answer? Start here. If you still need help, send us a message.</p><a class="faq-contact-link" href="#contact-form-section">Ask us directly <span aria-hidden="true">↗</span></a></div>
+        <div class="faq-accordion">
+          <article class="faq-item" aria-expanded="false"><button class="faq-question" type="button" aria-expanded="false"><span>How do I choose the right Firecraft sauce?</span><i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i></button><div class="faq-answer"><div class="faq-answer-inner">It depends on your heat tolerance and flavor preferences. Explore the product descriptions and heat guide to compare sauces. You can also contact us for help narrowing down your options.</div></div></article>
+          <article class="faq-item" aria-expanded="false"><button class="faq-question" type="button" aria-expanded="false"><span>How do I understand the sauce heat levels?</span><i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i></button><div class="faq-answer"><div class="faq-answer-inner">Check the heat rating and product description on the relevant sauce page or bottle label. If you are uncertain about a particular sauce, mention its name in your message.</div></div></article>
+          <article class="faq-item" aria-expanded="false"><button class="faq-question" type="button" aria-expanded="false"><span>How can I ask about an order or delivery?</span><i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i></button><div class="faq-answer"><div class="faq-answer-inner">Choose “Order support” in the contact form and include your order number. This helps the team understand which purchase you are asking about.</div></div></article>
+          <article class="faq-item" aria-expanded="false"><button class="faq-question" type="button" aria-expanded="false"><span>Can I enquire about wholesale or bulk orders?</span><i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i></button><div class="faq-answer"><div class="faq-answer-inner">Yes. Select “Wholesale &amp; retail” or “Brand partnerships” in the form and include a few details about your business and what you have in mind.</div></div></article>
+          <article class="faq-item" aria-expanded="false"><button class="faq-question" type="button" aria-expanded="false"><span>When should I expect a reply?</span><i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i></button><div class="faq-answer"><div class="faq-answer-inner">We aim to respond within 24–48 business hours. Please include clear contact details so we can follow up on your enquiry.</div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FINAL CTA -->
+    <section class="final-cta">
+      <div class="container final-cta-inner"><span class="section-eyebrow">KEEP EXPLORING</span><h2>There’s more to discover. <span>Bring the heat.</span></h2><p>While we get back to you, explore the sauces and find something new for your next meal.</p><div class="final-cta-btns"><a href="products.html" class="btn-primary">Shop the collection <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a><a href="recipes.html" class="btn-outline">Discover recipes <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></div>
+    </section>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script>
+    async function loadComponent(elementId, path) {
+      const container = document.getElementById(elementId);
+      if (!container) return;
+      try {
+        const response = await fetch(path);
+        if (!response.ok) throw new Error("Component could not be loaded: " + path);
+        container.innerHTML = await response.text();
+      } catch (error) {
+        console.error("Unable to load " + path, error);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      await Promise.all([
+        loadComponent("navbar-container", "components/navbar.html"),
+        loadComponent("footer-container", "components/footer.html")
+      ]);
+
+      document.querySelectorAll(".nav-menu a").forEach((link) => {
+        link.classList.remove("active");
+        if (link.textContent.trim().toUpperCase().includes("CONTACT")) link.classList.add("active");
+      });
+      if (typeof window.initNavbar === "function") window.initNavbar();
+
+      const heroArt = document.getElementById("contact-hero-art");
+      if (heroArt) {
+        const splashCandidates = [
+          "assets/images/services/Firecraft Hot Sauce Social and Splashy.png",
+          "assets/images/Firecraft Hot Sauce Social and Splashy.png",
+          "assets/images/services/Firecraft Hot Sauce Socials and Splashy.png",
+          "assets/images/services/Firecraft Hot Sauce Social and Splashy.PNG",
+          "assets/images/services/Firecraft Hot Sauce Socials Plus.png"
+        ];
+        let splashIndex = 0;
+        heroArt.addEventListener("error", function onSplashError() {
+          splashIndex += 1;
+          if (splashIndex < splashCandidates.length) {
+            heroArt.src = splashCandidates[splashIndex];
+          } else {
+            heroArt.removeEventListener("error", onSplashError);
+          }
+        });
+      }
+
+      const enquiryType = document.getElementById("enquiryType");
+      const orderNumberGroup = document.getElementById("orderNumberGroup");
+      const orderNumberInput = document.getElementById("orderNumber");
+      const contactForm = document.getElementById("firecraft-contact-form");
+      const formMessage = document.getElementById("form-message");
+      const submitButton = contactForm.querySelector(".btn-submit");
+
+      function syncOrderField() {
+        const isOrderSupport = enquiryType.value === "Order Support";
+        orderNumberGroup.classList.toggle("hidden", !isOrderSupport);
+        orderNumberInput.required = isOrderSupport;
+        if (!isOrderSupport) orderNumberInput.value = "";
+      }
+      enquiryType.addEventListener("change", syncOrderField);
+
+      document.getElementById("btn-partnership").addEventListener("click", () => {
+        enquiryType.value = "Wholesale & Retail";
+        syncOrderField();
+      });
+      if (window.location.hash === "#wholesale") {
+        enquiryType.value = "Wholesale & Retail";
+        syncOrderField();
+      }
+
+      contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        formMessage.className = "form-message";
+        formMessage.textContent = "";
+        if (!contactForm.checkValidity()) {
+          contactForm.reportValidity();
+          return;
+        }
+
+        /* Front-end demo only: connect this handler to your email/API service for real delivery. */
+        const originalButtonContent = submitButton.innerHTML;
+        submitButton.disabled = true;
+        submitButton.innerHTML = '<span>Preparing message…</span><i class="fa-solid fa-circle-notch fa-spin" aria-hidden="true"></i>';
+        window.setTimeout(() => {
+          formMessage.textContent = "Thanks for reaching out! This demo form has validated your message, but it is not connected to an email service yet.";
+          formMessage.classList.add("success");
+          submitButton.disabled = false;
+          submitButton.innerHTML = originalButtonContent;
+        }, 500);
+      });
+
+      const faqItems = document.querySelectorAll(".faq-item");
+      faqItems.forEach((item) => {
+        const button = item.querySelector(".faq-question");
+        const answer = item.querySelector(".faq-answer");
+        button.addEventListener("click", () => {
+          const shouldOpen = item.getAttribute("aria-expanded") !== "true";
+          faqItems.forEach((other) => {
+            other.setAttribute("aria-expanded", "false");
+            other.querySelector(".faq-question").setAttribute("aria-expanded", "false");
+            other.querySelector(".faq-answer").style.maxHeight = null;
+          });
+          if (shouldOpen) {
+            item.setAttribute("aria-expanded", "true");
+            button.setAttribute("aria-expanded", "true");
+            answer.style.maxHeight = answer.scrollHeight + "px";
+          }
+        });
+      });
+    });
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
