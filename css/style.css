@@ -38,9 +38,12 @@
     --card-bg-light: rgba(255, 255, 255, 0.03);
 }
 
-/* Light theme remaps page tokens. Heroes re-declare the dark set locally. */
+/* =========================================================
+   GLOBAL LIGHT THEME SYSTEM - ALL PAGES SUPPORT
+   ========================================================= */
 html.light-theme,
 body.light-theme {
+    /* Main Design Tokens */
     --color-dark: #f4ede3;
     --color-dark-soft: #e8d5c4;
     --color-dark-card: #ffffff;
@@ -49,11 +52,257 @@ body.light-theme {
     --color-border-dark: rgba(23, 21, 19, 0.15);
     --bg-light-section: #f0e6d6;
     --text-light-section: #171513;
-    --card-bg-light: #e0ccb8;
+    --card-bg-light: #ffffff;
 
-    background: var(--color-dark);
-    color: var(--color-text-light);
+    /* Rebind home.css & home2.css tokens */
+    --black: #eae4d9;
+    --dark: #f4ede3;
+    --dark-soft: #e8d5c4;
+    --dark-card: #ffffff;
+    --white: #171513;
+    --muted-white: #4a453e;
+    --muted: #6e675e;
+    --border: rgba(0, 0, 0, 0.12);
+
+    /* Services & Service Details page tokens */
+    --sp-dark: #f4ede3;
+    --sp-card: #ffffff;
+    --sp-text: #171513;
+    --sp-muted: #5e5952;
+    --sp-border: rgba(0, 0, 0, 0.12);
+    --hero-dark: #f4ede3;
+
+    /* Recipes & Recipe Details page tokens */
+    --rd-dark: #f4ede3;
+    --rd-card: #ffffff;
+    --rd-text: #171513;
+    --rd-muted: #5e5952;
+    --rd-border: rgba(0, 0, 0, 0.12);
+
+    /* Blog & Blog Details page tokens */
+    --blog-black: #f4ede3;
+    --blog-dark: #e8d5c4;
+    --blog-muted: #5e5952;
+    --blog-border: rgba(0, 0, 0, 0.12);
+    --bd-bg: #f4ede3;
+    --bd-bg-soft: #e8d5c4;
+    --bd-card: #ffffff;
+    --bd-text: #171513;
+    --bd-muted: #5e5952;
+    --bd-border: rgba(0, 0, 0, 0.12);
+
+    /* Contact Us page tokens */
+    --contact-black: #f4ede3;
+    --contact-black-soft: #e8d5c4;
+    --contact-card: #ffffff;
+    --contact-text: #171513;
+    --contact-muted: #5e5952;
+    --contact-border: rgba(0, 0, 0, 0.12);
+    --contact-ivory: #171513;
+
+    /* Products & Product Details page tokens */
+    --pd-dark: #f4ede3;
+    --pd-card: #ffffff;
+    --pd-text: #171513;
+    --pd-muted: #5e5952;
+    --pd-border: rgba(0, 0, 0, 0.12);
+    --bg-dark: #f4ede3;
+    --bg-secondary: #e8d5c4;
+    --text-primary: #171513;
+    --text-secondary: #5e5952;
+
+    background-color: #f4ede3 !important;
+    color: #171513 !important;
 }
+
+/* Page Body & Main Content */
+html.light-theme main,
+body.light-theme main,
+html.light-theme section:not(.navbar):not(.footer),
+body.light-theme section:not(.navbar):not(.footer),
+html.light-theme article,
+body.light-theme article {
+    background-color: #f4ede3 !important;
+    color: #171513 !important;
+}
+
+/* All Cards, Panels, Grids, Boxes, Modals, Forms & Containers */
+html.light-theme .heat-card,
+html.light-theme .flavor-card,
+html.light-theme .pairing-card,
+html.light-theme .product-card,
+html.light-theme .recipe-card,
+html.light-theme .blog-card,
+html.light-theme .service-card,
+html.light-theme .feature-item,
+html.light-theme .stat-card,
+html.light-theme .contact-card,
+html.light-theme .about-card,
+html.light-theme .sauce-card,
+html.light-theme .matrix-cell,
+html.light-theme .lab-card,
+html.light-theme .craft-card,
+html.light-theme .review-card,
+html.light-theme .value-card,
+html.light-theme .team-card,
+html.light-theme .award-item,
+html.light-theme .stat-box,
+html.light-theme .pd-card,
+html.light-theme .ingredient-card,
+html.light-theme .instruction-step,
+html.light-theme .sd-card,
+html.light-theme .feature-box,
+html.light-theme .pricing-card,
+html.light-theme .comment-card,
+html.light-theme .author-box,
+html.light-theme .sidebar-widget,
+html.light-theme .rc-sidebar,
+html.light-theme .contact-info-item,
+html.light-theme .contact-form,
+html.light-theme .faq-item,
+html.light-theme .modal-content,
+html.light-theme .tab-content,
+html.light-theme .spec-row,
+html.light-theme .filter-bar,
+html.light-theme .category-card,
+html.light-theme .step-card,
+html.light-theme .blend-form,
+html.light-theme .info-card,
+body.light-theme .heat-card,
+body.light-theme .flavor-card,
+body.light-theme .pairing-card,
+body.light-theme .product-card,
+body.light-theme .recipe-card,
+body.light-theme .blog-card,
+body.light-theme .service-card,
+body.light-theme .feature-item,
+body.light-theme .stat-card,
+body.light-theme .contact-card,
+body.light-theme .about-card,
+body.light-theme .sauce-card,
+body.light-theme .matrix-cell,
+body.light-theme .lab-card,
+body.light-theme .craft-card,
+body.light-theme .review-card,
+body.light-theme .value-card,
+body.light-theme .team-card,
+body.light-theme .award-item,
+body.light-theme .stat-box,
+body.light-theme .pd-card,
+body.light-theme .ingredient-card,
+body.light-theme .instruction-step,
+body.light-theme .sd-card,
+body.light-theme .feature-box,
+body.light-theme .pricing-card,
+body.light-theme .comment-card,
+body.light-theme .author-box,
+body.light-theme .sidebar-widget,
+body.light-theme .rc-sidebar,
+body.light-theme .contact-info-item,
+body.light-theme .contact-form,
+body.light-theme .faq-item,
+body.light-theme .modal-content,
+body.light-theme .tab-content,
+body.light-theme .spec-row,
+body.light-theme .filter-bar,
+body.light-theme .category-card,
+body.light-theme .step-card,
+body.light-theme .blend-form,
+body.light-theme .info-card {
+    background-color: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.12) !important;
+    color: #171513 !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Headings in Light Theme */
+html.light-theme h1:not(.logo-text),
+html.light-theme h2,
+html.light-theme h3,
+html.light-theme h4,
+html.light-theme h5,
+html.light-theme h6,
+body.light-theme h1:not(.logo-text),
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme h5,
+body.light-theme h6 {
+    color: #171513 !important;
+}
+
+/* Body & Paragraph Text in Light Theme */
+html.light-theme p,
+html.light-theme li,
+html.light-theme label,
+html.light-theme td,
+html.light-theme th,
+body.light-theme p,
+body.light-theme li,
+body.light-theme label,
+body.light-theme td,
+body.light-theme th {
+    color: #3b3732 !important;
+}
+
+/* Muted & Secondary Text in Light Theme */
+html.light-theme .muted,
+html.light-theme .text-muted,
+html.light-theme .color-muted,
+html.light-theme .meta-info,
+html.light-theme .date,
+html.light-theme .author,
+body.light-theme .muted,
+body.light-theme .text-muted,
+body.light-theme .color-muted,
+body.light-theme .meta-info,
+body.light-theme .date,
+body.light-theme .author {
+    color: #6e675e !important;
+}
+
+/* Form Inputs & Select Controls */
+html.light-theme input,
+html.light-theme textarea,
+html.light-theme select,
+html.light-theme .search-input,
+html.light-theme .sort-select,
+body.light-theme input,
+body.light-theme textarea,
+body.light-theme select,
+body.light-theme .search-input,
+body.light-theme .sort-select {
+    background-color: #ffffff !important;
+    color: #171513 !important;
+    border: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Filter Buttons & Badges */
+html.light-theme .filter-btn,
+html.light-theme .recipe-filter-btn,
+html.light-theme .tag,
+html.light-theme .tab-btn,
+body.light-theme .filter-btn,
+body.light-theme .recipe-filter-btn,
+body.light-theme .tag,
+body.light-theme .tab-btn {
+    background-color: #e8dfd3 !important;
+    color: #171513 !important;
+    border: 1px solid rgba(0, 0, 0, 0.12) !important;
+}
+
+html.light-theme .filter-btn.active,
+html.light-theme .recipe-filter-btn.active,
+html.light-theme .tab-btn.active,
+body.light-theme .filter-btn.active,
+body.light-theme .recipe-filter-btn.active,
+body.light-theme .tab-btn.active {
+    background-color: #E53224 !important;
+    color: #ffffff !important;
+    border-color: #E53224 !important;
+}
+
+
 
 
 /* =========================================================
@@ -2099,6 +2348,119 @@ footer {
     padding-top: 0 !important;
     background-color: #080808 !important;
 }
+
+/* =========================================================
+   FIRECRAFT GLOBAL RESPONSIVE & COMPONENT OVERRIDES
+   ========================================================= */
+
+/* Mobile Heat Section Overrides */
+@media (max-width: 768px) {
+    .heat-levels {
+        flex-direction: column !important;
+        height: auto !important;
+        gap: 16px !important;
+    }
+
+    .heat-card {
+        flex: none !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 140px !important;
+        padding: 24px 20px !important;
+        transform: none !important;
+    }
+
+    .heat-card:hover,
+    .heat-card.active {
+        flex: none !important;
+        transform: none !important;
+    }
+
+    .heat-card p {
+        opacity: 1 !important;
+        transform: none !important;
+        max-height: 100px !important;
+        margin-top: 10px !important;
+    }
+
+    .pepper-icons {
+        position: static !important;
+        margin-bottom: 12px !important;
+        max-width: 100% !important;
+    }
+}
+
+/* Mobile Flavor Discovery Grid Overrides */
+@media (max-width: 768px) {
+    .flavor-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+
+    .flavor-card {
+        width: 100% !important;
+        padding: 24px !important;
+    }
+}
+
+/* Mobile Perfect Pairing Cards Overrides */
+@media (max-width: 768px) {
+    .pairing-slider {
+        flex-direction: column !important;
+        overflow-x: visible !important;
+        gap: 24px !important;
+        padding-bottom: 0 !important;
+    }
+
+    .pairing-slide {
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        height: 440px !important;
+    }
+}
+
+/* Section Grid Responsiveness across website */
+@media (max-width: 768px) {
+    .featured-products {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+
+    .standard-container,
+    .editorial-grid,
+    .philosophy-layout,
+    .story-layout,
+    .story-container {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+
+    .recipe-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+}
+
+/* Standard Box-Sizing & Overflow Safety */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
 
 
 

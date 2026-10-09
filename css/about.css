@@ -500,10 +500,20 @@ body.light-theme .pairing-card p {
     color: #5e5952 !important;
 }
 
+@media (max-width: 768px) {
+    .philosophy-grid,
+    .pairings-grid,
+    .press-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+}
+
 body.light-theme .vm-editorial-card,
 body.light-theme .pairing-card,
 body.light-theme .press-card {
     background: #fffaf2 !important;
     border-color: rgba(23, 21, 19, 0.15) !important;
 }
+
 

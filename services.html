@@ -14,13 +14,55 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/services.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-<div id="navbar-container"></div>
+<div id="navbar-container">
+    <header class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/firecraft_logo.png" alt="Firecraft Hot Sauces">
+                <span class="logo-text">Firecraft</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="home2.html">Home 2</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Products</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="services.html" class="active">Service</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button type="button" class="mobile-menu-btn" aria-label="Open Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <button type="button" class="nav-icon theme-toggle-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button type="button" class="nav-icon dir-toggle-btn" aria-label="Toggle Direction">
+                    LTR
+                </button>
+                <div class="profile-dropdown-container desktop-only">
+                    <button type="button" class="nav-icon profile-btn" aria-label="Profile">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+                    <div class="profile-dropdown">
+                        <a href="#">Login</a>
+                        <a href="#">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+
 
 <main class="services-page">
 
@@ -528,6 +570,7 @@
         });
     });
 </script>
+<script src="js/navbar.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,3 +1,7 @@
+/* =========================================================
+   FIRECRAFT FOOTER - ALWAYS DARK THEME & RESPONSIVE
+   ========================================================= */
+
 .footer {
     --black: #080808;
     --red: #E53224;
@@ -5,62 +9,73 @@
     --muted-white: #B8B2AA;
     --border: rgba(255,255,255,0.14);
 
-    background-color: var(--black);
-    color: var(--white);
+    background-color: #080808 !important;
+    background: #080808 !important;
+    color: #F7F3EC !important;
     padding: 80px 40px 40px;
-    border-top: 1px solid var(--border);
+    border-top: 1px solid rgba(255,255,255,0.14);
 }
 
 .footer-container {
     max-width: 1280px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
     gap: 40px;
+    width: 100%;
 }
 
-.brand-col .brand {
+.brand-col .brand,
+.footer-brand .footer-logo {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: var(--white);
+    color: #F7F3EC !important;
     gap: 12px;
     margin-bottom: 16px;
 }
 
-.brand-col .tagline {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--muted-white);
-    letter-spacing: 0.1em;
+.brand-col .tagline,
+.footer-brand p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #B8B2AA !important;
+    line-height: 1.6;
     margin-bottom: 24px;
 }
 
-.social-icons {
+.social-icons,
+.social-links {
     display: flex;
     gap: 16px;
+    flex-wrap: wrap;
 }
 
-.social-icons a {
-    color: var(--white);
+.social-icons a,
+.social-links a {
+    color: #F7F3EC !important;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 16px;
     transition: color 0.2s;
 }
 
-.social-icons a:hover {
-    color: var(--red);
+.social-icons a:hover,
+.social-links a:hover {
+    color: #E53224 !important;
 }
 
-.footer-col h4 {
-    font-size: 13px;
-    font-weight: 700;
-    margin-bottom: 24px;
+.footer-col h4,
+.footer-column h3 {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    margin-bottom: 24px !important;
     letter-spacing: 0.1em;
-    color: var(--white);
+    color: #F7F3EC !important;
+    text-transform: uppercase;
 }
 
-.footer-col ul {
+.footer-col ul,
+.footer-column > div {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -69,87 +84,112 @@
     gap: 12px;
 }
 
-.footer-col a {
-    color: var(--muted-white);
+.footer-col a,
+.footer-column a {
+    color: #B8B2AA !important;
     text-decoration: none;
     font-size: 14px;
     transition: color 0.2s;
+    word-break: break-word;
 }
 
-.footer-col a:hover {
-    color: var(--red);
+.footer-col a:hover,
+.footer-column a:hover {
+    color: #E53224 !important;
 }
 
-.contact-info li {
-    color: var(--muted-white);
+.contact-info li,
+.footer-column .contact-item {
+    color: #B8B2AA !important;
     font-size: 14px;
     display: flex;
     align-items: flex-start;
-    gap: 8px;
+    gap: 12px;
+    word-break: break-word;
 }
 
 .footer-bottom {
     max-width: 1280px;
     margin: 60px auto 0;
     padding-top: 24px;
-    border-top: 1px solid var(--border);
+    border-top: 1px solid rgba(255,255,255,0.14);
     text-align: center;
-    color: var(--muted-white);
-    font-size: 12px;
+    color: #B8B2AA !important;
+    font-size: 13px;
+    width: 100%;
 }
 
 @media (max-width: 992px) {
     .footer-container {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 30px !important;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
+    .footer {
+        padding: 50px 20px 30px !important;
+    }
     .footer-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
     }
-    .footer { padding: 40px 20px; }
+    .footer-bottom {
+        margin-top: 40px !important;
+        padding-top: 20px !important;
+    }
 }
 
+/* Ensure Light Theme inherits permanent dark background */
 html.light-theme .footer,
 body.light-theme .footer {
-    --black: #080808;
-    --red: #E53224;
-    --white: #F7F3EC;
-    --muted-white: #B8B2AA;
-    --border: rgba(255,255,255,0.14);
     background-color: #080808 !important;
+    background: #080808 !important;
     color: #F7F3EC !important;
 }
 
 html.light-theme .footer .footer-col a,
 body.light-theme .footer .footer-col a,
+html.light-theme .footer .footer-column a,
+body.light-theme .footer .footer-column a,
 html.light-theme .footer .social-icons a,
-body.light-theme .footer .social-icons a {
+body.light-theme .footer .social-icons a,
+html.light-theme .footer .social-links a,
+body.light-theme .footer .social-links a {
     color: #B8B2AA !important;
 }
 
 html.light-theme .footer .footer-col a:hover,
 body.light-theme .footer .footer-col a:hover,
+html.light-theme .footer .footer-column a:hover,
+body.light-theme .footer .footer-column a:hover,
 html.light-theme .footer .social-icons a:hover,
-body.light-theme .footer .social-icons a:hover {
+body.light-theme .footer .social-icons a:hover,
+html.light-theme .footer .social-links a:hover,
+body.light-theme .footer .social-links a:hover {
     color: #E53224 !important;
 }
 
 html.light-theme .footer .footer-col h4,
 body.light-theme .footer .footer-col h4,
+html.light-theme .footer .footer-column h3,
+body.light-theme .footer .footer-column h3,
 html.light-theme .footer .brand-col .brand,
-body.light-theme .footer .brand-col .brand {
+body.light-theme .footer .brand-col .brand,
+html.light-theme .footer .footer-brand .footer-logo,
+body.light-theme .footer .footer-brand .footer-logo {
     color: #F7F3EC !important;
 }
 
 html.light-theme .footer .brand-col .tagline,
 body.light-theme .footer .brand-col .tagline,
+html.light-theme .footer .footer-brand p,
+body.light-theme .footer .footer-brand p,
 html.light-theme .footer .contact-info li,
 body.light-theme .footer .contact-info li,
 html.light-theme .footer .footer-bottom,
-body.light-theme .footer .footer-bottom {
+body.light-theme .footer .footer-bottom,
+html.light-theme .footer .footer-bottom p,
+body.light-theme .footer .footer-bottom p {
     color: #B8B2AA !important;
 }
-

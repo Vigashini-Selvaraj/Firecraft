@@ -10,98 +10,62 @@
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
-    window.initNavbar = function() {
-        // Mobile Menu
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navMenu = document.querySelector('.nav-menu');
-        
-        if (mobileMenuBtn && navMenu) {
-            // Remove old listeners to prevent duplicates if called multiple times
-            const newBtn = mobileMenuBtn.cloneNode(true);
-            mobileMenuBtn.parentNode.replaceChild(newBtn, mobileMenuBtn);
-            newBtn.addEventListener('click', () => {
-                navMenu.classList.toggle('show');
+    // Dynamic Navbar & Footer Fetch Loader
+    const navbarContainer = document.getElementById('navbar-container');
+    if (navbarContainer) {
+        // Highlight active link based on window.location
+        const updateActiveNav = () => {
+            const currentUrl = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = navbarContainer.querySelectorAll('.nav-menu a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === currentUrl) {
+                    link.classList.add('active');
+                }
             });
-        }
+        };
 
-        // Theme Toggle
-        const themeToggleBtn = document.querySelector('.theme-toggle-btn');
-        if (themeToggleBtn) {
-            const newThemeBtn = themeToggleBtn.cloneNode(true);
-            themeToggleBtn.parentNode.replaceChild(newThemeBtn, themeToggleBtn);
-            
-            // Check localStorage on load
-            if (localStorage.getItem('theme') === 'light') {
-                document.documentElement.classList.add('light-theme');
-                document.body.classList.add('light-theme');
-                const icon = newThemeBtn.querySelector('i');
-                if (icon) {
-                    icon.classList.remove('fa-moon');
-                    icon.classList.add('fa-sun');
+        fetch('components/navbar.html')
+            .then(res => {
+                if (!res.ok) throw new Error('HTTP error ' + res.status);
+                return res.text();
+            })
+            .then(data => {
+                navbarContainer.innerHTML = data;
+                updateActiveNav();
+                if (typeof window.initNavbar === 'function') {
+                    window.initNavbar();
                 }
-            }
-            
-            newThemeBtn.addEventListener('click', () => {
-                document.body.classList.toggle('light-theme');
-                document.documentElement.classList.toggle('light-theme', document.body.classList.contains('light-theme'));
-                const isLight = document.body.classList.contains('light-theme');
-                
-                // Save to localStorage
-                localStorage.setItem('theme', isLight ? 'light' : 'dark');
-                
-                const icon = newThemeBtn.querySelector('i');
-                if (icon) {
-                    if (isLight) {
-                        icon.classList.remove('fa-moon');
-                        icon.classList.add('fa-sun');
-                    } else {
-                        icon.classList.remove('fa-sun');
-                        icon.classList.add('fa-moon');
-                    }
+            })
+            .catch(err => {
+                console.warn('Navbar fetch note (using pre-rendered fallback if available):', err);
+                updateActiveNav();
+                if (typeof window.initNavbar === 'function') {
+                    window.initNavbar();
                 }
             });
+    } else {
+        if (typeof window.initNavbar === 'function') {
+            window.initNavbar();
         }
+    }
 
-        // RTL/LTR Toggle
-        const dirToggleBtn = document.querySelector('.dir-toggle-btn');
-        if (dirToggleBtn) {
-            const newDirBtn = dirToggleBtn.cloneNode(true);
-            dirToggleBtn.parentNode.replaceChild(newDirBtn, dirToggleBtn);
-            newDirBtn.addEventListener('click', () => {
-                const currentDir = document.documentElement.getAttribute('dir');
-                if (currentDir === 'rtl') {
-                    document.documentElement.setAttribute('dir', 'ltr');
-                    newDirBtn.textContent = 'LTR';
-                } else {
-                    document.documentElement.setAttribute('dir', 'rtl');
-                    newDirBtn.textContent = 'RTL';
-                }
-            });
-        }
 
-        // Profile Dropdown
-        const profileBtn = document.querySelector('.profile-btn');
-        const profileDropdown = document.querySelector('.profile-dropdown');
-        
-        if (profileBtn && profileDropdown) {
-            const newProfileBtn = profileBtn.cloneNode(true);
-            profileBtn.parentNode.replaceChild(newProfileBtn, profileBtn);
-            
-            newProfileBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                profileDropdown.classList.toggle('show');
+    const footerContainer = document.getElementById('footer-container');
+    if (footerContainer) {
+        fetch('components/footer.html')
+            .then(res => {
+                if (!res.ok) throw new Error('HTTP error ' + res.status);
+                return res.text();
+            })
+            .then(data => {
+                footerContainer.innerHTML = data;
+            })
+            .catch(err => {
+                console.warn('Footer fetch note (using pre-rendered fallback if available):', err);
             });
-            
-            document.addEventListener('click', (e) => {
-                if (!profileDropdown.contains(e.target) && !newProfileBtn.contains(e.target)) {
-                    profileDropdown.classList.remove('show');
-                }
-            });
-        }
-    };
-    
-    // Call it immediately for pages that might have hardcoded navbar
-    window.initNavbar();
+    }
+
 
     // Heat Modal Logic
     const heatCards = document.querySelectorAll('.heat-card');
