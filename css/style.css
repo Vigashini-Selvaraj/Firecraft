@@ -714,7 +714,7 @@ ul {
     position: relative;
     width: 100%;
     min-height: calc(100vh - 89px); /* Full screen minus navbar */
-    max-height: 850px;
+    max-height: 56.25vw; /* Maintain 16:9 aspect ratio max for desktop viewports */
     display: flex;
     align-items: center; margin-top: -2px; padding-top: 2px;
 
@@ -1747,6 +1747,7 @@ ul {
 
     .hero-section {
         min-height: 720px;
+        max-height: none;
 
         background-position: 62% center;
     }
