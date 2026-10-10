@@ -333,7 +333,7 @@
     height: clamp(450px, 48vw, 600px);
     overflow: visible;
     isolation: isolate;
-    background: var(--hero-card);
+    background: transparent !important;
 }
 
 .services-hero-image {
@@ -342,7 +342,7 @@
     z-index: -2;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
 }
 
@@ -1568,3 +1568,20 @@ body.light-theme .services-btn-outline {
 }
 
 
+
+/* FORCE HERO SECTION TO BE BLACK ALWAYS */
+body.light-theme .services-hero,
+html.light-theme .services-hero {
+    background: #0d0d0c !important;
+    background-color: #0d0d0c !important;
+}
+body.light-theme .services-hero h1,
+body.light-theme .services-hero p,
+body.light-theme .services-hero .services-heading-accent,
+body.light-theme .services-hero .services-caption-label,
+body.light-theme .services-hero-caption h2,
+body.light-theme .services-hero-note strong,
+body.light-theme .services-hero-note p,
+body.light-theme .services-text-link {
+    color: #f7f3ed !important;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Terms & Conditions | Firecraft Hot Sauce</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/images/firecraft_logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { background: #0b0908; color: #f7f2ea; font-family: 'Manrope', sans-serif; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 60px 20px; margin: 0; }
+    html.light-theme body { background: #f4ede3; color: #171513; }
+    .page-card { background: #151311; padding: 60px 50px; max-width: 800px; width: 100%; border: 1px solid rgba(247, 242, 234, 0.12); box-shadow: 0 20px 40px rgba(0,0,0,0.3); border-radius: 8px; }
+    html.light-theme .page-card { background: #ffffff; border-color: rgba(23, 21, 19, 0.15); }
+    .logo-link { display: block; text-align: center; margin-bottom: 30px; text-decoration: none; }
+    .logo-img { height: 75px; width: auto; object-fit: contain; margin: 0 auto; display: inline-block; }
+    .page-card h1 { font-family: 'DM Serif Display', serif; font-size: 38px; color: #e63b2e; margin-bottom: 30px; text-align: center; }
+    .content-box { font-size: 15px; line-height: 1.8; color: #b6aaa0; text-align: left; }
+    html.light-theme .content-box { color: #5e5952; }
+    .content-box h2 { color: #f7f2ea; font-size: 20px; margin-bottom: 10px; margin-top: 25px; }
+    html.light-theme .content-box h2 { color: #171513; }
+    .agreement-section { margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(247, 242, 234, 0.2); }
+    html.light-theme .agreement-section { border-color: rgba(23, 21, 19, 0.2); }
+    .custom-checkbox { display: flex; align-items: flex-start; gap: 12px; cursor: pointer; margin-bottom: 20px; }
+    .custom-checkbox input { display: none; }
+    .checkmark { min-width: 20px; height: 20px; border: 1px solid rgba(247,242,234,0.4); display: flex; align-items: center; justify-content: center; margin-top: 3px; border-radius: 3px; }
+    html.light-theme .checkmark { border-color: rgba(23,21,19,0.4); }
+    .custom-checkbox input:checked ~ .checkmark { background: #e63b2e; border-color: #e63b2e; }
+    .checkmark::after { content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900; font-size: 12px; color: white; display: none; }
+    .custom-checkbox input:checked ~ .checkmark::after { display: block; }
+    .agree-btn { padding: 12px 30px; background: #e63b2e; color: white; border: none; font-size: 16px; font-weight: 700; cursor: pointer; transition: background 0.3s; opacity: 0.5; pointer-events: none; border-radius: 4px; }
+    .agree-btn.active { opacity: 1; pointer-events: auto; }
+    .agree-btn:hover { background: #c82c20; }
+  </style>
+</head>
+<body>
+  <div class="page-card">
+    <a href="index.html" class="logo-link">
+      <img src="assets/images/firecraft_logo.png" alt="Firecraft Logo" class="logo-img">
+    </a>
+    <h1>Terms & Conditions</h1>
+    <div class="content-box">
+      <p>Please read these terms carefully before using our website.</p>
+      
+      <h2>1. Agreement to Terms</h2>
+      <p>By accessing or using our website, you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the service.</p>
+      
+      <h2>2. Intellectual Property</h2>
+      <p>The service and its original content, features, and functionality are owned by Firecraft and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.</p>
+      
+      <h2>3. Purchases</h2>
+      <p>If you wish to purchase any product made available through the service, you may be asked to supply certain information relevant to your purchase, including your credit card number, the expiration date, your billing address, and your shipping information.</p>
+      
+      <h2>4. Refunds and Returns</h2>
+      <p>Due to the consumable nature of our products, all sales are final. We only offer replacements for items that arrive damaged or defective.</p>
+
+      <div class="agreement-section">
+        <label class="custom-checkbox">
+          <input type="checkbox" id="agree-check-terms" onchange="toggleAgreeButtonTerms()">
+          <span class="checkmark"></span>
+          <span>I have read and agree to the Terms & Conditions of Firecraft Hot Sauce.</span>
+        </label>
+        <button type="button" class="agree-btn" id="agree-btn-terms" onclick="submitAgreementTerms()">Accept Terms</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    if (localStorage.getItem('firecraftTheme') === 'light') { document.documentElement.classList.add('light-theme'); }
+    function toggleAgreeButtonTerms() {
+      const cb = document.getElementById('agree-check-terms');
+      const btn = document.getElementById('agree-btn-terms');
+      if (cb.checked) { btn.classList.add('active'); } else { btn.classList.remove('active'); }
+    }
+    function submitAgreementTerms() {
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>

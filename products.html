@@ -80,9 +80,9 @@
 <section class="products-hero">
     <div class="container hero-content-wrapper">
         <div class="hero-text-content">
-            <span class="section-label">THE COLLECTION</span>
-            <h1>Find Your<br><em>Perfect Heat.</em></h1>
-            <p>Premium, small-batch hot sauces meticulously crafted for those who demand uncompromising flavor alongside their fire.</p>
+            <span class="section-label" style="color: white;">THE COLLECTION</span>
+            <h1 class="hero-title" style="color: white;">Find Your<br><em style="color: var(--color-red);">Perfect Heat.</em></h1>
+            <p style="color: rgba(255, 255, 255, 0.9);">Premium, small-batch hot sauces meticulously crafted for those who demand uncompromising flavor alongside their fire.</p>
             <div class="hero-buttons">
                 <a href="#collection" class="btn btn-primary">Explore Sauces <i class="fa-solid fa-arrow-right"></i></a>
                 <a href="#bundles" class="btn btn-outline">Build Your Collection <i class="fa-solid fa-box"></i></a>
@@ -459,17 +459,17 @@
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; justify-content: center; margin-top: 40px;">
             <div style="padding: 30px; background: var(--color-dark-soft); border: 1px solid var(--color-border-dark); border-radius: 8px;">
-                <i class="fa-solid fa-pepper-hot" style="font-size: 32px; color: var(--color-red); margin-bottom: 20px;"></i>
+                <img src="https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?w=600" alt="Small Batch" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px; margin-bottom: 20px;">
                 <h3 style="font-family: var(--font-display); font-size: 28px; color: var(--color-text-light); margin-bottom: 15px; font-weight: 400;">Small Batch</h3>
                 <p style="color: var(--color-muted); font-size: 15px; line-height: 1.6;">We handcraft every single bottle in small batches to ensure absolute perfection in flavor and heat consistency.</p>
             </div>
             <div style="padding: 30px; background: var(--color-dark-soft); border: 1px solid var(--color-border-dark); border-radius: 8px;">
-                <i class="fa-solid fa-leaf" style="font-size: 32px; color: var(--color-red); margin-bottom: 20px;"></i>
+                <img src="https://images.unsplash.com/photo-1596649283457-3f8d6896fb82?w=600" alt="100% Natural" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px; margin-bottom: 20px;">
                 <h3 style="font-family: var(--font-display); font-size: 28px; color: var(--color-text-light); margin-bottom: 15px; font-weight: 400;">100% Natural</h3>
                 <p style="color: var(--color-muted); font-size: 15px; line-height: 1.6;">No artificial extracts or preservatives. Our heat comes directly from the finest, freshest peppers grown locally.</p>
             </div>
             <div style="padding: 30px; background: var(--color-dark-soft); border: 1px solid var(--color-border-dark); border-radius: 8px;">
-                <i class="fa-solid fa-medal" style="font-size: 32px; color: var(--color-red); margin-bottom: 20px;"></i>
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600" alt="Award Winning" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px; margin-bottom: 20px;">
                 <h3 style="font-family: var(--font-display); font-size: 28px; color: var(--color-text-light); margin-bottom: 15px; font-weight: 400;">Award Winning</h3>
                 <p style="color: var(--color-muted); font-size: 15px; line-height: 1.6;">Recognized globally for balancing extreme heat with complex, culinary-grade flavor profiles.</p>
             </div>
@@ -486,67 +486,34 @@
         <div class="section-heading centered">
             <h2>Burn Book <em>Reviews.</em></h2>
         </div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
-            <div style="text-align: left; padding: 40px; border-left: 3px solid var(--color-red); background: var(--color-dark); border-radius: 4px;">
-                <div style="color: var(--color-gold); margin-bottom: 20px; font-size: 12px; letter-spacing: 4px;">
+        <div class="testimonial-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 50px;">
+            <div class="testimonial-card" style="background: var(--color-dark); border: 1px solid var(--color-border-dark); border-radius: 12px; padding: 50px; text-align: left; position: relative; transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--color-red)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--color-border-dark)'">
+                <i class="fa-solid fa-quote-right" style="font-size: 40px; color: rgba(255, 68, 51, 0.1); position: absolute; top: 40px; right: 40px;"></i>
+                <div style="color: var(--color-gold); margin-bottom: 25px; font-size: 14px; letter-spacing: 2px;">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 </div>
-                <p style="font-family: var(--font-display); font-size: 23px; color: var(--color-text-light); margin-bottom: 20px; line-height: 1.35;">"The Ghost Pepper Reserve completely ruined my taste buds in the best way possible. I can't eat BBQ without it now."</p>
-                <span style="color: var(--color-muted); font-weight: 700; font-size: 11px;">MARCUS T.</span>
+                <p style="font-size: 18px; color: var(--color-text-light); margin-bottom: 30px; line-height: 1.6; font-style: italic;">"The Ghost Pepper Reserve completely ruined my taste buds in the best way possible. I can't eat BBQ without it now."</p>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div style="width: 45px; height: 45px; border-radius: 50%; background: var(--color-red); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-family: var(--font-display); font-size: 18px;">MT</div>
+                    <span style="color: var(--color-text-light); font-weight: 700; font-size: 14px; letter-spacing: 0.1em;">MARCUS T.</span>
+                </div>
             </div>
-            <div style="text-align: left; padding: 40px; border-left: 3px solid var(--color-red); background: var(--color-dark); border-radius: 4px;">
-                <div style="color: var(--color-gold); margin-bottom: 20px; font-size: 12px; letter-spacing: 4px;">
+            
+            <div class="testimonial-card" style="background: var(--color-dark); border: 1px solid var(--color-border-dark); border-radius: 12px; padding: 50px; text-align: left; position: relative; transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--color-red)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--color-border-dark)'">
+                <i class="fa-solid fa-quote-right" style="font-size: 40px; color: rgba(255, 68, 51, 0.1); position: absolute; top: 40px; right: 40px;"></i>
+                <div style="color: var(--color-gold); margin-bottom: 25px; font-size: 14px; letter-spacing: 2px;">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 </div>
-                <p style="font-family: var(--font-display); font-size: 23px; color: var(--color-text-light); margin-bottom: 20px; line-height: 1.35;">"Mango Habanero changed my life. It's the exact perfect sweet to heat ratio. I buy it by the case now."</p>
-                <span style="color: var(--color-muted); font-weight: 700; font-size: 11px;">SARAH J.</span>
+                <p style="font-size: 18px; color: var(--color-text-light); margin-bottom: 30px; line-height: 1.6; font-style: italic;">"Mango Habanero changed my life. It's the exact perfect sweet to heat ratio. I buy it by the case now."</p>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div style="width: 45px; height: 45px; border-radius: 50%; background: var(--color-red); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-family: var(--font-display); font-size: 18px;">SJ</div>
+                    <span style="color: var(--color-text-light); font-weight: 700; font-size: 14px; letter-spacing: 0.1em;">SARAH J.</span>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- =====================================================
-     09. FINAL CTA
-===================================================== -->
-
-<!-- FIRECRAFT FINAL CTA -->
-<section class="firecraft-cta">
-    <div class="firecraft-cta-glow"></div>
-
-    <div class="firecraft-cta-content">
-        <span class="firecraft-cta-eyebrow">
-            <span class="firecraft-cta-line"></span>
-            MADE FOR THE BOLD
-            <span class="firecraft-cta-line"></span>
-        </span>
-
-        <h2>
-            Ordinary Food.<br>
-            <span>Extraordinary Heat.</span>
-        </h2>
-
-        <p>
-            Bold flavors. Real ingredients. Unforgettable heat.
-            Find your perfect Firecraft sauce and turn every meal
-            into something worth craving.
-        </p>
-
-        <div class="firecraft-cta-actions">
-            <a href="#collection" class="firecraft-cta-button">
-                EXPLORE THE COLLECTION
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
-
-            <span class="firecraft-cta-note">
-                <i class="fa-solid fa-fire-flame-curved"></i>
-                FIND YOUR LEVEL OF HEAT
-            </span>
-        </div>
-    </div>
-
-    <div class="firecraft-cta-decoration firecraft-cta-decoration-one"></div>
-    <div class="firecraft-cta-decoration firecraft-cta-decoration-two"></div>
-</section>
 
 </main>
 

@@ -32,7 +32,7 @@ body.light-theme #navbar-container .navbar {
     background-color: #080808 !important;
     background: #080808 !important;
     color: #F7F3EC !important;
-    border-bottom: 1px solid rgba(255,255,255,0.14) !important;
+    border-bottom: none !important;
     height: 85px;
     display: flex;
     align-items: center;

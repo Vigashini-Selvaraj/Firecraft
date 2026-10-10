@@ -800,3 +800,69 @@ h2 em {
         grid-template-columns: 1fr;
     }
 }
+
+body.light-theme .pd-hero-scroll-content { background: #f7f2ea !important; }
+body.light-theme .pd-title, body.light-theme .pd-short-desc, body.light-theme .heat-stat strong { color: #171513 !important; }
+body.light-theme .pd-price { color: #e53224 !important; }
+
+/* Custom Refinements */
+.pd-pairings-section h2 { font-family: var(--font-display); font-size: clamp(42px, 4.5vw, 68px); color: var(--color-text-light); margin-bottom: 20px; }
+.pd-pairings-section, .pd-tutorial-section, .pd-reviews-section, .pd-faq-section, .pd-related-section { padding: 50px 0 !important; }
+.custom-accordion .faq-item { background: var(--color-dark); margin-bottom: 15px; border: 1px solid var(--color-border-dark); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.custom-accordion .faq-item:first-child { border-top: 1px solid var(--color-border-dark); }
+.faq-header { padding: 25px 30px; font-size: 18px; }
+.faq-content p { padding: 0 30px 25px; }
+
+/* COMPLETE LIGHT THEME OVERRIDES FOR PRODUCT DETAILS */
+body.light-theme .breadcrumbs { color: var(--color-muted); }
+body.light-theme .breadcrumbs a { color: #171513; }
+body.light-theme .pd-title { color: #171513 !important; }
+body.light-theme .rating-num, body.light-theme .review-count { color: #171513 !important; }
+body.light-theme .pd-rating-block .stars { color: var(--color-red) !important; }
+body.light-theme .qty-control { border-color: rgba(23, 21, 19, 0.2) !important; background: transparent !important; }
+body.light-theme .qty-control input, body.light-theme .qty-control button { color: #171513 !important; }
+body.light-theme .btn-favorite { border-color: rgba(23, 21, 19, 0.2); color: #171513 !important; background: #ffffff; }
+body.light-theme .btn-favorite:hover { background: var(--color-red) !important; color: #ffffff !important; border-color: var(--color-red); }
+body.light-theme .flavor-tags .tag { color: #171513 !important; border-color: rgba(23, 21, 19, 0.2) !important; }
+body.light-theme .pd-info-grid .info-card { background: #ffffff !important; border: 1px solid rgba(23, 21, 19, 0.1) !important; box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
+body.light-theme .pd-info-grid .info-card h3, body.light-theme .pd-info-grid .info-card h4, body.light-theme .pd-info-grid .info-card .primary-pepper { color: #171513 !important; }
+body.light-theme .pd-info-grid .info-card p, body.light-theme .pd-info-grid .info-card li { color: #5e5952 !important; }
+body.light-theme .pd-ingredients-section { background: #ffffff !important; border: 1px solid rgba(23, 21, 19, 0.1) !important; }
+body.light-theme .pd-ingredients-section h3 { color: #171513 !important; }
+body.light-theme .ingredients-tabs .tab-btn { color: #171513 !important; border-bottom-color: rgba(23, 21, 19, 0.2) !important; }
+body.light-theme .ingredients-tabs .tab-btn.active { color: var(--color-red) !important; border-bottom-color: var(--color-red) !important; }
+body.light-theme .ingredients-content p { color: #5e5952 !important; }
+body.light-theme .product-card { background: #fffaf2 !important; border: 1px solid rgba(23, 21, 19, 0.1) !important; overflow: hidden; }
+body.light-theme .product-card .product-info { background: transparent !important; }
+
+/* SPACING AND ALIGNMENT FIXES */
+.pd-pairings-section { text-align: center; }
+.pd-pairings-section .section-label, .pd-pairings-section h2, .pd-pairings-section .section-subtitle { text-align: center !important; display: block; margin-left: auto; margin-right: auto; width: 100%; }
+.pd-related-section h2 { margin-bottom: 40px !important; text-align: center; }
+.related-grid-3 { margin-top: 40px; }
+
+/* LIGHT THEME OVERRIDES FOR PRODUCT DETAILS */
+body.light-theme .detail-box,
+body.light-theme .pd-tabs-section {
+    background-color: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.12) !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06) !important;
+}
+body.light-theme .tab-btn {
+    color: #555555;
+}
+body.light-theme .tab-btn.active {
+    color: var(--color-red) !important;
+}
+body.light-theme .tab-btn:hover {
+    color: #171513;
+}
+body.light-theme .custom-list li {
+    color: #3b3732 !important;
+}
+body.light-theme .heat-meter .bar {
+    background: rgba(0,0,0,0.1);
+}
+body.light-theme .heat-meter .bar.active {
+    background: var(--color-red);
+}

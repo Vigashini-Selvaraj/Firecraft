@@ -1159,8 +1159,38 @@ body.light-theme .article-page .cta-actions .btn-outline {
     border-color: rgba(247, 240, 231, 0.4) !important;
 }
 
+/* ======= BLOG DETAILS FIXES ======= */
 
-/* =========================================================
+/* Fix: Make hero text readable in Light Theme */
+html.light-theme .article-hero h1,
+body.light-theme .article-hero h1,
+html.light-theme .article-hero .article-intro,
+body.light-theme .article-hero .article-intro,
+html.light-theme .article-hero .article-meta,
+body.light-theme .article-hero .article-meta,
+html.light-theme .article-hero .article-meta span,
+body.light-theme .article-hero .article-meta span,
+html.light-theme .article-hero .breadcrumb,
+body.light-theme .article-hero .breadcrumb,
+html.light-theme .article-hero .breadcrumb a,
+body.light-theme .article-hero .breadcrumb a,
+html.light-theme .article-hero .breadcrumb i,
+body.light-theme .article-hero .breadcrumb i,
+html.light-theme #bc-title,
+body.light-theme #bc-title,
+html.light-theme #article-title,
+body.light-theme #article-title,
+html.light-theme #article-intro,
+body.light-theme #article-intro {
+    color: #171513 !important;
+}
+
+html.light-theme .article-hero .article-category,
+body.light-theme .article-hero .article-category,
+html.light-theme #article-cat,
+body.light-theme #article-cat {
+    color: #e63b2e !important;
+}/* =========================================================
    10. RESPONSIVE — TABLET
    ========================================================= */
 

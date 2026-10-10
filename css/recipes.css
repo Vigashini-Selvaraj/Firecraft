@@ -219,7 +219,7 @@
 /* 02. INTRO */
 
 .rc-intro {
-    padding: 105px 0;
+    padding: 60px 0;
     /* removed background and color to let theme work */
     /* removed */
 }
@@ -269,7 +269,7 @@
 /* 03. SAUCE PAIRINGS */
 
 .rc-pairings {
-    padding: 110px 0 120px;
+    padding: 60px 0;
     /* removed background to let theme work */
 }
 
@@ -1244,5 +1244,27 @@ body.light-theme .rc-filter.active {
 
 body.light-theme .rc-newsletter {
     margin-bottom: 0 !important;
+}
+
+body.light-theme section#rc-hero-main {
+    background: #0d0d0c !important;
+}
+
+body.light-theme #rc-hero-main .hero-title,
+body.light-theme #rc-hero-main h1,
+body.light-theme #rc-hero-main p,
+body.light-theme #rc-hero-main a.rc-text-link {
+    color: #f7f2ea !important;
+}
+
+body.light-theme #rc-cta-main h2,
+body.light-theme #rc-cta-main p,
+body.light-theme #rc-cta-main span.rc-eyebrow,
+body.light-theme #rc-cta-main span {
+    color: #ffffff !important;
+}
+body.light-theme .rc-time {
+    color: #171513 !important;
+    background: rgba(255, 255, 255, 0.9) !important;
 }
 

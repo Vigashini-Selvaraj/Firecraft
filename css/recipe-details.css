@@ -1290,3 +1290,125 @@ body.light-theme .rd-final-cta {
 }
 
 
+
+/* ======= OVERRIDES FOR RECIPE DETAILS ======= */
+
+/* Force hero section and breadcrumb to be full black */
+.rd-page {
+    background-color: #0d0d0c !important;
+}
+.rd-breadcrumb-wrap, .rd-hero {
+    background-color: #0d0d0c !important;
+}
+
+/* Ensure light mode also keeps it black */
+html.light-theme .rd-page,
+html.light-theme .rd-breadcrumb-wrap,
+html.light-theme .rd-hero {
+    background-color: #0d0d0c !important;
+}
+
+html.light-theme .rd-hero h1,
+html.light-theme .rd-hero p,
+html.light-theme .rd-breadcrumb span,
+html.light-theme .rd-eyebrow,
+html.light-theme .rd-meta small,
+html.light-theme .rd-meta strong {
+    color: #171513 !important;
+}
+
+/* Remove huge margin/padding between sections */
+.rd-page section {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+    margin-top: 0 !important;
+}
+
+/* Adjust font size for hero */
+.rd-hero h1 {
+    font-size: clamp(40px, 5vw, 60px) !important;
+}
+
+
+/* ======= ULTRA OVERRIDES FOR RECIPE DETAILS HERO ======= */
+
+html.light-theme .rd-hero,
+body.light-theme .rd-hero,
+html.light-theme .rd-breadcrumb-wrap,
+body.light-theme .rd-breadcrumb-wrap {
+    background: #0d0d0c !important;
+    background-color: #0d0d0c !important;
+}
+
+html.light-theme .rd-hero h1,
+body.light-theme .rd-hero h1,
+html.light-theme #recipe-title,
+body.light-theme #recipe-title,
+html.light-theme .rd-hero p,
+body.light-theme .rd-hero p,
+html.light-theme .rd-hero .rd-eyebrow,
+body.light-theme .rd-hero .rd-eyebrow,
+html.light-theme .rd-meta small,
+body.light-theme .rd-meta small,
+html.light-theme .rd-meta strong,
+body.light-theme .rd-meta strong {
+    color: #171513 !important;
+}
+
+html.light-theme .rd-tags span,
+body.light-theme .rd-tags span {
+    color: #ff8d7f !important;
+}
+
+html.light-theme .rd-hero h1 span,
+body.light-theme .rd-hero h1 span {
+    color: #e63b2e !important;
+}
+
+
+html.light-theme .rd-page,
+body.light-theme .rd-page,
+html.light-theme .rd-hero,
+body.light-theme .rd-hero {
+    background: #f7f2e9 !important;
+    background-color: #f7f2e9 !important;
+}
+
+html.light-theme .rd-breadcrumb-wrap,
+body.light-theme .rd-breadcrumb-wrap {
+    background: #f7f2e9 !important;
+    background-color: #f7f2e9 !important;
+    border-bottom: 1px solid rgba(0,0,0,0.1) !important;
+}
+
+html.light-theme .rd-breadcrumb a,
+body.light-theme .rd-breadcrumb a,
+html.light-theme .rd-breadcrumb span,
+body.light-theme .rd-breadcrumb span,
+html.light-theme .rd-hero h1,
+body.light-theme .rd-hero h1,
+html.light-theme #recipe-title,
+body.light-theme #recipe-title,
+html.light-theme .rd-hero p,
+body.light-theme .rd-hero p,
+html.light-theme .rd-hero .rd-eyebrow,
+body.light-theme .rd-hero .rd-eyebrow,
+html.light-theme .rd-meta small,
+body.light-theme .rd-meta small,
+html.light-theme .rd-meta strong,
+body.light-theme .rd-meta strong,
+html.light-theme .rd-meta i,
+body.light-theme .rd-meta i {
+    color: #171513 !important;
+}
+
+html.light-theme .rd-tags span,
+body.light-theme .rd-tags span {
+    color: #e63b2e !important;
+    background: rgba(230,59,46,0.1) !important;
+}
+
+html.light-theme .rd-hero h1 span,
+body.light-theme .rd-hero h1 span {
+    color: #e63b2e !important;
+}

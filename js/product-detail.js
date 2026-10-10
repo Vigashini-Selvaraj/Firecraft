@@ -357,4 +357,117 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Add to Cart Logic
+    const addToCartBtn = document.getElementById('add-to-cart-btn');
+    if (addToCartBtn) {
+        addToCartBtn.addEventListener('click', () => {
+            const quantity = parseInt(qtyInput.value, 10) || 1;
+            const priceNumber = parseFloat(product.price.replace(/[^0-9.]/g, ''));
+            
+            const cartItem = {
+                id: product.id,
+                name: product.name,
+                description: product.shortDesc,
+                price: priceNumber,
+                heat: product.heatScore,
+                image: product.image,
+                quantity: quantity
+            };
+            
+            let currentCart = [];
+            try {
+                const stored = localStorage.getItem('firecraftCart');
+                if (stored) {
+                    currentCart = JSON.parse(stored);
+                }
+            } catch (e) {
+                console.error("Failed to load cart", e);
+            }
+
+            const existingItemIndex = currentCart.findIndex(item => item.id === cartItem.id);
+            if (existingItemIndex > -1) {
+                currentCart[existingItemIndex].quantity += cartItem.quantity;
+            } else {
+                currentCart.push(cartItem);
+            }
+            
+            localStorage.setItem('firecraftCart', JSON.stringify(currentCart));
+            window.location.href = 'cart.html';
+        });
+    }
+
+    // Wishlist Logic
+    const favoriteBtn = document.querySelector('.btn-favorite');
+    if (favoriteBtn) {
+        favoriteBtn.addEventListener('click', () => {
+            const priceNumber = parseFloat(product.price.replace(/[^0-9.]/g, ''));
+            const wishlistItem = {
+                id: product.id,
+                name: product.name,
+                description: product.shortDesc,
+                price: priceNumber,
+                heat: product.heatScore,
+                image: product.image
+            };
+            
+            let currentWishlist = [];
+            try {
+                const stored = localStorage.getItem('firecraftWishlist');
+                if (stored) {
+                    currentWishlist = JSON.parse(stored);
+                }
+            } catch (e) {
+                console.error("Failed to load wishlist", e);
+            }
+
+            const exists = currentWishlist.some(item => item.id === wishlistItem.id);
+            if (!exists) {
+                currentWishlist.push(wishlistItem);
+                localStorage.setItem('firecraftWishlist', JSON.stringify(currentWishlist));
+            }
+            
+            // Show toast
+            showToast("wishlist added");
+            
+            const icon = favoriteBtn.querySelector('i');
+            if (icon) {
+                icon.className = 'fa-solid fa-heart';
+                icon.style.color = 'var(--color-red, #E53224)';
+            }
+        });
+    }
+
+    function showToast(message) {
+        let toast = document.getElementById('custom-toast');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 'custom-toast';
+            Object.assign(toast.style, {
+                position: 'fixed',
+                bottom: '30px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                background: 'var(--color-red, #E53224)',
+                color: 'white',
+                padding: '12px 24px',
+                borderRadius: '30px',
+                boxShadow: '0 5px 15px rgba(0,0,0,0.2)',
+                zIndex: '9999',
+                fontFamily: 'var(--font-primary, sans-serif)',
+                fontSize: '14px',
+                fontWeight: '600',
+                opacity: '0',
+                transition: 'opacity 0.3s ease',
+                pointerEvents: 'none'
+            });
+            document.body.appendChild(toast);
+        }
+        toast.textContent = message;
+        toast.style.opacity = '1';
+        
+        setTimeout(() => {
+            toast.style.opacity = '0';
+        }, 3000);
+    }
 });

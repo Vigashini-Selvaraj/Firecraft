@@ -1,0 +1,404 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101010">
+
+    <title>Your Cart | Firecraft</title>
+
+    <link rel="icon" type="image/png" href="assets/images/firecraft_logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cart.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div id="navbar-container">
+        <!-- Your existing navbar can be loaded here by main.js -->
+    </div>
+
+    <main class="cart-page">
+
+        <!-- PAGE INTRO -->
+        <section class="cart-hero">
+            <div class="container cart-hero-inner">
+                <div class="cart-breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <span>Shopping Cart</span>
+                </div>
+
+                <div class="cart-hero-content">
+                    <div>
+                        <span class="cart-eyebrow">YOUR FIRECRAFT ORDER</span>
+                        <h1>Good Choices.<br><span>Hotter Meals.</span></h1>
+                        <p>
+                            Your favorite flavors are almost yours.
+                            Review your sauces, choose your delivery,
+                            and get ready to bring the heat.
+                        </p>
+                    </div>
+
+                    <div class="cart-hero-art" aria-hidden="true">
+                        <i class="fa-solid fa-pepper-hot"></i>
+                        <span>REAL INGREDIENTS.<br>UNFORGETTABLE FLAVOR.</span>
+                    </div>
+                </div>
+
+                <div class="checkout-progress">
+                    <div class="progress-step active">
+                        <span>01</span>
+                        <div>
+                            <strong>Your Cart</strong>
+                            <small>Review items</small>
+                        </div>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step">
+                        <span>02</span>
+                        <div>
+                            <strong>Delivery</strong>
+                            <small>Your details</small>
+                        </div>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step">
+                        <span>03</span>
+                        <div>
+                            <strong>Confirmation</strong>
+                            <small>Place your order</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CART AND CHECKOUT -->
+        <section class="cart-main section-light">
+            <div class="container">
+
+                <div class="cart-layout">
+
+                    <!-- LEFT COLUMN -->
+                    <div class="cart-left">
+
+                        <section class="cart-panel items-panel">
+                            <div class="panel-heading">
+                                <div>
+                                    <span class="panel-kicker">YOUR SELECTION</span>
+                                    <h2>Cart Items <span id="cart-count">(0)</span></h2>
+                                </div>
+
+                                <a href="products.html" class="continue-link">
+                                    Continue Shopping
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+
+                            <div id="cart-items" class="cart-items">
+                                <!-- Rendered by cart.js -->
+                            </div>
+
+                            <div id="empty-cart" class="empty-cart" hidden>
+                                <div class="empty-cart-icon">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </div>
+                                <h3>Your cart is craving something.</h3>
+                                <p>Explore our signature sauces and find your next favorite.</p>
+                                <a href="products.html" class="cart-btn cart-btn-primary">
+                                    Explore Sauces
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+
+                            <div class="promo-area" id="promo-area">
+                                <label for="promo-code">Have a promo code?</label>
+                                <div class="promo-control">
+                                    <input id="promo-code" type="text" placeholder="Enter coupon code">
+                                    <button type="button" id="apply-promo" class="cart-btn cart-btn-dark">Apply Code</button>
+                                </div>
+                                <p id="promo-message" class="form-message" aria-live="polite"></p>
+                                <small>Demo coupon: <strong>FIRE10</strong> for 10% off eligible items.</small>
+                            </div>
+                        </section>
+
+                        <!-- WISHLIST -->
+                        <section class="cart-panel items-panel" id="wishlist-section" style="display: none;">
+                            <div class="panel-heading">
+                                <div>
+                                    <span class="panel-kicker">YOUR FAVORITES</span>
+                                    <h2>Wishlist</h2>
+                                </div>
+                            </div>
+                            <div id="wishlist-items" class="cart-items">
+                                <!-- Rendered by cart.js -->
+                            </div>
+                        </section>
+
+                        <!-- DELIVERY DETAILS -->
+                        <section class="cart-panel delivery-panel" id="delivery-details">
+                            <div class="panel-heading">
+                                <div>
+                                    <span class="panel-kicker">WHERE SHOULD WE SEND IT?</span>
+                                    <h2><i class="fa-solid fa-location-dot heading-icon"></i> Delivery Details</h2>
+                                </div>
+                            </div>
+
+                            <form id="delivery-form">
+                                <div class="form-grid">
+                                    <div class="form-field">
+                                        <label for="customer-name">Full Name *</label>
+                                        <input id="customer-name" name="name" type="text" autocomplete="name" placeholder="Your full name" required>
+                                    </div>
+
+                                    <div class="form-field">
+                                        <label for="customer-phone">Phone Number *</label>
+                                        <input id="customer-phone" name="phone" type="tel" autocomplete="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number" required>
+                                    </div>
+
+                                    <div class="form-field full-width">
+                                        <label for="customer-email">Email Address *</label>
+                                        <input id="customer-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+                                    </div>
+
+                                    <div class="form-field full-width">
+                                        <label for="customer-address">Street Address *</label>
+                                        <textarea id="customer-address" name="address" autocomplete="street-address" rows="3" placeholder="House number, street, area" required></textarea>
+                                    </div>
+
+                                    <div class="form-field">
+                                        <label for="customer-city">City *</label>
+                                        <input id="customer-city" name="city" autocomplete="address-level2" placeholder="City" required>
+                                    </div>
+
+                                    <div class="form-field">
+                                        <label for="customer-state">State *</label>
+                                        <input id="customer-state" name="state" autocomplete="address-level1" placeholder="State" required>
+                                    </div>
+
+                                    <div class="form-field">
+                                        <label for="customer-pincode">PIN Code *</label>
+                                        <input id="customer-pincode" name="pincode" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{6}" maxlength="6" placeholder="6-digit PIN code" required>
+                                    </div>
+
+                                    <div class="form-field">
+                                        <label for="delivery-note">Delivery Note</label>
+                                        <input id="delivery-note" name="note" placeholder="Landmark or special instructions">
+                                    </div>
+                                </div>
+
+                                <p class="secure-note">
+                                    <i class="fa-solid fa-lock"></i>
+                                    Your delivery information is used to process this order.
+                                </p>
+                            </form>
+                        </section>
+
+                        <!-- DELIVERY OPTIONS -->
+                        <section class="cart-panel">
+                            <div class="panel-heading">
+                                <div>
+                                    <span class="panel-kicker">CHOOSE WHAT WORKS FOR YOU</span>
+                                    <h2><i class="fa-solid fa-truck-fast heading-icon"></i> Delivery Options</h2>
+                                </div>
+                            </div>
+
+                            <div class="option-list">
+                                <label class="choice-card selected">
+                                    <input type="radio" name="shipping" value="standard" checked>
+                                    <span class="custom-radio"></span>
+                                    <span class="choice-copy">
+                                        <strong>Standard Delivery</strong>
+                                        <small>Estimated 3–5 business days</small>
+                                    </span>
+                                    <strong class="choice-price" data-shipping-price="standard">₹99</strong>
+                                </label>
+
+                                <label class="choice-card">
+                                    <input type="radio" name="shipping" value="express">
+                                    <span class="custom-radio"></span>
+                                    <span class="choice-copy">
+                                        <strong>Express Delivery</strong>
+                                        <small>Estimated 1–2 business days</small>
+                                    </span>
+                                    <strong class="choice-price" data-shipping-price="express">₹199</strong>
+                                </label>
+
+                                <label class="choice-card">
+                                    <input type="radio" name="shipping" value="pickup">
+                                    <span class="custom-radio"></span>
+                                    <span class="choice-copy">
+                                        <strong>Store Pickup</strong>
+                                        <small>Collect from our designated pickup point</small>
+                                    </span>
+                                    <strong class="choice-price">Free</strong>
+                                </label>
+                            </div>
+
+                            <p class="delivery-disclaimer">
+                                Delivery estimates and availability are illustrative until connected to a shipping service.
+                            </p>
+                        </section>
+
+                        <!-- PAYMENT -->
+                        <section class="cart-panel payment-panel">
+                            <div class="panel-heading">
+                                <div>
+                                    <span class="panel-kicker">SIMPLE & SECURE CHECKOUT</span>
+                                    <h2><i class="fa-regular fa-credit-card heading-icon"></i> Payment Method</h2>
+                                </div>
+                            </div>
+
+                            <div class="option-list">
+                                <label class="choice-card selected">
+                                    <input type="radio" name="payment" value="cod" checked>
+                                    <span class="custom-radio"></span>
+                                    <span class="choice-copy">
+                                        <strong>Cash on Delivery</strong>
+                                        <small>Pay when your order arrives</small>
+                                    </span>
+                                    <i class="fa-solid fa-money-bill-wave payment-symbol"></i>
+                                </label>
+
+                                <label class="choice-card">
+                                    <input type="radio" name="payment" value="card">
+                                    <span class="custom-radio"></span>
+                                    <span class="choice-copy">
+                                        <strong>Credit / Debit Card</strong>
+                                        <small>Visa, Mastercard and supported cards</small>
+                                    </span>
+                                    <i class="fa-regular fa-credit-card payment-symbol"></i>
+                                </label>
+
+                                <label class="choice-card">
+                                    <input type="radio" name="payment" value="upi">
+                                    <span class="custom-radio"></span>
+                                    <span class="choice-copy">
+                                        <strong>UPI Payment</strong>
+                                        <small>Pay through a supported UPI app</small>
+                                    </span>
+                                    <i class="fa-solid fa-mobile-screen-button payment-symbol"></i>
+                                </label>
+                            </div>
+
+                            <div id="online-payment-note" class="online-payment-note" hidden>
+                                <i class="fa-solid fa-shield-halved"></i>
+                                Online payments require a configured payment gateway. Your order will not be charged by this demo page.
+                            </div>
+                        </section>
+
+                    </div>
+
+                    <!-- RIGHT COLUMN -->
+                    <aside class="cart-right">
+
+                        <section class="cart-panel summary-panel">
+                            <div class="panel-heading">
+                                <div>
+                                    <span class="panel-kicker">THE FINAL COUNT</span>
+                                    <h2>Order Summary</h2>
+                                </div>
+                                <i class="fa-solid fa-receipt summary-icon"></i>
+                            </div>
+
+                            <div class="summary-lines">
+                                <div><span>Subtotal</span><strong id="summary-subtotal">₹0.00</strong></div>
+                                <div id="discount-row" hidden><span>Discount</span><strong id="summary-discount" class="discount-value">−₹0.00</strong></div>
+                                <div><span>Delivery</span><strong id="summary-shipping">₹99.00</strong></div>
+                                <div><span>Estimated tax (8%)</span><strong id="summary-tax">₹0.00</strong></div>
+                            </div>
+
+                            <div class="summary-total">
+                                <span>Total to Pay</span>
+                                <strong id="summary-total">₹0.00</strong>
+                            </div>
+
+                            <p class="summary-tax-note">Tax is an illustrative estimate. Final tax depends on your actual product and billing setup.</p>
+
+                            <button type="button" class="cart-btn cart-btn-primary checkout-btn" id="place-order">
+                                <span>Place My Order</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                            <div class="summary-security">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>Review your details before confirming.</span>
+                            </div>
+                        </section>
+
+                        <section class="cart-panel perks-panel">
+                            <h3>Why shop Firecraft?</h3>
+                            <div class="perk-item">
+                                <i class="fa-solid fa-pepper-hot"></i>
+                                <div><strong>Flavor-first sauces</strong><small>Bold flavor in every bottle.</small></div>
+                            </div>
+                            <div class="perk-item">
+                                <i class="fa-solid fa-box"></i>
+                                <div><strong>Careful packing</strong><small>Designed to help protect your order.</small></div>
+                            </div>
+                            <div class="perk-item">
+                                <i class="fa-solid fa-headset"></i>
+                                <div><strong>Customer support</strong><small>We're here to help with your order.</small></div>
+                            </div>
+                        </section>
+
+                        <!-- TRACK EXISTING ORDER -->
+                        <section class="cart-panel track-panel">
+                            <span class="panel-kicker">ALREADY ORDERED?</span>
+                            <h2>Track Your Order</h2>
+                            <p>Enter your order reference to look up its status.</p>
+                            <form id="track-form">
+                                <label for="tracking-id">Order Reference</label>
+                                <input id="tracking-id" type="text" placeholder="e.g. FC123456" required>
+                                <button class="cart-btn cart-btn-dark" type="submit">
+                                    Check Status <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </form>
+                            <div id="tracking-result" class="tracking-result" aria-live="polite"></div>
+                            <small class="tracking-hint">Live tracking requires a connected order management system.</small>
+                        </section>
+
+                    </aside>
+                </div>
+
+                <!-- ORDER SUCCESS -->
+                <section id="order-success" class="order-success" hidden aria-live="polite">
+                    <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+                    <span class="panel-kicker">ORDER DETAILS SAVED</span>
+                    <h2>You're bringing the heat!</h2>
+                    <p id="success-message"></p>
+                    <p class="success-reference">Order reference: <strong id="success-order-id"></strong></p>
+                    <button type="button" id="continue-after-order" class="cart-btn cart-btn-primary">
+                        Continue Shopping <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </section>
+
+                <!-- SERVICE PROMISES -->
+                <div class="cart-promises">
+                    <div><i class="fa-solid fa-truck-fast"></i><span><strong>Convenient Delivery</strong><small>Choose your preferred option</small></span></div>
+                    <div><i class="fa-solid fa-lock"></i><span><strong>Checkout Care</strong><small>Clear order totals</small></span></div>
+                    <div><i class="fa-solid fa-pepper-hot"></i><span><strong>Big Flavor</strong><small>Made for your favorite meals</small></span></div>
+                    <div><i class="fa-solid fa-headset"></i><span><strong>We're Here</strong><small>Customer support</small></span></div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

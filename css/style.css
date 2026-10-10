@@ -216,13 +216,13 @@ body.light-theme .info-card {
 }
 
 /* Headings in Light Theme */
-html.light-theme h1:not(.logo-text),
+html.light-theme h1:not(.logo-text):not(.hero-title),
 html.light-theme h2,
 html.light-theme h3,
 html.light-theme h4,
 html.light-theme h5,
 html.light-theme h6,
-body.light-theme h1:not(.logo-text),
+body.light-theme h1:not(.logo-text):not(.hero-title),
 body.light-theme h2,
 body.light-theme h3,
 body.light-theme h4,
@@ -715,7 +715,7 @@ ul {
     width: 100%;
     min-height: calc(100vh - 89px); /* Full screen minus navbar */
     display: flex;
-    align-items: center;
+    align-items: center; margin-top: -2px; padding-top: 2px;
 
     background:
         url("../assets/images/Firecraft Hot Sauce in Flames.png")
@@ -2251,14 +2251,14 @@ html.light-theme .products-hero p,
 body.light-theme .products-hero p,
 html.light-theme .products-hero .section-label,
 body.light-theme .products-hero .section-label {
-    color: #f7f2ea;
+    color: #f7f2ea !important;
 }
 
 html.light-theme .hero-title span,
 body.light-theme .hero-title span,
 html.light-theme .products-hero h1 em,
 body.light-theme .products-hero h1 em {
-    color: var(--color-red);
+    color: var(--color-red) !important;
 }
 
 html.light-theme .hero-section .btn-outline,
@@ -2277,7 +2277,7 @@ html.light-theme .wholesale-content p,
 body.light-theme .wholesale-content p,
 html.light-theme .wholesale-content .section-label,
 body.light-theme .wholesale-content .section-label {
-    color: #f7f2ea;
+    color: #f7f2ea !important;
 }
 
 html.light-theme .footer,
@@ -2413,7 +2413,7 @@ footer {
     }
 
     .pairing-slide {
-        flex: 0 0 100% !important;
+        flex: none !important;
         width: 100% !important;
         height: 440px !important;
     }
@@ -2453,7 +2453,7 @@ footer {
 
 html, body {
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 img, video, iframe {
@@ -2465,3 +2465,66 @@ img, video, iframe {
 
 
 
+
+/* Overrides for heat cards and pairing cards to keep text visible on dark images in light theme */
+html.light-theme .heat-card h3, body.light-theme .heat-card h3, html.light-theme .heat-card p, body.light-theme .heat-card p, html.light-theme .heat-card .level-num, body.light-theme .heat-card .level-num, html.light-theme .heat-card .heat-number, body.light-theme .heat-card .heat-number, html.light-theme .flip-card-front h3, body.light-theme .flip-card-front h3, html.light-theme .flip-card-back h3, body.light-theme .flip-card-back h3, html.light-theme .flip-card-back p, body.light-theme .flip-card-back p, html.light-theme .final-cta-inner h2, body.light-theme .final-cta-inner h2, html.light-theme .final-cta-inner p, body.light-theme .final-cta-inner p { color: #ffffff !important; }
+
+
+/* RTL Hero Background Alignment */
+html[dir="rtl"] .hero-section, html[dir="rtl"] .products-hero, html[dir="rtl"] .contact-hero, html[dir="rtl"] .services-hero, html[dir="rtl"] .about-hero { background-position: right center !important; }
+
+
+/* Override for hero text and white line in light theme */
+html.light-theme .hero-section h1, body.light-theme .hero-section h1, html.light-theme .hero-section h1.hero-title, body.light-theme .hero-section h1.hero-title, html.light-theme .hero-section p, body.light-theme .hero-section p, html.light-theme .hero-section .hero-eyebrow, body.light-theme .hero-section .hero-eyebrow { color: #f7f2ea !important; } html.light-theme .hero-section h1 span, body.light-theme .hero-section h1 span { color: #e53224 !important; } html.light-theme .navbar, body.light-theme .navbar, html.light-theme #navbar-container, body.light-theme #navbar-container, html.light-theme .hero-section, body.light-theme .hero-section { border: none !important; box-shadow: none !important; }
+
+
+/* Proper RTL Mirroring for Hero */
+/* Proper RTL Mirroring for Hero */
+html[dir="rtl"] .hero-section, html[dir="rtl"] .products-hero, html[dir="rtl"] .contact-hero, html[dir="rtl"] .services-hero, html[dir="rtl"] .about-hero { transform: scaleX(-1); background-position: right center !important; }
+html[dir="rtl"] .products-hero .container, html[dir="rtl"] .contact-hero .container, html[dir="rtl"] .services-hero .container, html[dir="rtl"] .about-hero .container { transform: scaleX(-1); }
+html[dir="rtl"] .hero-section .hero-content { transform: scaleX(-1); margin-left: 0 !important; margin-right: auto !important; text-align: left !important; }
+
+/* Home 2 RTL and Light Theme Fixes */
+html[dir="rtl"] .approach-hero { transform: scaleX(-1); }
+html[dir="rtl"] .approach-hero .hero-inner { transform: scaleX(-1); }
+
+html.light-theme .approach-hero h1, body.light-theme .approach-hero h1,
+html.light-theme .approach-hero p, body.light-theme .approach-hero p,
+html.light-theme .approach-hero .eyebrow, body.light-theme .approach-hero .eyebrow,
+html.light-theme .approach-hero .hero-side-note, body.light-theme .approach-hero .hero-side-note,
+html.light-theme .approach-hero .hero-side-note p, body.light-theme .approach-hero .hero-side-note p,
+html.light-theme .approach-hero .hero-side-note span, body.light-theme .approach-hero .hero-side-note span {
+    color: #f7f2ea !important;
+}
+html.light-theme .approach-hero h1 span, body.light-theme .approach-hero h1 span {
+    color: var(--color-red) !important;
+}
+html.light-theme .approach-hero .outline-btn, body.light-theme .approach-hero .outline-btn {
+    color: #f7f2ea !important;
+    border-color: rgba(247, 242, 234, 0.4) !important;
+}
+html.light-theme .approach-hero .outline-btn:hover, body.light-theme .approach-hero .outline-btn:hover {
+    background: #f7f2ea !important;
+    color: #171513 !important;
+}
+
+/* Home 2 Additional Light Theme Fixes */
+html.light-theme .collection-card h3, body.light-theme .collection-card h3,
+html.light-theme .collection-card p, body.light-theme .collection-card p,
+html.light-theme .collection-card span, body.light-theme .collection-card span {
+    color: #f7f2ea !important;
+}
+
+html.light-theme .wholesale-section h2, body.light-theme .wholesale-section h2,
+html.light-theme .wholesale-section p, body.light-theme .wholesale-section p,
+html.light-theme .wholesale-section span, body.light-theme .wholesale-section span {
+    color: #f7f2ea !important;
+}
+html.light-theme .wholesale-section h2 em, body.light-theme .wholesale-section h2 em {
+    color: var(--color-red) !important;
+}
+
+
+/* FIX PRODUCT CARD LIGHT THEME */
+body.light-theme .product-card, body.light-theme .recipe-card, body.light-theme .blog-card { background: #fffaf2 !important; border: 1px solid rgba(23, 21, 19, 0.1) !important; }
+body.light-theme .product-card .product-info, body.light-theme .recipe-card .recipe-info, body.light-theme .blog-card .blog-info { background: transparent !important; }

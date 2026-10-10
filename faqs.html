@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQs | Firecraft Hot Sauce</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/images/firecraft_logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { background: #0b0908; color: #f7f2ea; font-family: 'Manrope', sans-serif; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 60px 20px; margin: 0; }
+    html.light-theme body { background: #f4ede3; color: #171513; }
+    .page-card { background: #151311; padding: 60px 50px; max-width: 800px; width: 100%; border: 1px solid rgba(247, 242, 234, 0.12); box-shadow: 0 20px 40px rgba(0,0,0,0.3); border-radius: 8px; }
+    html.light-theme .page-card { background: #ffffff; border-color: rgba(23, 21, 19, 0.15); }
+    .logo-link { display: block; text-align: center; margin-bottom: 30px; text-decoration: none; }
+    .logo-img { height: 75px; width: auto; object-fit: contain; margin: 0 auto; display: inline-block; }
+    .page-card h1 { font-family: 'DM Serif Display', serif; font-size: 38px; color: #e63b2e; margin-bottom: 40px; text-align: center; }
+    
+    .faq-accordion { text-align: left; }
+    .faq-item { border-bottom: 1px solid rgba(247, 242, 234, 0.1); margin-bottom: 10px; }
+    html.light-theme .faq-item { border-color: rgba(23, 21, 19, 0.1); }
+    .faq-header { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; cursor: pointer; font-size: 17px; font-weight: 600; color: #f7f2ea; transition: color 0.3s; }
+    html.light-theme .faq-header { color: #171513; }
+    .faq-header:hover { color: #e63b2e; }
+    .faq-header i { font-size: 14px; transition: transform 0.3s; color: #e63b2e; }
+    .faq-item.active .faq-header i { transform: rotate(180deg); }
+    .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; color: #b6aaa0; font-size: 15px; line-height: 1.6; }
+    html.light-theme .faq-content { color: #5e5952; }
+    .faq-content p { padding-bottom: 20px; margin: 0; }
+  </style>
+</head>
+<body>
+  <div class="page-card">
+    <a href="index.html" class="logo-link">
+      <img src="assets/images/firecraft_logo.png" alt="Firecraft Logo" class="logo-img">
+    </a>
+    <h1>Frequently Asked Questions</h1>
+    
+    <div class="faq-accordion">
+      <div class="faq-item">
+        <div class="faq-header" onclick="toggleFaq(this)">
+          Do your sauces contain artificial preservatives?
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-content">
+          <p>No, we use only natural preservatives like vinegar, salt, and citrus juices. We believe in keeping our ingredients as clean and natural as possible.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-header" onclick="toggleFaq(this)">
+          Are Firecraft sauces gluten-free and vegan?
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-content">
+          <p>Yes! All of our core hot sauces are 100% gluten-free and certified vegan. They are made entirely from plant-based ingredients.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-header" onclick="toggleFaq(this)">
+          Do you ship internationally?
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-content">
+          <p>Currently, we only ship within the United States and Canada. We hope to expand our shipping zones globally in the near future!</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-header" onclick="toggleFaq(this)">
+          How long does a bottle last after opening?
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-content">
+          <p>We recommend refrigerating our sauces after opening. Once refrigerated, a bottle will easily stay fresh and retain its heat for up to 6 months.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-header" onclick="toggleFaq(this)">
+          Which sauce is the hottest?
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-content">
+          <p>The "Ghost Pepper Reserve" is currently our hottest offering, clocking in at over 500,000 Scoville Heat Units. Proceed with caution!</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-header" onclick="toggleFaq(this)">
+          What happens if my bottle arrives broken?
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-content">
+          <p>If your package arrives damaged, please email us a photo within 48 hours of delivery at support@firecraft.com, and we will ship a free replacement immediately.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    if (localStorage.getItem('firecraftTheme') === 'light') { document.documentElement.classList.add('light-theme'); }
+    
+    function toggleFaq(headerElement) {
+      const item = headerElement.parentElement;
+      const content = item.querySelector('.faq-content');
+      
+      // Close other open FAQs
+      const allItems = document.querySelectorAll('.faq-item');
+      allItems.forEach(i => {
+        if (i !== item && i.classList.contains('active')) {
+          i.classList.remove('active');
+          i.querySelector('.faq-content').style.maxHeight = '0';
+        }
+      });
+      
+      // Toggle current FAQ
+      item.classList.toggle('active');
+      if (item.classList.contains('active')) {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } else {
+        content.style.maxHeight = "0";
+      }
+    }
+  </script>
+</body>
+</html>

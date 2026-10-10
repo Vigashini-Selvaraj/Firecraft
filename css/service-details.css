@@ -779,52 +779,116 @@
 }
 
 /* LIGHT THEME FOR SERVICE DETAILS PAGE */
-body.light-theme #service-detail-page {
+html.light-theme #service-detail-page {
     background: #f7f2e9 !important;
     color: #171513 !important;
 }
 
-body.light-theme #service-detail-page .sd-hero {
+html.light-theme #service-detail-page .sd-hero {
     background: #0d0d0c !important;
     color: #f7f2ea !important;
 }
 
-body.light-theme #service-detail-page .sd-hero h2,
-body.light-theme #service-detail-page .sd-hero p,
-body.light-theme #service-detail-page .sd-hero .hero-title,
-body.light-theme #service-detail-page .sd-hero .sd-hero-note,
-body.light-theme #service-detail-page .sd-breadcrumb a,
-body.light-theme #service-detail-page .sd-breadcrumb span {
+html.light-theme #service-detail-page .sd-hero h2,
+html.light-theme #service-detail-page .sd-hero p,
+html.light-theme #service-detail-page .sd-hero .hero-title,
+html.light-theme #service-detail-page .sd-hero .sd-hero-note,
+html.light-theme #service-detail-page .sd-breadcrumb a,
+html.light-theme #service-detail-page .sd-breadcrumb span {
     color: #f7f2ea !important;
 }
 
-body.light-theme #service-detail-page h2,
-body.light-theme #service-detail-page h3,
-body.light-theme #service-detail-page .sd-product-info h3,
-body.light-theme #service-detail-page .sd-benefit-card h3,
-body.light-theme #service-detail-page .sd-process-step h3,
-body.light-theme #service-detail-page .sd-faq-item summary {
+html.light-theme #service-detail-page h2,
+html.light-theme #service-detail-page h3,
+html.light-theme #service-detail-page .sd-product-info h3,
+html.light-theme #service-detail-page .sd-benefit-card h3,
+html.light-theme #service-detail-page .sd-process-step h3,
+html.light-theme #service-detail-page .sd-faq-item summary {
     color: #171513 !important;
 }
 
-body.light-theme #service-detail-page p,
-body.light-theme #service-detail-page .sd-benefit-card p,
-body.light-theme #service-detail-page .sd-product-info p,
-body.light-theme #service-detail-page .sd-process-step p,
-body.light-theme #service-detail-page .sd-faq-item p {
+html.light-theme #service-detail-page p,
+html.light-theme #service-detail-page .sd-benefit-card p,
+html.light-theme #service-detail-page .sd-product-info p,
+html.light-theme #service-detail-page .sd-process-step p,
+html.light-theme #service-detail-page .sd-faq-item p {
     color: #5e5952 !important;
 }
 
-body.light-theme #service-detail-page .sd-benefit-card,
-body.light-theme #service-detail-page .sd-product-card,
-body.light-theme #service-detail-page .sd-process-step,
-body.light-theme #service-detail-page .sd-faq-item {
+html.light-theme #service-detail-page .sd-benefit-card,
+html.light-theme #service-detail-page .sd-product-card,
+html.light-theme #service-detail-page .sd-process-step,
+html.light-theme #service-detail-page .sd-faq-item {
     background: #fffaf2 !important;
     border-color: rgba(23, 21, 19, 0.15) !important;
 }
 
-body.light-theme #service-detail-page .sd-final-cta {
+html.light-theme #service-detail-page .sd-final-cta {
     background: #efe7dc !important;
     margin-bottom: 0 !important;
 }
 
+
+
+/* ======= OVERRIDES FOR LIGHT THEME & SPACING ======= */
+
+/* Fix Hero section in light theme to be black */
+html.light-theme #service-detail-page {
+    background: #0d0d0c !important;
+}
+
+html.light-theme #service-detail-page .sd-hero {
+    background: #0d0d0c !important;
+}
+
+html.light-theme #service-detail-page .sd-breadcrumb,
+html.light-theme #service-detail-page .sd-breadcrumb a,
+html.light-theme #service-detail-page .sd-breadcrumb span,
+html.light-theme #service-detail-page .sd-hero h1,
+html.light-theme #service-detail-page .sd-hero p,
+html.light-theme #service-detail-page .sd-hero .hero-eyebrow,
+html.light-theme #service-detail-page .sd-hero .hero-title span,
+html.light-theme #service-detail-page .sd-hero-note span {
+    color: #f7f3ed !important;
+}
+
+/* Ensure the image in hero section is always visible */
+html.light-theme #service-detail-page .sd-hero-image-wrap img,
+html.light-theme #service-detail-page .sd-hero-image-wrap img {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Meet the collection box visibility */
+#service-detail-page .sd-image-caption,
+html.light-theme #service-detail-page .sd-image-caption {
+    background: #f7f3ed !important;
+    color: #171513 !important;
+    border: 1px solid rgba(0,0,0,0.1) !important;
+}
+
+#service-detail-page .sd-image-caption *,
+html.light-theme #service-detail-page .sd-image-caption * {
+    color: #171513 !important;
+}
+
+/* Reduce huge margins/padding in all sections */
+#service-detail-page .sd-section {
+    padding: 50px 0 !important;
+}
+
+#service-detail-page .sd-hero {
+    padding-top: 20px !important;
+}
+
+/* Fix FAQ alignment */
+#service-detail-page .sd-faq-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 40px !important;
+}
+
+/* Fix FAQ padding */
+#service-detail-page .sd-faq-heading {
+    padding-right: 40px;
+}

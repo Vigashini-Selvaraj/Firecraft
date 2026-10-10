@@ -1001,8 +1001,82 @@ body.light-theme .newsletter-form input {
     color: #211a16 !important;
 }
 
+/* ======= BLOG FIXES ======= */
 
-/* =========================================================
+/* Fix 1: Force hero text to be visible (white in dark, dark in light) */
+.blog-hero h1,
+.blog-hero p {
+    color: #f7f3ed !important;
+}
+
+
+
+html.light-theme .blog-hero h1 span,
+body.light-theme .blog-hero h1 span {
+    color: #e63b2e !important;
+}
+
+/* Fix 2: RTL flip for hero background */
+[dir="rtl"] .blog-hero-bg {
+    transform: scaleX(-1);
+}
+
+/* Fix 3: Explore by topics section dark mode styling */
+.recent-posts-section {
+    background-color: #0d0d0c !important;
+}
+.recent-posts-section h2, 
+.recent-posts-section p, 
+.recent-posts-section .blog-meta,
+.recent-posts-section h3 a {
+    color: #f7f3ed !important;
+}
+.recent-posts-section .blog-card {
+    background: #171513 !important;
+    border-color: rgba(255,255,255,0.05) !important;
+}
+.recent-posts-section .filter-btn {
+    color: #f7f3ed !important;
+    border-color: rgba(255,255,255,0.2) !important;
+}
+.recent-posts-section .filter-btn.active, .recent-posts-section .filter-btn:hover {
+    background: var(--blog-red) !important;
+    border-color: var(--blog-red) !important;
+    color: #f7f3ed !important;
+}
+
+/* Explore by topics section light mode fallback */
+html.light-theme .recent-posts-section,
+body.light-theme .recent-posts-section {
+    background-color: #f7f2e9 !important;
+}
+html.light-theme .recent-posts-section h2, 
+body.light-theme .recent-posts-section h2,
+html.light-theme .recent-posts-section p, 
+body.light-theme .recent-posts-section p,
+html.light-theme .recent-posts-section .blog-meta,
+body.light-theme .recent-posts-section .blog-meta,
+html.light-theme .recent-posts-section h3 a,
+body.light-theme .recent-posts-section h3 a,
+html.light-theme .recent-posts-section .filter-btn,
+body.light-theme .recent-posts-section .filter-btn {
+    color: #171513 !important;
+}
+html.light-theme .recent-posts-section .blog-card,
+body.light-theme .recent-posts-section .blog-card {
+    background: #fffaf2 !important;
+    border-color: rgba(0,0,0,0.1) !important;
+}
+html.light-theme .recent-posts-section .filter-btn,
+body.light-theme .recent-posts-section .filter-btn {
+    border-color: rgba(0,0,0,0.2) !important;
+}
+html.light-theme .recent-posts-section .filter-btn.active, 
+body.light-theme .recent-posts-section .filter-btn.active,
+html.light-theme .recent-posts-section .filter-btn:hover, 
+body.light-theme .recent-posts-section .filter-btn:hover {
+    color: #f7f3ed !important;
+}/* =========================================================
    RESPONSIVE — TABLET
 ========================================================= */
 
@@ -1343,3 +1417,29 @@ body.light-theme .newsletter-form input {
     }
 }
 
+
+/* Fix 4: FAQ Padding */
+.faq-item summary {
+    padding: 24px 20px !important;
+}
+
+.faq-item p {
+    padding: 0 35px 25px 20px !important;
+}
+
+
+/* BRUTE FORCE FIX FOR BLOG HERO TEXT */
+html.light-theme .blog-hero h1,
+body.light-theme .blog-hero h1,
+html.light-theme .blog-hero h1 *,
+body.light-theme .blog-hero h1 * {
+    color: #ffffff !important;
+}
+html.light-theme .blog-hero h1 span,
+body.light-theme .blog-hero h1 span {
+    color: #e63b2e !important;
+}
+html.light-theme .blog-hero p,
+body.light-theme .blog-hero p {
+    color: #ffffff !important;
+}

@@ -28,6 +28,12 @@ window.initNavbar = () => {
         document.documentElement.classList.remove("light-theme");
         document.body.classList.remove("light-theme");
     }
+    
+    // Sync direction state
+    const savedDir = localStorage.getItem("dir");
+    if (savedDir) {
+        document.documentElement.setAttribute("dir", savedDir);
+    }
     updateThemeIcons();
     updateDirButtons();
 };
@@ -63,6 +69,7 @@ document.addEventListener("click", (e) => {
         const currentDir = document.documentElement.getAttribute("dir") || "ltr";
         const newDir = currentDir.toLowerCase() === "rtl" ? "ltr" : "rtl";
         document.documentElement.setAttribute("dir", newDir);
+        localStorage.setItem("dir", newDir);
         updateDirButtons();
         return;
     }

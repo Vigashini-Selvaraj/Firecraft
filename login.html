@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Firecraft Hot Sauce</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/images/firecraft_logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <style>
+    .form-message {
+      font-size: 14px;
+      margin-top: 15px;
+      display: none;
+      font-weight: 600;
+    }
+    .form-message.error {
+      color: var(--auth-red);
+      display: block;
+    }
+    .form-message.success {
+      color: #2e7d32;
+      display: block;
+    }
+  </style>
+</head>
+<body class="auth-page">
+
+  <!-- Toast Notification -->
+  <div id="toast" class="auth-toast">
+    <i class="fa-solid fa-envelope-circle-check"></i>
+    <span>Reset link sent! Please check your inbox.</span>
+  </div>
+
+  <header class="auth-header">
+    <a href="index.html" class="logo">
+      <img src="assets/images/firecraft_logo.png" alt="Firecraft Logo">
+      <span class="logo-text">Firecraft</span>
+    </a>
+  </header>
+
+  <main class="auth-main">
+    <div class="auth-card">
+      <h1>Welcome back</h1>
+      <p class="auth-subtitle">Log in to your Firecraft account.</p>
+
+      <div class="auth-social">
+        <button class="btn-social">
+          <i class="fa-brands fa-google" style="color: #DB4437;"></i>
+          Continue with Google
+        </button>
+        <button class="btn-social">
+          <i class="fa-brands fa-apple"></i>
+          Continue with Apple
+        </button>
+      </div>
+
+      <div class="auth-divider">
+        <span>or</span>
+      </div>
+
+      <form class="auth-form" id="login-form" novalidate>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="password-wrapper">
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <button type="button" class="password-toggle" onclick="togglePassword('password', this)" aria-label="Toggle password visibility">
+              <i class="fa-regular fa-eye-slash"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="auth-options">
+          <label class="custom-checkbox">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Remember me
+          </label>
+          <a href="#" onclick="showToast(event)">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn-auth">Log In</button>
+        <div id="login-msg" class="form-message"></div>
+      </form>
+
+      <div class="auth-footer">
+        Don't have an account? <a href="register.html">Register here</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Theme initializer
+    (function() {
+      const savedTheme = localStorage.getItem('firecraftTheme');
+      if (savedTheme === 'light') {
+        document.documentElement.classList.add('light-theme');
+        document.body.classList.add('light-theme');
+      }
+    })();
+
+    // Password Toggle
+    function togglePassword(inputId, btn) {
+      const input = document.getElementById(inputId);
+      const icon = btn.querySelector('i');
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+      } else {
+        input.type = 'password';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+      }
+    }
+
+    // Forget password toast
+    function showToast(e) {
+      e.preventDefault();
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3500);
+    }
+
+    // Form Validation & Login
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const msg = document.getElementById('login-msg');
+      
+      msg.className = 'form-message'; // reset
+
+      if (!email || !password) {
+        msg.textContent = 'Please enter both email and password.';
+        msg.classList.add('error');
+        return;
+      }
+
+      // Check against stored users
+      let users = JSON.parse(localStorage.getItem('firecraftUsers')) || {};
+      
+      if (!users[email]) {
+        msg.textContent = 'No account found with this email.';
+        msg.classList.add('error');
+        return;
+      }
+
+      if (users[email].password !== password) {
+        msg.textContent = 'Incorrect password.';
+        msg.classList.add('error');
+        return;
+      }
+
+      msg.textContent = 'Login successful! Redirecting...';
+      msg.classList.add('success');
+
+      // Add a simple flag to show user is logged in
+      localStorage.setItem('firecraftCurrentUser', email);
+
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
