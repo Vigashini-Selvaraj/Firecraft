@@ -76,7 +76,7 @@ h2 em {
 ===================================================== */
 
 .approach-hero {
-    min-height: 90vh;
+    min-height: 700px;
     position: relative;
     display: flex;
     align-items: center;
@@ -84,7 +84,7 @@ h2 em {
 }
 .hero-image {
     position: absolute; inset: 0;
-    background: url("../assets/images/home2_hero.png") center / cover no-repeat;
+    background: url("../assets/images/home2_hero.png") center right / cover no-repeat;
     transform: scale(1.02);
 }
 .hero-overlay {
@@ -335,6 +335,7 @@ h2 em {
 }
 
 @media (max-width: 768px) {
+    .approach-hero { max-height: none; }
     .hero-inner { align-items: flex-start; }
     .hero-side-note { display: none; }
     .journey { grid-template-columns: 1fr 1fr; }

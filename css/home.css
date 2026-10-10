@@ -767,6 +767,17 @@ body.light-theme .ed-desc {
     .sauce-card { min-width: 100%; }
     .small-img { display: none; }
     .review-feature blockquote { font-size: 32px; }
+    
+    /* Hero section fixes for mobile */
+    .hero {
+        background-position: 65% center;
+    }
+    .hero::before {
+        background: linear-gradient(90deg, rgba(8,8,8,0.95) 0%, rgba(8,8,8,0.85) 60%, rgba(8,8,8,0.4) 100%);
+    }
+    .hero-heading {
+        font-size: 48px;
+    }
 }
 
 

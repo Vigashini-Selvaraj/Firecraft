@@ -6,10 +6,11 @@
 .products-hero {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: 700px;
+    padding: 155px 0 105px;
     display: flex;
     align-items: center;
-    background: url('../assets/images/products/Fruit-Forward.png') center center/cover no-repeat;
+    background: url('../assets/images/products/Fruit-Forward.png') center right/cover no-repeat;
     border-bottom: 1px solid var(--color-border-dark);
     overflow: hidden;
     isolation: isolate;
@@ -787,6 +788,7 @@
     }
 }
 @media (max-width: 768px) {
+    .products-hero { max-height: none; }
     .heat-scale-grid {
         grid-template-columns: 1fr;
     }
