@@ -119,6 +119,7 @@ body.light-theme .nav-links a {
     font-weight: 700;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    white-space: nowrap;
     transition: color 0.2s;
     padding: 8px 0;
     position: relative;
@@ -297,8 +298,8 @@ body.light-theme .dropdown-content a:hover {
 }
 
 @media (max-width: 1024px) {
-    .nav-menu, .nav-center .nav-links { gap: 16px; }
-    .nav-menu a, .nav-links a { font-size: 12px; }
+    .nav-menu, .nav-center .nav-links { gap: 12px; }
+    .nav-menu a, .nav-links a { font-size: 11px; }
 }
 
 @media (max-width: 900px) {

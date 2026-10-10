@@ -714,6 +714,7 @@ ul {
     position: relative;
     width: 100%;
     min-height: calc(100vh - 89px); /* Full screen minus navbar */
+    max-height: 850px;
     display: flex;
     align-items: center; margin-top: -2px; padding-top: 2px;
 
